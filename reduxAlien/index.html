@@ -1,0 +1,2083 @@
+<!DOCTYPE html>
+<!--forbidden operators-->
+<!--<html><head><title></title></head><body></body></html>-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>地球文明等待你的拯救</title>
+    <meta name="Keywords" content="地球文明等待你的拯救,腾讯新闻,腾讯网,QQ,Tencent" />
+    <meta name="description" content="地球文明等待你的拯救_腾讯新闻_腾讯网" />
+    <script src="http://mat1.gtimg.com/news/v_rranduan/react/react.js"></script>
+    <script src="http://mat1.gtimg.com/news/v_rranduan/react/react-dom.js"></script>
+    <script src="http://mat1.gtimg.com/news/v_rranduan/react/browser.min.js"></script>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <script src="http://mat1.gtimg.com/news/v_rranduan/waixingren/zepto.js"></script>
+    <!--<script src="http://mat1.gtimg.com/news/v_rranduan/waixingren/touch.js "></script>-->
+    <script type="text/javascript" src="http://mat1.gtimg.com/news/2015/zt/js/touch.js"></script>
+    <style lang="">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        @font-face {
+            font-family: 'alien';
+            src: url('MFLangQian_Noncommercial-Light.otf');
+        }
+        html {
+            font-family: 'alien';
+            font-size: 62.5%;
+        }
+        body {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+        #root {
+            width: 100%;
+            height: 100%;
+        }
+        .wrapper {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(http://home.duanran96.com/reduxAlien/images/bg-1.jpg)
+        }
+        .wrapper .question-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .question-wrapper canvas {
+            display: none;
+            position: absolute;
+            transform: translate(-50%,0);
+            left: 50%;
+        }
+        .question-wrapper .vsPic , .question-wrapper .losePic , .question-wrapper .winPic , .question-wrapper .numPic , .question-wrapper .lineOne , .question-wrapper .question , .question-wrapper .answer , .question-wrapper .pointSec , .question-wrapper .answerNum , .question-wrapper .moveWordFri , .question-wrapper .moveWordSec , .question-wrapper .moveWordThi , .question-wrapper .noMoveWord , .question-wrapper .reservation , .question-wrapper .lineTwo , .question-wrapper .lineThree , .question-wrapper .loadPrecent , .question-wrapper .loadWord , .question-wrapper .playVideo , .question-wrapper .alienLook {
+            position: absolute;
+            transform: translate(-50%,0);
+            left: 50%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        }
+        .question-wrapper .leftAlien , .question-wrapper .rightAlien , .question-wrapper .pointFri , .question-wrapper .pointThi , .question-wrapper .playMore , .question-wrapper .share , .question-wrapper .weixinLayout .smallAlien {
+            position: absolute;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .question-wrapper .loadPrecent {
+            line-height: 2.5rem;
+            font-size: 2.4rem;
+            color: #0a776b;
+        }
+        .question-wrapper .loadWord {
+            background-image: url(http://home.duanran96.com/reduxAlien/images/loading.png);
+        }
+        .question-wrapper .playVideo {
+            display: none;
+            opacity: 0;
+            background-image: url(http://home.duanran96.com/reduxAlien/images/play.png);           
+        }
+        .question-wrapper .playVideoMove {
+            -webkit-animation: playVideoMoving 1s ease-in-out forwards;
+        }
+        @keyframes playVideoMoving {
+            0% {
+                opacity: 0.4
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .question-wrapper .alienLook {
+            display: none;
+            background-image: url(http://home.duanran96.com/reduxAlien/images/play-word.png);            
+        }
+        .question-wrapper .videoOutCloses {
+            display: none;
+            position: absolute;
+            background-color: black;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        .question-wrapper .videoOutCloses .videoCloses {
+            position: absolute;
+            -webkit-transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+        }
+        .question-wrapper .videoOutCloses .videoCloses .video {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .question-wrapper .vsPic {
+            display: none;
+            background-image: url(http://home.duanran96.com/reduxAlien/images/vs.png);
+        }
+        .question-wrapper .losePic {
+            display: none;
+            background-image: url(http://home.duanran96.com/reduxAlien/images/lose.png);
+        }
+        .question-wrapper .winPic {
+            display: none;
+            background-image: url(http://home.duanran96.com/reduxAlien/images/win.png);
+        }
+        .question-wrapper .numPic {
+            display: none;
+            background-image: url(http://home.duanran96.com/reduxAlien/images/num-0.png);
+        }
+        .question-wrapper .leftAlien {
+            display: none; 
+            background-image: url(http://home.duanran96.com/reduxAlien/images/al-1.png);
+        }
+        .question-wrapper .rightAlien {
+            display: none; 
+            background-image: url(http://home.duanran96.com/reduxAlien/images/al-2.png);
+        }
+        .question-wrapper .lineOne {
+            display: none; 
+            background-image: url(http://home.duanran96.com/reduxAlien/images/pic-line.png);
+        }
+        .question-wrapper .question {
+            display: none; 
+            font-size: 1.8rem;
+            color: #00ae95;
+        }
+        .question-wrapper .answer {
+            display: none;
+        }
+        .question-wrapper .answer .ans {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            text-align: center;
+        }
+        .question-wrapper .answer .ans li {
+            display: inline-block;
+            height: 100%;      
+            width: 20%;  
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;         
+            list-style: none;
+        }
+        .question-wrapper .pointFri {
+            display: none;
+            background-image: url(http://home.duanran96.com/reduxAlien/images/point-1.png);
+        }
+        .question-wrapper .pointSec {
+            display: none;
+            background-image: url(http://home.duanran96.com/reduxAlien/images/point-1.png);
+        }
+        .question-wrapper .pointThi {
+            display: none;
+            background-image: url(http://home.duanran96.com/reduxAlien/images/point-1.png);
+        }
+        .question-wrapper .answerNum {
+            display: none;
+        }
+        .question-wrapper .answerNum .ansN {
+            position: absolute;
+            top: 0;
+            left:0;
+            height: 100%;
+            width: 100%;
+        }
+        .question-wrapper .answerNum .ansN li {
+            position: relative;
+            float: left;
+            width: 20%;
+            height: 50%;
+            border: 1px solid #14747a;
+            box-sizing: border-box;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            list-style: none;
+        }
+        .question-wrapper .answerNum .ansN li img {
+            position: absolute;
+            display: block;
+            transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;            
+            height: 59.5%;
+        }
+        .question-wrapper .wrongDiv , .question-wrapper .correctDiv {
+            display: none;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.4)
+        }
+        .question-wrapper .wrongDiv .wrong , .question-wrapper .correctDiv .correct {
+            position: absolute;
+            transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;        
+        }
+        .question-wrapper .wrongDiv .wrong {
+            background-image: url(http://home.duanran96.com/reduxAlien/images/wrong.png)
+        }
+        .question-wrapper .correctDiv .correct {
+            background-image: url(http://home.duanran96.com/reduxAlien/images/correct.png)
+        }
+        .question-wrapper .moveWordFri {
+            display: none;
+            opacity: 0;
+            background-image: url()
+        }
+        .question-wrapper .moveFri {
+            -webkit-animation: moveFrist 3s ease-in-out forwards;
+        }
+        @keyframes moveFrist {
+            0% {
+                opacity: 1;
+                -webkit-transform: translate(-50%,350%);
+            }
+            100% {
+                opacity: 0.4;
+                -webkit-transform: translate(-50%,0);
+            }
+        }
+        .question-wrapper .moveWordSec {
+            display: none;
+            opacity: 0;
+            background-image: url()
+        }
+        .question-wrapper .moveSec {
+            -webkit-animation: moveSecond 2s ease-in-out 1s forwards;
+        }
+        @keyframes moveSecond {
+            0% {
+                opacity: 1;
+                -webkit-transform: translate(-50%,250%);
+            }
+            100% {
+                opacity: 0.7;
+                -webkit-transform: translate(-50%,0);
+            }
+        }
+        .question-wrapper .moveWordThi {
+            display: none;
+            opacity: 0;
+            background-image: url()
+        }
+        .question-wrapper .moveThi {
+            -webkit-animation: moveThird 1s ease-in-out 2s forwards;
+        }
+        @keyframes moveThird {
+            0% {
+                opacity: 1;
+                -webkit-transform: translate(-50%,150%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translate(-50%,0);
+            }
+        }
+        .question-wrapper .noMoveWord {
+            display: none;
+            background-image: url(http://home.duanran96.com/reduxAlien/images/bg-come.png);
+        }
+        .question-wrapper .reservation {
+            display: none;
+            background-image: url(http://home.duanran96.com/reduxAlien/images/live.png)
+        }
+        .question-wrapper .lineTwo {
+            display: none;
+            background-image: url(http://home.duanran96.com/reduxAlien/images/share-line-else.png)
+        }
+        .question-wrapper .reservation a {
+            position: absolute;
+            display: block;
+            left: 0;
+            top: 0;
+            width: 100%;
+            padding-top: 28.94%;
+        }
+        .question-wrapper .lineThree {
+            display: none;
+            background-image: url(http://home.duanran96.com/reduxAlien/images/middle-line.png)
+        }
+        .question-wrapper .playMore {
+            display: none;
+            background-image: url(http://home.duanran96.com/reduxAlien/images/more-play.png)
+        }
+        .question-wrapper .share {
+            display: none;
+            background-image: url(http://home.duanran96.com/reduxAlien/images/share.png)
+        }
+        .question-wrapper .weixinLayout {
+            display: none;
+            position: fixed;
+            background-color: rgba(0,0,0,0.6);
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        .question-wrapper .weixinLayout .smallAlien {
+            background-image: url(http://home.duanran96.com/reduxAlien/images/share-bot.png);
+        }
+    </style>
+</head>
+<body>
+    <!-- 全站流量统计代码 开始 -->
+    <!--#include virtual="/public/pingjs.htm"-->
+    <!--普通专题pgv统计代码请放在<body>标签下方,重大项目报道及频道首页改版pgv统计代码放于首屏后.-->
+    <!-- 全站流量统计代码 结束 -->
+    <div id="root"></div>
+    <script>
+         var config = { // 题目配置文件
+            first_question: {
+                question: [
+                    "55,48,45,53,56,61,63",
+                    "57,55,45,49,51,61,63",
+                    "50,57,43,54,55,61,63",
+                    "55,57,45,53,55,61,63",
+                    "53,55,43,49,54,61,63",
+                    "49,54,43,50,57,61,63",
+                    "56,56,45,52,55,61,63",
+                    "50,55,43,54,57,61,63",
+                    "53,56,43,49,51,61,63",
+                    "52,56,43,49,55,61,63",
+                    "53,54,43,51,56,61,63",
+                    "57,48,45,51,51,61,63",
+                    "52,56,45,51,57,61,63",
+                    "56,52,45,50,49,61,63",
+                    "54,54,45,51,50,61,63",
+                    "50,48,43,54,56,61,63",
+                    "52,48,43,52,56,61,63",
+                    "51,56,43,50,56,61,63",
+                    "52,48,45,50,56,61,63",
+                    "49,54,43,49,57,61,63",
+                    "56,52,45,51,49,61,63",
+                    "53,48,43,50,55,61,63",
+                    "57,53,45,53,53,61,63",
+                    "51,49,45,50,48,61,63",
+                    "55,53,45,52,49,61,63",   
+                    "56,48,45,53,53,61,63",
+                    "53,53,43,50,49,61,63",
+                    "51,51,45,49,57,61,63",
+                    "50,54,43,53,55,61,63",
+                    "56,49,45,54,48,61,63"
+                ],
+                answer: [
+                    "49,50",
+                    "56,52",
+                    "57,54",
+                    "50,50",
+                    "55,51",
+                    "52,53",
+                    "52,49",
+                    "57,54",
+                    "55,49",
+                    "54,53",
+                    "57,52",
+                    "53,55",
+                    "57",
+                    "54,51",
+                    "51,52",
+                    "56,56",
+                    "56,56",
+                    "54,54",
+                    "49,50",
+                    "51,53",
+                    "53,51",
+                    "55,55",
+                    "52,48",
+                    "49,49",
+                    "51,52",
+                    "50,53",
+                    "55,54",
+                    "49,52",
+                    "56,51",
+                    "50,49"
+                ]
+            },
+            second_question: {
+                question: [
+                    "50,48,48,43,51,57,56,61,63",
+                    "50,54,51,43,50,48,54,61,63",
+                    "57,49,49,45,50,48,48,61,63",
+                    "51,48,48,43,49,50,49,61,63",
+                    "49,51,48,43,51,49,50,61,63",
+                    "49,54,48,43,50,52,56,61,63",
+                    "55,49,54,45,51,49,54,61,63",
+                    "57,55,57,45,54,48,53,61,63",
+                    "56,57,56,45,53,56,52,61,63",
+                    "53,49,53,43,52,48,48,61,63",
+                    "49,49,48,43,51,55,55,61,63",
+                    "49,49,53,43,54,55,52,61,63",
+                    "50,49,54,43,54,49,50,61,63",
+                    "53,49,57,43,49,55,48,61,63",
+                    "56,55,54,45,55,50,52,61,63",
+                    "55,53,48,45,50,53,48,61,63",
+                    "57,56,53,45,56,55,51,61,63",
+                    "53,57,57,45,52,56,49,61,63",
+                    "56,56,54,45,54,55,52,61,63",
+                    "50,55,53,43,53,48,53,61,63",
+                    "50,54,51,43,50,48,54,61,63",
+                    "52,55,51,43,49,55,55,61,63",
+                    "52,53,57,43,50,51,48,61,63",
+                    "54,49,54,45,50,49,50,61,63",
+                    "57,54,52,45,49,48,51,61,63",
+                    "56,56,56,45,54,53,56,61,63",
+                    "57,57,54,45,56,49,48,61,63",
+                    "51,52,53,43,49,53,56,61,63",
+                    "50,54,52,45,49,48,51,61,63",
+                    "54,50,50,43,49,53,48,61,63"
+                ],
+                answer: [
+                    "53,57,56",
+                    "52,54,57",
+                    "55,49,49",
+                    "52,50,49",
+                    "52,52,50",
+                    "52,48,56",
+                    "52,48,48",
+                    "51,55,52",
+                    "51,49,52",
+                    "57,49,53",
+                    "52,56,55",
+                    "55,56,57",
+                    "56,50,56",
+                    "54,56,57",
+                    "49,53,50",
+                    "53,48,48",
+                    "49,49,50",
+                    "49,49,56",
+                    "50,49,50",
+                    "55,56,48",
+                    "52,54,57",
+                    "54,53,48",
+                    "52,56,57",
+                    "52,48,52",
+                    "56,54,49",
+                    "50,51,48",
+                    "49,56,54",
+                    "53,48,51",
+                    "49,54,49",
+                    "55,55,50"
+                ]
+            },
+            third_question: {
+                question: [
+                    "49,54,50,247,57,61,63",
+                    "49,50,56,247,56,61,63",
+                    "51,51,53,247,53,61,63",
+                    "56,48,48,247,52,48,61,63",
+                    "52,48,50,247,54,61,63",
+                    "50,56,56,247,52,61,63",
+                    "52,48,53,247,53,61,63",
+                    "50,54,52,247,56,61,63",
+                    "52,53,48,247,57,61,63",
+                    "49,54,56,247,55,61,63",
+                    "52,52,215,57,61,63",
+                    "49,50,215,50,48,61,63",
+                    "49,49,215,49,49,61,63",
+                    "53,52,215,49,54,61,63",
+                    "51,50,215,49,53,61,63",
+                    "53,51,215,56,61,63",
+                    "52,48,215,50,49,61,63",
+                    "50,49,215,49,49,61,63",
+                    "51,49,215,49,53,61,63",
+                    "50,53,215,49,52,61,63",
+                    "51,54,56,215,50,61,63",
+                    "49,53,48,215,54,61,63",
+                    "50,49,57,215,50,61,63",
+                    "49,52,53,215,54,61,63",
+                    "50,54,51,215,51,61,63",
+                    "49,51,53,215,52,61,63",
+                    "49,48,56,215,57,61,63",
+                    "49,50,52,215,50,61,63",
+                    "49,51,50,215,51,61,63",
+                    "49,52,54,215,53,61,63"
+                ],
+                answer: [
+                    "49,56",
+                    "49,54",
+                    "54,55",
+                    "50,48",
+                    "54,55",
+                    "55,50",
+                    "56,49",
+                    "51,51",
+                    "53,48",
+                    "50,52",
+                    "51,57,54",
+                    "50,52,48",
+                    "49,50,49",
+                    "56,54,52",
+                    "52,56,48",
+                    "52,50,52",
+                    "56,52,48",
+                    "50,51,49",
+                    "52,54,53",
+                    "51,53,48",
+                    "55,51,54",
+                    "57,48,48",
+                    "52,51,56",
+                    "56,55,48",
+                    "55,56,57",
+                    "53,52,48",
+                    "57,55,50",
+                    "50,52,56",
+                    "51,57,54",
+                    "55,51,48"
+                ]
+            }
+        }
+    </script>
+    <script type="text/babel">
+        function reducer (state = [],action) { // reducer函数
+            switch(action.type) {
+                case 'ADD':
+                    if(state.length < 5)
+                        return state.concat(action.text);
+                    return state;
+                case 'SUB':
+                    return state.slice(0,state.length - 1);
+                case 'RESET':
+                    return state.slice(state.length);
+                default:
+                    return state;
+            }
+        }
+        var store = Redux.createStore(reducer); // redux createStore
+
+        var Question = React.createClass({ // 生成主要组件
+            getInitialState: function() {
+                return {
+                    ctx: '', // canvas画笔
+                    width: '', // canvas宽
+                    height: '', // canvas高
+                    radius: '', // canvas画圆半径
+                    start: '', // canvas画圆起始位置
+                    end: '', // canvas画圆结束位置
+                    markQuestionNum: 0, // 当前题目是第几题
+                    correctAnswer: '', // 当前题目的正确答案
+                    picArr: [ // 图片预加载数组
+                        'http://home.duanran96.com/reduxAlien/images/bg-1.jpg',
+                        'http://home.duanran96.com/reduxAlien/images/loading.png',
+                        'http://home.duanran96.com/reduxAlien/images/play.png',
+                        'http://home.duanran96.com/reduxAlien/images/play-word.png',
+                        'http://home.duanran96.com/reduxAlien/images/play-bg.jpg',
+                        'http://home.duanran96.com/reduxAlien/images/vs.png',
+                        'http://home.duanran96.com/reduxAlien/images/lose.png',
+                        'http://home.duanran96.com/reduxAlien/images/win.png',
+                        'http://home.duanran96.com/reduxAlien/images/num-5.png',
+                        'http://home.duanran96.com/reduxAlien/images/num-4.png',
+                        'http://home.duanran96.com/reduxAlien/images/num-3.png',
+                        'http://home.duanran96.com/reduxAlien/images/num-2.png',
+                        'http://home.duanran96.com/reduxAlien/images/num-1.png',
+                        'http://home.duanran96.com/reduxAlien/images/num-0.png',
+                        'http://home.duanran96.com/reduxAlien/images/al-1.png',
+                        'http://home.duanran96.com/reduxAlien/images/al-2.png',
+                        'http://home.duanran96.com/reduxAlien/images/al-3.png',
+                        'http://home.duanran96.com/reduxAlien/images/al-4.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-line.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-00.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-11.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-22.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-33.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-44.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-55.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-66.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-77.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-88.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-99.png',
+                        'http://home.duanran96.com/reduxAlien/images/point-1.png',
+                        'http://home.duanran96.com/reduxAlien/images/point-2.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-0.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-1.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-2.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-3.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-4.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-5.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-6.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-7.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-8.png',
+                        'http://home.duanran96.com/reduxAlien/images/pic-9.png',
+                        'http://home.duanran96.com/reduxAlien/images/cover.png',
+                        'http://home.duanran96.com/reduxAlien/images/wrong.png',
+                        'http://home.duanran96.com/reduxAlien/images/correct.png',
+                        'http://home.duanran96.com/reduxAlien/images/wrong-word-1.png',
+                        'http://home.duanran96.com/reduxAlien/images/wrong-word-2.png',
+                        'http://home.duanran96.com/reduxAlien/images/wrong-word-3.png',
+                        'http://home.duanran96.com/reduxAlien/images/correct-word-1.png',
+                        'http://home.duanran96.com/reduxAlien/images/correct-word-2.png',
+                        'http://home.duanran96.com/reduxAlien/images/correct-word-3.png',
+                        'http://home.duanran96.com/reduxAlien/images/bg-come.png',
+                        'http://home.duanran96.com/reduxAlien/images/live.png',
+                        'http://home.duanran96.com/reduxAlien/images/share-line-else.png',
+                        'http://home.duanran96.com/reduxAlien/images/middle-line.png',
+                        'http://home.duanran96.com/reduxAlien/images/more-play.png',
+                        'http://home.duanran96.com/reduxAlien/images/share.png',
+                        'http://home.duanran96.com/reduxAlien/images/share-bot.png',
+                        'http://home.duanran96.com/reduxAlien/images/share-one.jpg',
+                    ]
+                };
+            },
+            loadImage: function (arr,callback) { // 图片预加载
+                var len = arr.length;
+                var index = 0;
+                var imgArr = [];
+                function load () {
+                    var img = new Image();
+                    function loading () {
+                        imgArr.push(img);
+                        if(index < len) {
+                            callback && callback(imgArr);
+                            load();
+                        }else {
+                                imgArr.shift();
+                        }
+                        index ++;
+                    }
+                    img.onload = loading; // 图片预加载成功
+                    img.onerror = loading; // 图片预加载失败
+                    img.src = arr[index];
+                }
+                if(len > 0) {
+                      load();
+                }
+            },
+            changeNumber: function (arr) { // 预加载百分比
+                $(this.refs.loadPrecent).text(parseInt(arr.length / this.state.picArr.length * 100) + '%');
+                if(parseInt(arr.length / this.state.picArr.length * 100) == 100) {   
+                    $(this.refs.loadWord).css('display','none');
+                    $(this.refs.playVideo).css('display','block').addClass('playVideoMove');
+                    $(this.refs.alienLook).css('display','block');
+                    this.buttonClick(); // 绑定点击事件函数
+                }
+            },
+            onloadCanvas: function () { // 配置canvas画板
+                var ctx = this.refs.canvas.getContext('2d');
+
+                var canvasObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 159,
+                    width: 159,
+                    top: 28
+                });
+
+                this.refs.canvas.width = $(window).width() * canvasObj.width / 100;
+                this.refs.canvas.height = $(window).width() * canvasObj.width / 100;
+                this.refs.canvas.style.top = canvasObj.top + '%';          
+                var width = this.refs.canvas.width;
+                var height = this.refs.canvas.height;
+
+                var start = 1.5 * Math.PI;
+                var end = 1.5 * Math.PI;
+                var radius = this.refs.canvas.width / 2;
+
+                this.setState({ // 记录画板的信息
+                    ctx: ctx,
+                    width: width,
+                    height: height,
+                    radius: radius,
+                    start: start,
+                    end: end,
+                })
+
+
+                this.drawCanvas(ctx,width,height,start,end,radius);
+            },
+            drawCanvas: function (ctx,width,height,start,end,radius) { // 使用canvas画椭圆
+                ctx.clearRect(0,0,width,height); // 清除画板
+                var x = width / 2;
+                var y = height / 2;
+                ctx.fillStyle = '#3da1a7';
+                ctx.beginPath();
+                ctx.moveTo(x,y);
+                ctx.arc(x,y,radius,0,2 * Math.PI,0);
+                ctx.closePath();
+                ctx.fill();
+
+                ctx.fillStyle = '#19454c';
+                ctx.beginPath();
+                ctx.moveTo(x,y);
+                ctx.arc(x,y,radius-1,0,2 * Math.PI,0);
+                ctx.closePath();
+                ctx.fill();
+
+                ctx.fillStyle = '#407e88';
+                ctx.beginPath();
+                ctx.moveTo(x,y);
+                ctx.arc(x,y,radius-1,start,end,0);
+                ctx.closePath();
+                ctx.fill();
+
+                ctx.fillStyle = '#3da1a7';
+                ctx.beginPath();
+                ctx.moveTo(x,y);
+                ctx.arc(x,y,radius-5,0,2 * Math.PI,0);
+                ctx.closePath();
+                ctx.fill();
+
+                ctx.fillStyle = '#1d363a';
+                ctx.beginPath();
+                ctx.moveTo(x,y);
+                ctx.arc(x,y,radius-6,0,2 * Math.PI,0);
+                ctx.closePath();
+                ctx.fill();
+            },
+            roundCanvas: function (ctx,width,height,start,end,radius) { // 使用 drawCanvas 配合 setInterval 画倒计时椭圆
+                var time = 0; // 倒计时时间
+                var _this = this; // 获取this;
+                var timer = setInterval(function () {
+                    if(time >= 0 && time < 1000) { // 0秒时
+                        
+                        $(_this.refs.vsPic).css('display','none');
+                        $(_this.refs.numPic).css('display','block').css('backgroundImage','url(http://home.duanran96.com/reduxAlien/images/num-5.png)');
+                        
+                    } else if(time >= 1000 && time < 2000) { // 1秒时
+
+                        $(_this.refs.numPic).css('backgroundImage','url(http://home.duanran96.com/reduxAlien/images/num-4.png)');
+
+                    } else if(time >= 2000 && time < 3000) { // 2秒时
+
+                        $(_this.refs.numPic).css('backgroundImage','url(http://home.duanran96.com/reduxAlien/images/num-3.png)');
+
+                    } else if(time >= 3000 && time < 4000) { // 3秒时
+
+                        $(_this.refs.numPic).css('backgroundImage','url(http://home.duanran96.com/reduxAlien/images/num-2.png)');
+
+                    } else if(time >= 4000 && time < 5000) { // 4秒时
+
+                        $(_this.refs.numPic).css('backgroundImage','url(http://home.duanran96.com/reduxAlien/images/num-1.png)');
+
+                    } else if(time >= 5000) { // 5秒时
+
+                        $(_this.refs.numPic).css('backgroundImage','url(http://home.duanran96.com/reduxAlien/images/num-0.png)');
+
+                        if(_this.state.correctAnswer == store.getState().join('')) { // 获取 store 中的值,与记录 正确答案 的值进行比对,看是否正确
+                            _this.triggerCorrect(); // 如果正确
+                        } else {
+                            _this.triggerWrong(); // 如果不正确
+                        }
+
+                        clearInterval(timer);
+
+                    }
+                    
+                    end = time * 2 * Math.PI / 5000 + 1.5 * Math.PI;
+                    _this.drawCanvas(_this.state.ctx,_this.state.width,_this.state.height,_this.state.start,end,_this.state.radius); // 绘画椭圆
+                    time += 1/60*1000;
+
+                },1/60*1000);
+            },
+            buttonClick: function () { // 绑定事件函数              
+                var _this = this
+
+                $(this.refs.playVideo).on(_this.props.onEvent,function () { // 点击播放视频
+                    $(_this.refs.video).attr({
+                        "x-webkit-airplay": "allow",
+                        "playsinline": "",
+                        "webkit-playsinline": ""
+                    })
+
+                    _this.changeImageToVideoStyle(); // 改变样式 由图片预加载 到播放视频
+
+                    $(_this.refs.video).get(0).play();
+                    $(_this.refs.video).get(0).addEventListener('ended',toVideo); // 添加视频结束的回调函数
+
+                    function toVideo () {
+                        $(_this.refs.video).get(0).pause();
+                        $(_this.refs.video).get(0).removeEventListener('ended',toVideo);
+
+                        _this.changeVideoToPlayStyle(); // 改变样式 由播放视频 到答题
+
+                        _this.play(); // 开始答题
+                    }
+                })
+
+                $(this.refs.alienLook).on(_this.props.onEvent,function () { // 点击进入AI视角
+                    $(_this.refs.playVideo).trigger(_this.props.onEvent);
+                })
+
+                $(document).on('keypress',function (e) { // 敲击空格
+                    if(e.keyCode == 32) {
+                        $(_this.refs.answerNum).find('li').css('background-image','url()');
+                        store.dispatch({ // 发出 type 为 SUB 的 action
+                            type: 'SUB'
+                        })
+                    }
+                })
+
+                $(this.refs.answerNum).find('li').on(_this.props.onEvent,function () { // 点击数字的按钮
+                    if(store.getState().length < 5) {
+                        $(_this.refs.answerNum).find('li').css('background-image','url()');
+                        $(this).css('background-image','url(http://home.duanran96.com/reduxAlien/images/cover.png)')
+                        store.dispatch({ // 发出 type 为 ADD 的 action
+                            type: 'ADD',
+                            text: this.id.slice(6)
+                        })
+                    }                    
+                })
+
+                $(this.refs.correct).on('correct',function () { // 答题正确事件
+                    store.dispatch({ // 发出 type 为 RESET 的 action
+                        type: 'RESET'
+                    });
+                    $(_this.refs.correctDiv).css('display','none');
+                    $(_this.refs.answerNum).find('li').css('background-image','url()');
+
+                    if(_this.state.markQuestionNum == 3) { //答完三道题
+
+                        _this.changeStyleCorrect(); // 答题正确 跳转样式
+                        
+                    } else {
+                        
+                        _this.randomQuestion(); // 若不是三道,继续随机题目
+
+                    }
+                })
+
+                $(this.refs.wrong).on('wrong',function () { // 答题错误事件
+                    store.dispatch({ // 发出 type 为 RESET 的 action
+                        type: 'RESET'
+                    });
+                    $(_this.refs.wrongDiv).css('display','none');
+                    $(_this.refs.answerNum).find('li').css('background-image','url()');
+                    _this.changeStyleWrong(); // 答题错误 跳转样式
+                })
+
+                $(this.refs.playMore).on(_this.props.onEvent,function () { // 为 重玩 绑定点击事件
+                    _this.replayChange();
+                    _this.randomQuestion();
+                })
+
+                this.shareData(); // 为分享绑定事件
+            },
+            changeImageToVideoStyle: function () { // 由 图片预加载 到 播放视频的 样式
+                $(this.refs.loadPrecent).css('display','none');
+                $(this.refs.playVideo).css('display','none');
+                $(this.refs.alienLook).css('display','none');
+                $(this.refs.videoOutCloses).css('display','block');
+            },
+            changeVideoToPlayStyle: function () { // 由 图片预加载 到 答题的 样式
+                $(this.refs.videoOutCloses).css('display','none');
+                $(this.refs.canvas).css('display','block');
+                $(this.refs.vsPic).css('display','block');
+                $(this.refs.lineOne).css('display','block');
+                $(this.refs.leftAlien).css('display','block');
+                $(this.refs.rightAlien).css('display','block');
+                $(this.refs.question).css('display','block');
+                $(this.refs.answer).css('display','block');
+                $(this.refs.pointFri).css('display','block');
+                $(this.refs.pointSec).css('display','block');
+                $(this.refs.pointThi).css('display','block');
+                $(this.refs.answerNum).css('display','block');
+            },
+            changeStyle: function () { // 答完题 需要改变的样式
+                $(this.refs.question).html('').css('display','none');
+
+                $(this.refs.answer).css('display','none');
+
+                $(this.refs.pointFri).css({
+                    'background-image': 'url(http://home.duanran96.com/reduxAlien/images/point-1.png)',
+                    'display': 'none'
+                });
+                $(this.refs.pointSec).css({
+                    'background-image': 'url(http://home.duanran96.com/reduxAlien/images/point-1.png)',
+                    'display': 'none'
+                });
+                $(this.refs.pointThi).css({
+                    'background-image': 'url(http://home.duanran96.com/reduxAlien/images/point-1.png)',
+                    'display': 'none'
+                });
+
+                $(this.refs.answerNum).css('display','none');
+
+                this.setState({
+                    markQuestionNum: 0
+                })
+
+                $(this.refs.noMoveWord).css('display','block');
+                $(this.refs.reservation).css('display','block');
+                $(this.refs.lineTwo).css('display','block');
+                $(this.refs.lineThree).css('display','block');
+                $(this.refs.playMore).css('display','block');
+                $(this.refs.share).css('display','block');
+            },
+            changeStyleCorrect: function () { // 答题正确需要改变的样式
+                $(this.refs.numPic).css('display','none');
+                $(this.refs.winPic).css('display','block');
+                $(this.refs.losePic).css('display','none');
+                $(this.refs.leftAlien).css('background-image','url(http://home.duanran96.com/reduxAlien/images/al-3.png)');
+                $(this.refs.rightAlien).css('background-image','url(http://home.duanran96.com/reduxAlien/images/al-2.png)'); 
+                $(this.refs.moveWordFri).css({
+                    'display': 'block',
+                    'background-image': 'url(http://home.duanran96.com/reduxAlien/images/correct-word-1.png)'
+                }).addClass('moveFri')
+                $(this.refs.moveWordSec).css({
+                    'display': 'block',
+                    'background-image': 'url(http://home.duanran96.com/reduxAlien/images/correct-word-2.png)'
+                }).addClass('moveSec')
+                $(this.refs.moveWordThi).css({
+                    'display': 'block',
+                    'background-image': 'url(http://home.duanran96.com/reduxAlien/images/correct-word-3.png)'
+                }).addClass('moveThi')   
+                this.changeStyle();               
+            },
+            changeStyleWrong: function () { // 答题错误需要改变的样式
+                $(this.refs.numPic).css('display','none');
+                $(this.refs.winPic).css('display','none');
+                $(this.refs.losePic).css('display','block');
+                $(this.refs.leftAlien).css('background-image','url(http://home.duanran96.com/reduxAlien/images/al-1.png)');
+                $(this.refs.rightAlien).css('background-image','url(http://home.duanran96.com/reduxAlien/images/al-4.png)');   
+                $(this.refs.moveWordFri).css({
+                    'display': 'block',
+                    'background-image': 'url(http://home.duanran96.com/reduxAlien/images/wrong-word-1.png)'
+                }).addClass('moveFri')
+                $(this.refs.moveWordSec).css({
+                    'display': 'block',
+                    'background-image': 'url(http://home.duanran96.com/reduxAlien/images/wrong-word-2.png)'
+                }).addClass('moveSec')
+                $(this.refs.moveWordThi).css({
+                    'display': 'block',
+                    'background-image': 'url(http://home.duanran96.com/reduxAlien/images/wrong-word-3.png)'
+                }).addClass('moveThi')  
+                this.changeStyle();     
+            },
+            replayChange: function () { // 重玩需要改变饿样式
+                $(this.refs.numPic).css('display','block');
+                $(this.refs.winPic).css('display','none');
+                $(this.refs.losePic).css('display','none');
+                $(this.refs.leftAlien).css('background-image','url(http://home.duanran96.com/reduxAlien/images/al-1.png)');
+                $(this.refs.rightAlien).css('background-image','url(http://home.duanran96.com/reduxAlien/images/al-2.png)'); 
+
+                $(this.refs.moveWordFri).css({
+                    'display': 'none',
+                    'background-image': 'url()'
+                }).removeClass('moveFri')
+                $(this.refs.moveWordSec).css({
+                    'display': 'none',
+                    'background-image': 'url()'
+                }).removeClass('moveSec')  
+                $(this.refs.moveWordThi).css({
+                    'display': 'none',
+                    'background-image': 'url()'
+                }).removeClass('moveThi')    
+
+                $(this.refs.noMoveWord).css('display','none');
+                $(this.refs.reservation).css('display','none');
+                $(this.refs.lineTwo).css('display','none');
+                $(this.refs.lineThree).css('display','none');
+                $(this.refs.playMore).css('display','none');
+                $(this.refs.share).css('display','none');
+
+                $(this.refs.question).css('display','block');
+                $(this.refs.answer).css('display','block');
+                $(this.refs.pointFri).css({
+                    'display': 'block'
+                });
+                $(this.refs.pointSec).css({
+                    'display': 'block'
+                });
+                $(this.refs.pointThi).css({
+                    'display': 'block'
+                });
+                $(this.refs.answerNum).css('display','block');
+
+            },
+            randomQuestion: function () { // 随机题目的函数
+                var questionNum = Math.floor(Math.random() * 30); // 从 30道题 中随机
+                var answerNum = questionNum;
+                if(this.state.markQuestionNum == 0) { // 第一题
+                    this.setState({
+                        correctAnswer: this.props.config.first_question.answer[answerNum] // 记录正确答案
+                    });
+                    $(this.refs.question).html(this.props.config.first_question.question[questionNum]); // 生成题目
+                    $(this.refs.pointFri).css('background-image','url(http://home.duanran96.com/reduxAlien/images/point-2.png)');
+                    $(this.refs.pointSec).css('background-image','url(http://home.duanran96.com/reduxAlien/images/point-1.png)');
+                    $(this.refs.pointThi).css('background-image','url(http://home.duanran96.com/reduxAlien/images/point-1.png)');
+                    this.roundCanvas(this.state.ctx,this.state.width,this.state.height,this.state.start,this.state.end,this.state.radius); // 开始倒计时
+                } else if (this.state.markQuestionNum == 1) { // 第二题
+                    this.setState({
+                        correctAnswer: this.props.config.second_question.answer[answerNum] // 记录正确答案
+                    });
+                    $(this.refs.question).html(this.props.config.second_question.question[questionNum]); // 生成题目
+                    $(this.refs.pointFri).css('background-image','url(http://home.duanran96.com/reduxAlien/images/point-1.png)');
+                    $(this.refs.pointSec).css('background-image','url(http://home.duanran96.com/reduxAlien/images/point-2.png)');
+                    $(this.refs.pointThi).css('background-image','url(http://home.duanran96.com/reduxAlien/images/point-1.png)');
+                    this.roundCanvas(this.state.ctx,this.state.width,this.state.height,this.state.start,this.state.end,this.state.radius); // 开始倒计时
+                } else if (this.state.markQuestionNum == 2) { // 第三题
+                    this.setState({
+                        correctAnswer: this.props.config.third_question.answer[answerNum] // 记录正确答案
+                    });
+                    $(this.refs.question).html(this.props.config.third_question.question[questionNum]); // 生成题目
+                    $(this.refs.pointFri).css('background-image','url(http://home.duanran96.com/reduxAlien/images/point-1.png)');
+                    $(this.refs.pointSec).css('background-image','url(http://home.duanran96.com/reduxAlien/images/point-1.png)');
+                    $(this.refs.pointThi).css('background-image','url(http://home.duanran96.com/reduxAlien/images/point-2.png)');
+                    this.roundCanvas(this.state.ctx,this.state.width,this.state.height,this.state.start,this.state.end,this.state.radius); // 开始倒计时
+                } else {
+                    return;
+                }
+                this.setState({ // 答完题目的个数 +1,若答完三道就结束
+                    markQuestionNum: this.state.markQuestionNum + 1
+                });
+            },
+            triggerCorrect: function () { // 答题正确
+                var _this = this;
+                $(this.refs.correctDiv).css('display','block');
+                var timer = setTimeout(function () {
+                    $(_this.refs.correct).trigger('correct'); // 触发正确事件
+                    clearTimeout(timer);
+                },1000);
+            },
+            triggerWrong: function () { // 答题错误
+                var _this = this;
+                $(this.refs.wrongDiv).css('display','block');
+                var timer = setTimeout(function () {
+                    $(_this.refs.wrong).trigger('wrong'); // 触发错误事件
+                    clearTimeout(timer);
+                },1000);
+            },
+            shareData: function () { // 页面分享
+                var _this = this;
+                var shareData = {
+                    title: "快！去拯救世界",
+                    desc: "AI能否拯救地球文明？3月26日，围观AI大战，看谁才是最后的胜者。",
+                    img: "http://home.duanran96.com/reduxAlien/images/share-one.jpg",
+                    link: window.location.href
+                };
+                var UA = function() {
+                    var userAgent = navigator.userAgent.toLowerCase();
+                    return {
+                        ipad: /ipad/.test(userAgent),
+                        iphone: /iphone/.test(userAgent),
+                        android: /android/.test(userAgent),
+                        qqnews: /qqnews/.test(userAgent),
+                        weixin: /micromessenger/.test(userAgent),
+                        qqnews_version: userAgent.match(/qqnews/i) == "qqnews" ? userAgent.split('qqnews/')[1] : ''
+                    }
+                };
+                function shareQQNews() {
+                    var ua = UA();
+                    switch (true) {
+                        case ua.qqnews:
+                            if (window.TencentNews && window.TencentNews.setShareArticleInfo) {
+                                window.TencentNews.setShareArticleInfo(shareData.title, shareData.desc, shareData.desc, shareData.link, shareData.img)
+                            }
+                            if (window.TencentNews && window.TencentNews.showShareMenu) {
+                                window.TencentNews.showShareMenu(shareData.link, shareData.title, shareData.desc, shareData.img, "news_news_wc")
+                            } else {
+                                window.TencentNews.shareFromWebView(shareData.title, shareData.desc, shareData.img)
+                            }
+                            break;
+                        case ua.weixin:
+                            var weixinLayout = $(_this.refs.weixinLayout).get(0);
+                            weixinLayout.style.display = "block";
+                            weixinLayout.addEventListener("click", function() {
+                                weixinLayout.style.display = "none"
+                            });
+                            break;
+                        default:
+                            window.location = "http://share.v.t.qq.com/index.php?c=share&a=index&appkey=801378464&url=" + shareData.link + "&title=" + shareData.desc + "&pic=" + shareData.img + "&des=" + shareData.title;
+                            break
+                    }
+                };
+                function onBridgeReady() {
+                    WeixinJSBridge.on("menu:share:timeline", function(e) {
+                        var data = {
+                            img_width: "120",
+                            img_height: "120",
+                            img_url: shareData.img,
+                            link: shareData.link,
+                            desc: shareData.title,
+                            title: shareData.desc
+                        };
+                        WeixinJSBridge.invoke("shareTimeline", data, function(res) {
+                            WeixinJSBridge.log(res.err_msg)
+                        })
+                    });
+                    WeixinJSBridge.on("menu:share:weibo", function() {
+                        WeixinJSBridge.invoke("shareWeibo", {
+                            "content": shareData.desc,
+                            "url": shareData.link
+                        }, function(res) {
+                            WeixinJSBridge.log(res.err_msg)
+                        })
+                    });
+                    WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+                        WeixinJSBridge.invoke("sendAppMessage", {
+                            img_width: "120",
+                            img_height: "120",
+                            img_url: shareData.img,
+                            link: shareData.link,
+                            desc: shareData.desc,
+                            title: shareData.title
+                        }, function(res) {
+                            WeixinJSBridge.log(res.err_msg)
+                        })
+                    })
+                };
+                document.addEventListener('WeixinJSBridgeReady', function() {
+                    onBridgeReady()
+                });
+                function androidQQNewsShare() {
+                    var head = document.getElementsByTagName('body')[0];
+                    var script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.src = 'http://mat1.gtimg.com/www/js/newsapp/jsapi/news.js?_tsid=1';
+                    head.appendChild(script)
+                }
+                androidQQNewsShare();
+                $(this.refs.share).on('click',function () {
+                    shareQQNews();
+                })
+            },
+            play: function () { // 答题函数
+                var _this = this;
+                this.onloadCanvas(); // 配置 canvas 画板                
+                setTimeout(function () {
+                    _this.randomQuestion(); // 随机题目
+                },1000)
+            },
+            resize: function () { // 当窗口改变,重新配置几何样式
+                var _this = this
+                $(window).resize(function () {
+                    _this.onloadCanvas();
+                    var loadPrecentObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        top: 701,
+                    })
+                    $(_this.refs.loadPrecent).css({
+                        "top": loadPrecentObj.top + '%'
+                    })
+                    var loadWordObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 24,
+                        width: 190,
+                        top: 849,
+                    })
+                    $(_this.refs.loadWord).css({
+                        "width": loadWordObj.width + '%',
+                        "paddingTop": loadWordObj.padding_top + '%',
+                        "top": loadWordObj.top + '%'
+                    })
+                    var playVideoObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 106,
+                        width: 106,
+                        top: 821
+                    })
+                    $(_this.refs.playVideo).css({
+                        "width": playVideoObj.width + '%',
+                        "paddingTop": playVideoObj.padding_top + '%',
+                        "top": playVideoObj.top + '%'
+                    })
+                    var alienLookObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 35,
+                        width: 295,
+                        top: 1001
+                    })
+                    $(_this.refs.alienLook).css({
+                        "width": alienLookObj.width + '%',
+                        "paddingTop": alienLookObj.padding_top + '%',
+                        "top": alienLookObj.top + '%'
+                    })
+                    var videoClosesObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 1334,
+                        width: 750
+                    })
+                    $(_this.refs.videoCloses).css({
+                        "width": videoClosesObj.width + '%',
+                        "paddingTop": videoClosesObj.padding_top + '%',
+                    })
+                    var vsObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 35,
+                        width: 81,
+                        top: 91
+                    })
+                    $(_this.refs.vsPic).css({
+                        "width": vsObj.width + '%',
+                        "paddingTop": vsObj.padding_top + '%',
+                        "top": vsObj.top + '%'
+                    })
+                    var loseObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 31,
+                        width: 81,
+                        top: 93
+                    })
+                    $(_this.refs.losePic).css({
+                        "width": loseObj.width + '%',
+                        "paddingTop": loseObj.padding_top + '%',
+                        "top": loseObj.top + '%'
+                    })
+                    var winObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 36,
+                        width: 82,
+                        top: 90.5
+                    })
+                    $(_this.refs.winPic).css({
+                        "width": winObj.width + '%',
+                        "paddingTop": winObj.padding_top + '%',
+                        "top": winObj.top + '%'
+                    })
+                    var numObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 53,
+                        width: 45,
+                        top: 82
+                    })
+                    $(_this.refs.numPic).css({
+                        "width": numObj.width + '%',
+                        "paddingTop": numObj.padding_top + '%',
+                        "top": numObj.top + '%'
+                    })
+                    var leftObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 94,
+                        width: 94,
+                        top: 28,
+                        left: 55
+                    })
+                    $(_this.refs.leftAlien).css({
+                        "width": leftObj.width + '%',
+                        "paddingTop": leftObj.padding_top + '%',
+                        "top": leftObj.top + '%',
+                        "left": leftObj.left + '%'
+                    })
+                    var rightObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 94,
+                        width: 94,
+                        top: 28,
+                        right: 55
+                    })
+                    $(_this.refs.rightAlien).css({
+                        "width": rightObj.width + '%',
+                        "paddingTop": rightObj.padding_top + '%',
+                        "top": rightObj.top + '%',
+                        "right": rightObj.right + '%'
+                    })
+                    var lineOneObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 48,
+                        width: 750,
+                        top: 105,
+                    })
+                    $(_this.refs.lineOne).css({
+                        "width": lineOneObj.width + '%',
+                        "paddingTop": lineOneObj.padding_top + '%',
+                        "top": lineOneObj.top + '%'
+                    })
+                    var questionObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        top: 332
+                    })
+                    $(_this.refs.question).css({
+                        "top": questionObj.top + '%'
+                    })
+                    var answerObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 120,
+                        width: 535,
+                        top: 463
+                    })
+                    $(_this.refs.answer).css({
+                        "width": answerObj.width + '%',
+                        "paddingTop": answerObj.padding_top + '%',
+                        "top": answerObj.top + '%'
+                    })
+                    var pointFriObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 20,
+                        width: 18,
+                        top: 733,
+                        left: 327
+                    })
+                    $(_this.refs.pointFri).css({
+                        "width": pointFriObj.width + '%',
+                        "paddingTop": pointFriObj.padding_top + '%',
+                        "top": pointFriObj.top + '%',
+                        "left": pointFriObj.left + '%'
+                    })
+                    var pointSecObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 20,
+                        width: 18,
+                        top: 733
+                    })
+                    $(_this.refs.pointSec).css({
+                        "width": pointSecObj.width + '%',
+                        "paddingTop": pointSecObj.padding_top + '%',
+                        "top": pointSecObj.top + '%',
+                    })
+                    var pointThiObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 20,
+                        width: 18,
+                        top: 733,
+                        right: 327
+                    })
+                    $(_this.refs.pointThi).css({
+                        "width": pointThiObj.width + '%',
+                        "paddingTop": pointThiObj.padding_top + '%',
+                        "top": pointThiObj.top + '%',
+                        "right": pointThiObj.right + '%'
+                    })
+                    var answerNumObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 271,
+                        width: 676,
+                        top: 858,
+                    })
+                    $(_this.refs.answerNum).css({
+                        "width": answerNumObj.width + '%',
+                        "paddingTop": answerNumObj.padding_top + '%',
+                        "top": answerNumObj.top + '%',
+                    })
+                    var wrongOrCorrectObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 197,
+                        width: 129,
+                    })
+                    $(_this.refs.correct).css({
+                        "width": wrongOrCorrectObj.width + '%',
+                        "paddingTop": wrongOrCorrectObj.padding_top + '%',
+                    })
+                    $(_this.refs.wrong).css({
+                        "width": wrongOrCorrectObj.width + '%',
+                        "paddingTop": wrongOrCorrectObj.padding_top + '%',
+                    })
+                    var moveWordObjFri = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 24,
+                        width: 400,
+                        top: 253
+                    })
+                    $(_this.refs.moveWordFri).css({
+                        "width": moveWordObjFri.width + '%',
+                        "paddingTop": moveWordObjFri.padding_top + '%',
+                        "top": moveWordObjFri.top + '%',
+                    })
+                    var moveWordObjSec = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 24,
+                        width: 400,
+                        top: 308
+                    })
+                    $(_this.refs.moveWordSec).css({
+                        "width": moveWordObjSec.width + '%',
+                        "paddingTop": moveWordObjSec.padding_top + '%',
+                        "top": moveWordObjSec.top + '%',
+                    })
+                    var moveWordObjThi = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 24,
+                        width: 400,
+                        top: 362
+                    })
+                    $(_this.refs.moveWordThi).css({
+                        "width": moveWordObjThi.width + '%',
+                        "paddingTop": moveWordObjThi.padding_top + '%',
+                        "top": moveWordObjThi.top + '%',
+                    })  
+                    var noMoveWordObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 250,
+                        width: 750,
+                        top: 480
+                    })
+                    $(_this.refs.noMoveWord).css({
+                        "width": noMoveWordObj.width + '%',
+                        "paddingTop": noMoveWordObj.padding_top + '%',
+                        "top": noMoveWordObj.top + '%',
+                    })
+                    var reservationObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 88,
+                        width: 304,
+                        top: 830
+                    })
+                    $(_this.refs.reservation).css({
+                        "width": reservationObj.width + '%',
+                        "paddingTop": reservationObj.padding_top + '%',
+                        "top": reservationObj.top + '%',
+                    })
+                    var lineTwoObj =  _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 48,
+                        width: 750,
+                        top: 959
+                    })
+                    $(_this.refs.lineTwo).css({
+                        "width": lineTwoObj.width + '%',
+                        "paddingTop": lineTwoObj.padding_top + '%',
+                        "top": lineTwoObj.top + '%',
+                    })
+                    var lineThreeObj =  _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 43,
+                        width: 1,
+                        top: 1053
+                    })
+                    $(_this.refs.lineThree).css({
+                        "width": lineThreeObj.width + '%',
+                        "paddingTop": lineThreeObj.padding_top + '%',
+                        "top": lineThreeObj.top + '%',
+                    })
+                    var playMoreObj =  _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 33,
+                        width: 66,
+                        top: 1058,
+                        left: 223
+                    })
+                    $(_this.refs.playMore).css({
+                        "width": playMoreObj.width + '%',
+                        "paddingTop": playMoreObj.padding_top + '%',
+                        "top": playMoreObj.top + '%',
+                        "left": playMoreObj.left + '%'
+                    })
+                    var shareObj =  _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 33,
+                        width: 66,
+                        top: 1058,
+                        right: 223
+                    })
+                    $(_this.refs.share).css({
+                        "width": shareObj.width + '%',
+                        "paddingTop": shareObj.padding_top + '%',
+                        "top": shareObj.top + '%',
+                        "right": shareObj.right + '%'
+                    })
+                    var smallAlienObj = _this.props.countRect({
+                        printHeight: 1206,
+                        printWidth: 750,
+                        height: 515,
+                        width: 373,
+                        top: 53,
+                        right: 45
+                    })
+                    $(_this.refs.smallAlien).css({
+                        "width": smallAlienObj.width + '%',
+                        "paddingTop": smallAlienObj.padding_top + '%',
+                        "top": smallAlienObj.top + '%',
+                        "right": smallAlienObj.right + '%'
+                    })
+                })
+            },
+            componentDidMount: function () { // 当组件生成完毕
+                var _this = this;
+                this.resize(); // 改变窗口重新计算开始
+                this.loadImage(_this.state.picArr,_this.changeNumber); // 图片预加载开始
+            },
+            render: function () {
+                // 计算 每一个 元素的位置
+                var loadPrecentObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    top: 701,
+                })
+                var loadPrecentObjStyle = {
+                    top: loadPrecentObj.top + '%',
+                }
+                var loadWordObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 24,
+                    width: 190,
+                    top: 849,
+                })
+                var loadWordObjStyle = {
+                    width: loadWordObj.width +'%',
+                    paddingTop: loadWordObj.padding_top + '%',
+                    top: loadWordObj.top + '%',
+                }
+                var playVideoObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 106,
+                    width: 106,
+                    top: 821
+                })
+                var playVideoObjStyle = {
+                    width: playVideoObj.width +'%',
+                    paddingTop: playVideoObj.padding_top + '%',
+                    top: playVideoObj.top + '%',
+                }
+                var alienLookObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 35,
+                    width: 295,
+                    top: 1001
+                })
+                var alienLookObjStyle = {
+                    width: alienLookObj.width +'%',
+                    paddingTop: alienLookObj.padding_top + '%',
+                    top: alienLookObj.top + '%',
+                }
+                var videoClosesObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 1334,
+                    width: 750
+                })
+                var videoClosesObjStyle = {
+                    width: videoClosesObj.width +'%',
+                    paddingTop: videoClosesObj.padding_top + '%',
+                }
+                var vsObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 35,
+                    width: 81,
+                    top: 91
+                })
+                var vsObjStyle = {
+                    width: vsObj.width + '%',
+                    paddingTop: vsObj.padding_top + '%',
+                    top: vsObj.top + '%'
+                }
+                var loseObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 31,
+                    width: 81,
+                    top: 93
+                })
+                var loseObjStyle = {
+                    width: loseObj.width + '%',
+                    paddingTop: loseObj.padding_top + '%',
+                    top: loseObj.top + '%'
+                }
+                var winObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 36,
+                    width: 82,
+                    top: 90.5
+                })
+                var winObjStyle = {
+                    width: winObj.width + '%',
+                    paddingTop: winObj.padding_top + '%',
+                    top: winObj.top + '%'
+                }
+                var numObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 53,
+                    width: 45,
+                    top: 82
+                })
+                var numObjStyle = {
+                    width: numObj.width + '%',
+                    paddingTop: numObj.padding_top + '%',
+                    top: numObj.top + '%'
+                }
+                var leftObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 94,
+                    width: 94,
+                    top: 28,
+                    left: 55
+                })
+                var leftObjStyle = {
+                    width: leftObj.width + '%',
+                    paddingTop: leftObj.padding_top + '%',
+                    top: leftObj.top + '%',
+                    left: leftObj.left + '%'
+                }
+                var rightObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 94,
+                    width: 94,
+                    top: 28,
+                    right: 55
+                })
+                var rightObjStyle = {
+                    width: rightObj.width + '%',
+                    paddingTop: rightObj.padding_top + '%',
+                    top: rightObj.top + '%',
+                    right: rightObj.right + '%'
+                }
+                var lineOneObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 48,
+                    width: 750,
+                    top: 105,
+                })
+                var lineOneObjStyle = {
+                    width: lineOneObj.width + '%',
+                    paddingTop: lineOneObj.padding_top + '%',
+                    top: lineOneObj.top + '%',
+                }
+                var questionObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    top: 332
+                })
+                var questionObjStyle = {
+                    top: questionObj.top + '%'
+                }
+                var answerObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 120,
+                    width: 535,
+                    top: 463
+                })
+                var answerObjStyle = {
+                    width: answerObj.width + '%',
+                    paddingTop: answerObj.padding_top + '%',
+                    top: answerObj.top + '%',
+                }
+                var pointFriObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 20,
+                    width: 18,
+                    top: 733,
+                    left: 327
+                })
+                var pointFriObjStyle = {
+                    width: pointFriObj.width + '%',
+                    paddingTop: pointFriObj.padding_top + '%',
+                    top: pointFriObj.top + '%',
+                    left: pointFriObj.left + '%'
+                }
+                var pointSecObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 20,
+                    width: 18,
+                    top: 733
+                })
+                var pointSecObjStyle = {
+                    width: pointSecObj.width + '%',
+                    paddingTop: pointSecObj.padding_top + '%',
+                    top: pointSecObj.top + '%',
+                }
+                var pointThiObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 20,
+                    width: 18,
+                    top: 733,
+                    right: 327
+                })
+                var pointThiObjStyle = {
+                    width: pointThiObj.width + '%',
+                    paddingTop: pointThiObj.padding_top + '%',
+                    top: pointThiObj.top + '%',
+                    right: pointThiObj.right + '%'
+                }
+                var answerNumObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 271,
+                    width: 676,
+                    top: 858,
+                })
+                var answerNumObjStyle = {
+                    width: answerNumObj.width +'%',
+                    paddingTop: answerNumObj.padding_top + '%',
+                    top: answerNumObj.top + '%'
+                }
+                var wrongOrCorrectObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 197,
+                    width: 129,
+                })
+                var wrongOrCorrectObjStyle = {
+                    width: wrongOrCorrectObj.width +'%',
+                    paddingTop: wrongOrCorrectObj.padding_top + '%',
+                }
+                var moveWordObjFri = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 24,
+                    width: 400,
+                    top: 253
+                })
+                var moveWordObjFriStyle = {
+                    width: moveWordObjFri.width +'%',
+                    paddingTop: moveWordObjFri.padding_top + '%',
+                    top: moveWordObjFri.top + '%'
+                }
+                var moveWordObjSec = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 24,
+                    width: 400,
+                    top: 308
+                })
+                var moveWordObjSecStyle = {
+                    width: moveWordObjSec.width +'%',
+                    paddingTop: moveWordObjSec.padding_top + '%',
+                    top: moveWordObjSec.top + '%'
+                }
+                var moveWordObjThi = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 24,
+                    width: 400,
+                    top: 362
+                })
+                var moveWordObjThiStyle = {
+                    width: moveWordObjThi.width +'%',
+                    paddingTop: moveWordObjThi.padding_top + '%',
+                    top: moveWordObjThi.top + '%'
+                }
+                var noMoveWordObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 250,
+                    width: 750,
+                    top: 480
+                })
+                var noMoveWordObjStyle = {
+                    width: noMoveWordObj.width +'%',
+                    paddingTop: noMoveWordObj.padding_top + '%',
+                    top: noMoveWordObj.top + '%'
+                }
+                var reservationObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 88,
+                    width: 304,
+                    top: 830
+                })
+                var reservationObjStyle = {
+                    width: reservationObj.width +'%',
+                    paddingTop: reservationObj.padding_top + '%',
+                    top: reservationObj.top + '%'
+                }
+                var lineTwoObj =  this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 48,
+                    width: 750,
+                    top: 959
+                })
+                var lineTwoObjStyle = {
+                    width: lineTwoObj.width +'%',
+                    paddingTop: lineTwoObj.padding_top + '%',
+                    top: lineTwoObj.top + '%'
+                }
+                var lineThreeObj =  this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 43,
+                    width: 1,
+                    top: 1053
+                })
+                var lineThreeObjStyle = {
+                    width: lineThreeObj.width +'%',
+                    paddingTop: lineThreeObj.padding_top + '%',
+                    top: lineThreeObj.top + '%'
+                }
+                var playMoreObj =  this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 33,
+                    width: 66,
+                    top: 1058,
+                    left: 223
+                })
+                var playMoreObjStyle = {
+                    width: playMoreObj.width +'%',
+                    paddingTop: playMoreObj.padding_top + '%',
+                    top: playMoreObj.top + '%',
+                    left: playMoreObj.left + '%'
+                }
+                var shareObj =  this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 33,
+                    width: 66,
+                    top: 1058,
+                    right: 223
+                })
+                var shareObjStyle = {
+                    width: shareObj.width +'%',
+                    paddingTop: shareObj.padding_top + '%',
+                    top: shareObj.top + '%',
+                    right: shareObj.right + '%'
+                }
+                var smallAlienObj = this.props.countRect({
+                    printHeight: 1206,
+                    printWidth: 750,
+                    height: 515,
+                    width: 373,
+                    top: 53,
+                    right: 45
+                })
+                var smallAlienObjStyle = {
+                    width: smallAlienObj.width +'%',
+                    paddingTop: smallAlienObj.padding_top + '%',
+                    top: smallAlienObj.top + '%',
+                    right: smallAlienObj.right + '%'
+                }
+                return (
+                    <div className="question-wrapper">
+                        <span className="loadPrecent" ref="loadPrecent" style={loadPrecentObjStyle}></span>
+                        <div className="loadWord" ref="loadWord" style={loadWordObjStyle}></div>     
+                        <div className="playVideo" ref="playVideo" style={playVideoObjStyle}></div>
+                        <div className="alienLook" ref="alienLook" style={alienLookObjStyle}></div>
+                        <div className="videoOutCloses" ref="videoOutCloses">
+                            <div className="videoCloses" ref="videoCloses" style={videoClosesObjStyle}>
+                                <video className="video" ref="video" data-index="1" x-webkit-airplay="allow" playsinline webkit-playsinline preload="preload" src="http://mat1.gtimg.com/news/zt2017/2017lh/player.mp4" poster="http://home.duanran96.com/reduxAlien/images/play-bg.jpg"></video>
+                            </div>               
+                        </div>
+                        <canvas ref="canvas"></canvas>
+                        <div className="vsPic" ref="vsPic" style={vsObjStyle}></div>
+                        <div className="winPic" ref="winPic" style={winObjStyle}></div>
+                        <div className="losePic" ref="losePic" style={loseObjStyle}></div>
+                        <div className="numPic" ref="numPic" style={numObjStyle}></div>
+                        <div className="leftAlien" ref="leftAlien" style={leftObjStyle}></div>
+                        <div className="rightAlien" ref="rightAlien" style={rightObjStyle}></div>
+                        <div className="lineOne" ref="lineOne" style={lineOneObjStyle}></div>
+                        <span className="question" ref="question" style={questionObjStyle}></span>
+                        <div className="answer" ref="answer" style={answerObjStyle}>
+                            <ul className="ans">
+                                {
+                                    store.getState().map(function (value,index,arr) {
+                                        var liStyle = {
+                                            backgroundImage: 'url(http://home.duanran96.com/reduxAlien/images/pic-' + value + value + '.png)'
+                                        }
+                                        return (
+                                            <li key={index} style={liStyle}></li>
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </div>
+                        <div className="pointFri" ref="pointFri" style={pointFriObjStyle}></div>
+                        <div className="pointSec" ref="pointSec" style={pointSecObjStyle}></div>
+                        <div className="pointThi" ref="pointThi" style={pointThiObjStyle}></div>
+                        <div className="answerNum" ref="answerNum" style={answerNumObjStyle}>
+                            <ul className="ansN">
+                                <li id="button0">
+                                    <img src="http://home.duanran96.com/reduxAlien/images/pic-0.png" alt=""/>
+                                </li>
+                                <li id="button1">
+                                    <img src="http://home.duanran96.com/reduxAlien/images/pic-1.png" alt=""/>
+                                </li>
+                                <li id="button2">
+                                    <img src="http://home.duanran96.com/reduxAlien/images/pic-2.png" alt=""/>
+                                </li>
+                                <li id="button3">
+                                    <img src="http://home.duanran96.com/reduxAlien/images/pic-3.png" alt=""/>
+                                </li>
+                                <li id="button4">
+                                    <img src="http://home.duanran96.com/reduxAlien/images/pic-4.png" alt=""/>
+                                </li>
+                                <li id="button5">
+                                    <img src="http://home.duanran96.com/reduxAlien/images/pic-5.png" alt=""/>
+                                </li>
+                                <li id="button6">
+                                    <img src="http://home.duanran96.com/reduxAlien/images/pic-6.png" alt=""/>
+                                </li>
+                                <li id="button7">
+                                    <img src="http://home.duanran96.com/reduxAlien/images/pic-7.png" alt=""/>
+                                </li>
+                                <li id="button8">
+                                    <img src="http://home.duanran96.com/reduxAlien/images/pic-8.png" alt=""/>
+                                </li>
+                                <li id="button9">
+                                    <img src="http://home.duanran96.com/reduxAlien/images/pic-9.png" alt=""/>
+                                </li>    
+                            </ul>                       
+                        </div>
+                        <div className="correctDiv" ref="correctDiv">
+                            <div className="correct" ref="correct" style={wrongOrCorrectObjStyle}></div>
+                        </div>
+                        <div className="wrongDiv" ref="wrongDiv">
+                            <div className="wrong" ref="wrong" style={wrongOrCorrectObjStyle}></div>
+                        </div>
+                        <div className="moveWordFri" ref="moveWordFri" style={moveWordObjFriStyle}></div>
+                        <div className="moveWordSec" ref="moveWordSec" style={moveWordObjSecStyle}></div>
+                        <div className="moveWordThi" ref="moveWordThi" style={moveWordObjThiStyle}></div>
+                        <div className="noMoveWord" ref="noMoveWord" style={noMoveWordObjStyle}></div>
+                        <div className="reservation" ref="reservation" style={reservationObjStyle}>
+                            <a href="http://news.qq.com/zt2017/khd_live/jueyi.htm"></a>
+                        </div>
+                        <div className="lineTwo" ref="lineTwo" style={lineTwoObjStyle}></div>
+                        <div className="lineThree" ref="lineThree" style={lineThreeObjStyle}></div>
+                        <div className="playMore" ref="playMore" style={playMoreObjStyle}></div>
+                        <div className="share" ref="share" style={shareObjStyle}></div>
+                        <div className="weixinLayout" ref="weixinLayout">
+                            <div className="smallAlien" refs="smallAlien" style={smallAlienObjStyle}></div>
+                        </div>
+                    </div>
+                )
+            }
+        })
+
+        var App = React.createClass({ // 生成的入口组件
+            getInitialState: function () {
+                return {
+                    onEvent: 'click', // 记录绑定 click 或者 tap 事件
+                    newConfig: {} // 记录 题目 配置文件
+                }
+            },
+            countRect: function (obj) { // 计算几何位置的函数
+                var _h = obj.height;
+                var _w = obj.width;
+                var _r = obj.right;
+                var _l = obj.left;
+                var _t = obj.top;
+                var _b = obj.bottom;
+                var oldH = obj.printHeight;
+                var oldW = obj.printWidth;
+                var newH = $(window).height();
+                var newW = $(window).width();
+                var viewH;
+                var viewW;
+                if((newW / newH) < (oldW / oldH)) {
+                    viewH = oldH * newW / oldW;
+                    return {
+                        width: _w * 100 / oldW,
+                        padding_top: _h * 100 / oldW,
+                        right: _r * 100 / oldW,
+                        left: _l * 100 / oldW,
+                        top: _t * 100 / oldH * viewH / newH + ((newH - viewH) / 2 / newH * 100),
+                        bottom: _b * 100 / oldH * viewH / newH + ((newH - viewH) / 2 / newH * 100)
+                    }
+                } else {
+                    viewW = oldW * newH / oldH;
+                    return {
+                        width: _w * 100 / oldW * viewW / newW,
+                        padding_top: _h * 100 / oldW * viewW / newW,
+                        right: _r * 100 / oldW * viewW / newW + ((newW - viewW) / 2 / newW * 100),
+                        left: _l * 100 / oldW * viewW / newW + ((newW - viewW) / 2 / newW * 100),
+                        top: _t * 100 / oldH,
+                        bottom: _b * 100 / oldH,
+                    }
+                }
+            },
+            mobileOrPc: function () { // 判断是 pc 或者 移动端 , 绑定什么类型的事件
+                if(/iphone|nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|android|iPod/i.test(navigator.userAgent.toLowerCase())){ 
+                    this.setState({
+                        onEvent: 'tap'
+                    })
+                }
+            },
+            set: function (str) { // 封装对象加密
+                var strNew = ''
+                for(var  i = 0 ; i < str.length ; i++){
+                    strNew += str.codePointAt(i);
+                    if(i < str.length - 1)
+                    strNew += ',';
+                }
+                return strNew;
+            },
+            reset: function (str) { // 封装对象解密
+                var arr = str.split(',')
+                var newStr = '';
+                for(var i = 0 ; i < arr.length ; i++) {
+                    newStr += String.fromCodePoint(arr[i]);
+                }
+                return newStr;
+            },
+            copyReset: function (config,newConfig) { // 封装 遍历 题目 配置文件 并解密
+                var newConfig = newConfig || {};
+                for(var prop in config) {
+                    if(typeof(config[prop]) == 'object') {
+                        newConfig[prop] = ( config[prop].constructor === Array ) ? [] : {}
+                        this.copyReset(config[prop],newConfig[prop]);
+                    } else {
+                        newConfig[prop] = this.reset(config[prop]);
+                    }
+                }
+                return newConfig;
+            },
+            changeConfig: function () { // 修改解密后的题目配置文件
+                var _this = this; 
+                this.setState({
+                    newConfig: _this.copyReset(_this.props.config,{})
+                })
+            },
+            componentWillMount: function () { // 在组建生成前传入组件 state 信息
+                this.mobileOrPc();
+                this.changeConfig();
+            },
+            render: function () {
+                return (
+                    <div className="wrapper">
+                        <Question countRect={this.countRect} onEvent={this.state.onEvent} config={this.state.newConfig}/>
+                    </div>
+                )
+            }
+        })
+        function render () { // 渲染组件
+            ReactDOM.render(
+                <App config={config}/>,
+                document.getElementById('root')
+            );
+        };
+        render(); // 渲染页面
+        store.subscribe(render); // 监听页面的改变
+    </script>
+</body>
+</html>
+<!--<html><head><title></title></head><body></body></html>-->

@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<!--forbidden operators-->
+<!--<html><head><title></title></head><body></body></html>-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>全景两会</title>
+    <meta name="Keywords" content="全景两会,腾讯新闻,腾讯网,QQ,Tencent" />
+    <meta name="description" content="全景两会_腾讯新闻_腾讯网" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta name="format-detection" content="telephone=no">
+	 <!--<link rel="stylesheet" href="index.css"> -->
+	<!--<link rel="stylesheet" href="index.css">-->
+	<link rel="stylesheet" href="http://mat1.gtimg.com/news/rainstorm/odometer-theme-default.css">
+	<link rel="stylesheet" href="http://imgcache.qq.com/tencentvideo_v1/vstyle/mobile/v2/style/player.css?t=20161102172411">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    body {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .wrapper {
+        position: relative;
+        display: none;;
+        width: 100%;
+    }
+    .wrapper .banner_wrapper {
+        position: relative;
+        width: 100%;
+    }
+    .wrapper .banner_wrapper img {
+        display: block;
+        width: 100%;
+    }
+    .wrapper .title_wrapper {
+        position: relative;
+        width: 100%;
+    }
+    .wrapper .title_wrapper img {
+        display: block;
+        width: 100%;
+    }
+    .wrapper .title_wrapper span {
+        position: absolute;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        top: 50%;
+        left: 8%;
+        color: #5B4436;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .wrapper .video_wrapper {
+        position: relative;
+        width: 100%;
+        background-color: black;
+    }
+    .wrapper .video_wrapper img {
+        display: block;
+        width: 100%;
+    }
+    .wrapper .people_wrapper {
+        position: relative;
+        width: 100%;
+    }
+    .wrapper .people_wrapper img {
+        display: block;
+        width: 100%;
+    }
+    .wrapper .people_wrapper .people {
+        position: absolute;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        top: 50%;
+        left: 9%;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .wrapper .people_wrapper .people .people_num {
+        color: #F4E791;
+    }
+    .wrapper .people_wrapper .people .people_watch {
+        color: #948472;
+    }
+    .wrapper .people_wrapper .share_logo_one {
+        position: absolute;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        top: 50%;
+        right: 5%;
+        height: 19px;
+        width: 19.5px;
+        background-image: url('http://mat1.gtimg.com/news/v_rranduan/test2/share_logo_one.png');
+        background-size: cover;
+    }
+    .wrapper .videoMessage_wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 20px;
+        background-color: #B6A898;
+    }
+    .wrapper .videoMessage_wrapper ul {
+        width: 100%;
+    }
+    .wrapper .videoMessage_wrapper ul:after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+    .wrapper .videoMessage_wrapper ul li{
+        float: left;
+        width: 50%;
+    }
+    .wrapper .videoMessage_wrapper ul li>div {
+        width: 90%;
+        padding: 0 5%;
+        padding-top: 10px;
+    }
+    .wrapper .videoMessage_wrapper ul li>div>div {
+        position: relative;
+        width: 100%;
+    }
+    .wrapper .videoMessage_wrapper ul li>div>div>img {
+        display: block;
+        width: 100%;
+        border: 4px solid transparent;
+        box-sizing: border-box;
+        -webkit-box-sizing:border-box;
+    }
+    .wrapper .videoMessage_wrapper ul li>div>div>div {
+        position: absolute;
+        display: none;
+        height: 20px;
+        width: 60px;
+        left: 0;
+        bottom: 0px;
+        background-image: url('http://mat1.gtimg.com/news/v_rranduan/test2/playing.jpg');
+        background-size: cover;
+    }
+    .wrapper .videoMessage_wrapper ul li>div>span {
+        color: #eee;
+        line-height: 18px;
+        font-size: 12px;
+        
+    }
+    .wrapper .invite_top_wrapper {
+        position: relative;
+        width: 100%;
+    }
+    .wrapper .invite_top_wrapper img {
+        display: block;
+        width: 100%;
+    }
+    .wrapper .city_wrapper {
+        position: relative;
+        width: 100%;
+    }
+    .wrapper .city_wrapper .city {
+        position: relative;
+        height: 60px;
+        width: 90%;
+        padding: 0 5%;
+    }
+    .wrapper .city_wrapper .city .line {
+        position: absolute;
+        transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+        left: 50%;
+        height: 1px;
+        width: 90%;
+        background-color: #D5D5D5;
+    }
+    .wrapper .city_wrapper .city .left_squre {
+        position: absolute;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        top: 50%;
+        left: 5%;
+        height: 4px;
+        width: 4px;
+        background-color: #D5D5D5;
+    }
+    .wrapper .city_wrapper .city .right_squre {
+        position: absolute;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        top: 50%;
+        right: 5%;
+        height: 4px;
+        width: 4px;
+        background-color: #D5D5D5;
+    }
+    .wrapper .city_wrapper .city .city_pic {
+        position: absolute;
+        transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+        left: 50%;
+        height: 36px;
+        width: 145px;
+        background-image: url('http://mat1.gtimg.com/news/v_rranduan/test2/city.jpg');
+        background-size: cover;
+    }
+    .wrapper .city_wrapper .city_friend {
+        position: relative;
+        height: 30px;
+        width: 90%;
+        padding: 0 5%;
+    }
+    .wrapper .city_wrapper .city_friend span {
+        position: absolute;
+        transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+        left: 50%;
+        font-size: 14px;
+        font-weight: 600;
+        color: #978674;
+        white-space: nowrap;
+    }
+    .wrapper .city_wrapper .city_sign {
+        position: relative;
+        width: 100%;
+        padding-top: 10px;
+    }
+    .wrapper .city_wrapper .city_sign ul {
+        width: 100%;
+    }
+    .wrapper .city_wrapper .city_sign ul:after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+    .wrapper .city_wrapper .city_sign ul li {
+        float: left;
+        width: 33.1%;
+    }
+    .wrapper .city_wrapper .city_sign ul .border_line {
+        border-left: 1px solid #e9e9e9;
+        border-right: 1px solid #e9e9e9;
+    }
+    .wrapper .city_wrapper .city_sign ul li .city_sign_pic {
+        position: relative;
+        height: 100px;
+        width: 100%;
+    }
+    .wrapper .city_wrapper .city_sign ul li .city_sign_pic div {
+        position: absolute;
+        transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+        left: 50%;
+        height: 82px;
+        width: 82.5px;
+        background-size: cover;
+    }
+    .wrapper .city_wrapper .city_sign ul li .city_sign_pic .beijing_pic {
+        background-image: url('http://mat1.gtimg.com/news/v_rranduan/test2/beijing.png');
+    }
+    .wrapper .city_wrapper .city_sign ul li .city_sign_pic .zhejiang_pic {
+        background-image: url('http://mat1.gtimg.com/news/v_rranduan/test2/zhejiang.png');
+    }
+    .wrapper .city_wrapper .city_sign ul li .city_sign_pic .shanghai_pic {
+        background-image: url('http://mat1.gtimg.com/news/v_rranduan/test2/shanghai.png');
+    }
+    .wrapper .city_wrapper .city_sign ul li .city_sign_message {
+        position: relative;
+        height: 85px;
+        width: 100%;
+    }
+    .wrapper .city_wrapper .city_sign ul li .city_sign_message .message {
+        position: absolute;
+        transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+        left: 50%;
+        height: 20px;
+        width: 70px;
+        background-image: url('http://mat1.gtimg.com/news/v_rranduan/test2/message.png');
+        background-size: cover;
+    }
+    .wrapper .invite_bottom_wrapper {
+        position: relative;
+        width: 100%;
+    }
+    .wrapper .invite_bottom_wrapper img {
+        display: block;
+        width: 100%;
+    }
+    .wrapper .bottom_logo_wrapper {
+        position: relative;
+        height: 200px;
+        width: 100%;
+        background-color: #7F6B5A;
+    }
+    .wrapper .bottom_logo_wrapper .share_logo_two {
+        position: absolute;
+        transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+        left: 50%;
+        height: 41.5px;
+        width: 258.5px;
+        /*padding-top: 30px;
+        width: 60%;*/
+        background-image: url('http://mat1.gtimg.com/news/v_rranduan/test2/share_logo_two.png');
+        background-size: cover;
+        /*background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;*/
+    }
+    .weixin_layout {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: url('http://mat1.gtimg.com/news/2016/zt/autolive/img/wx_share.png') no-repeat;
+        background-color: rgba(0, 0, 0, 0.8);
+        background-size: 100% auto;
+        width: 100%;
+        z-index: 9999;
+        display: none;
+    }
+    .sfadeIn {
+        animation: fadeIn .4s ease;
+        -webkit-animation: fadeIn .4s ease;
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @-webkit-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .load {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url('http://mat1.gtimg.com/news/2016/zt/qmp/h5/qjlh/bg.jpg');
+        background-size: cover;
+    }
+    .load .load_wrapper {
+        position: absolute;
+        transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 110px;   
+    }
+    .load .load_wrapper img {
+        position: absolute;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        top: 0%;
+        left: 50%;
+    }
+     .load .load_wrapper span {
+        position: absolute;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        bottom: 0%;
+        left: 50%;
+        padding: 20px;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+     }
+     .load .news {
+        position: absolute;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        height: 44.5px;
+        width: 232px;
+        bottom: 10%;
+        left: 50%;
+        background-image: url('http://mat1.gtimg.com/news/v_rranduan/test2/news.png');
+        background-size: cover;
+     }
+    </style>
+</head>
+<body>
+    <!-- 全站流量统计代码 开始 -->
+    <!--#include virtual="/public/pingjs.htm"-->
+    <!--普通专题pgv统计代码请放在<body>标签下方,重大项目报道及频道首页改版pgv统计代码放于首屏后.-->
+    <!-- 全站流量统计代码 结束 -->
+    <div class="wrapper">
+        <div class="banner_wrapper">
+            <img src="http://mat1.gtimg.com/news/v_rranduan/test2/banner.jpg" alt="">
+        </div>
+        <div class="title_wrapper">
+            <img src="http://mat1.gtimg.com/news/v_rranduan/test2/title.jpg" alt="">
+            <span>人大代表专职尝试标题标题</span>
+        </div>
+        <div class="video_wrapper" id="video">
+            <img src="http://mat1.gtimg.com/news/v_rranduan/test2/video_player.png" alt="">
+        </div>
+        <div class="people_wrapper">
+            <img src="http://mat1.gtimg.com/news/v_rranduan/test2/people.jpg" alt="">
+            <div class="people">
+                <span class="people_num">123456789</span>
+                <span class="people_watch">人观看直播</span>
+            </div>
+            <div class="share_logo_one"></div>
+        </div>
+        <div class="videoMessage_wrapper"></div>
+        <div class="invite_top_wrapper">
+            <img src="http://mat1.gtimg.com/news/v_rranduan/test2/invite_top_bg.jpg" alt="">
+        </div>
+        <div class="city_wrapper">
+            <div class="city">
+                <div class="line"></div>
+                <div class="left_squre"></div>
+                <div class="right_squre"></div>
+                <div class="city_pic"></div>
+            </div>
+            <div class="city_friend">
+                <span>北京、浙江、上海的网友，快到这里来哦！！</span>
+            </div>
+            <div class="city_sign">
+                <ul>
+                    <li>
+                        <div class="city_sign_pic">
+                            <div class="beijing_pic"></div>
+                        </div>
+                        <div class="city_sign_message">
+                            <div class="message"></div>
+                        </div>
+                    </li>
+                    <li class="border_line">
+                        <div class="city_sign_pic">
+                            <div class="zhejiang_pic"></div>
+                        </div>
+                        <div class="city_sign_message">
+                            <div class="message"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="city_sign_pic">
+                            <div class="shanghai_pic"></div>
+                        </div>
+                        <div class="city_sign_message">
+                            <div class="message"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="invite_bottom_wrapper">
+            <img src="http://mat1.gtimg.com/news/v_rranduan/test2/invite_bottom.jpg" alt="">
+        </div>
+        <div class="bottom_logo_wrapper">
+            <div class="share_logo_two"></div>
+        </div>
+    </div>
+    <div class="weixin_layout"></div>
+    <div class="load">
+        <div class="load_wrapper">
+            <img src="http://mat1.gtimg.com/news/v_rranduan/test2/logo.png" alt="">
+            <span class="load_precent">0%</span>
+        </div>
+        <div class="news"></div>
+    </div>
+    <script type="text/javascript" src="http://mat1.gtimg.com/news/yuanwt/zepto.min.js"></script>
+    <script type="text/javascript" src="http://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2_mobile.js" charset="UTF-8"></script>
+    <!--图片预加载-->
+    <script>
+        var picArr = ['http://mat1.gtimg.com/news/v_rranduan/test2/banner.jpg','http://mat1.gtimg.com/news/v_rranduan/test2/beijing.png','http://mat1.gtimg.com/news/v_rranduan/test2/city.jpg','http://mat1.gtimg.com/news/v_rranduan/test2/invite_bottom.jpg','http://mat1.gtimg.com/news/v_rranduan/test2/invite_top_bg.jpg','http://mat1.gtimg.com/news/v_rranduan/test2/lianghui.jpg','http://mat1.gtimg.com/news/v_rranduan/test2/message.png','http://mat1.gtimg.com/news/v_rranduan/test2/people.jpg','http://mat1.gtimg.com/news/v_rranduan/test2/pic1.png','http://mat1.gtimg.com/news/v_rranduan/test2/pic2.png','http://mat1.gtimg.com/news/v_rranduan/test2/pic3.png','http://mat1.gtimg.com/news/v_rranduan/test2/pic4.png','http://mat1.gtimg.com/news/v_rranduan/test2/playing.jpg','http://mat1.gtimg.com/news/v_rranduan/test2/shanghai.png','http://mat1.gtimg.com/news/v_rranduan/test2/share_logo_one.png','http://mat1.gtimg.com/news/v_rranduan/test2/share_logo_two.png','http://mat1.gtimg.com/news/v_rranduan/test2/title.jpg','http://mat1.gtimg.com/news/v_rranduan/test2/video_player.png','http://mat1.gtimg.com/news/v_rranduan/test2/zhejiang.png'];
+        function loadImg (arr, callback) {
+			var len = arr.length;
+			var index = 0;
+			var imgArr = [];
+			function load () {
+				var img = new Image();
+				img.onload = function () {
+					imgArr.push(img);
+					if(index < len) { 
+						callback && callback(imgArr); 
+						load();
+					}else { 
+						imgArr.shift();
+					} 
+					index ++; 
+				} 
+				img.src = arr[index]; 
+			} 
+			if(len > 0) {
+				load();
+			}
+		}
+		function changeNumber (arr) {
+            $('.load_precent').text(parseInt(arr.length / picArr.length * 100) + '%');
+            // console.log(parseInt(arr.length / picArr.length * 100));
+			if(parseInt(arr.length / picArr.length * 100) == 100) {
+                $('.load').hide();
+                $('.wrapper').show();
+			}
+		}
+		loadImg(picArr, changeNumber);
+    </script>
+    <!--播放源数据-->
+    <script>
+        var config = {
+            videoArr: [
+                {
+                    pic: 'http://mat1.gtimg.com/news/v_rranduan/test2/pic1.png',
+                    word: '直播信号1:省十二届人大常委会第九次会议表决中',
+                    id: '106316701',
+                    nolive: false
+                },
+                {
+                    pic: 'http://mat1.gtimg.com/news/v_rranduan/test2/pic2.png',
+                    word: '直播信号2:陆军第27集团军去年年底已从河北移防山西',
+                    id: 'j0022ue0tlf',
+                    nolive: true
+                },
+                {
+                    pic: 'http://mat1.gtimg.com/news/v_rranduan/test2/pic3.png',
+                    word: '直播信号3:省解放军改革七大军区为何要调整为五大战区',
+                    id: 'u002290yjip',
+                    nolive: true
+                },
+                {
+                    pic: 'http://mat1.gtimg.com/news/v_rranduan/test2/pic4.png',
+                    word: '直播信号4:军改幕后18个集团军开始行动 已全部亮相军报',
+                    id: 'f0022p0b5fy',
+                    nolive: true
+                }
+            ]
+        }
+    </script>
+    <!--初始化dom-->
+    <script>
+        var imgArr = [];
+        var ul = $('<ul></ul>');
+        for(var i = 0 ; i < config.videoArr.length ; i++) {
+            var img = $('<img></img>');
+            img.attr("src",config.videoArr[i].pic).attr('id',config.videoArr[i].id).attr('nolive',config.videoArr[i].nolive);
+            imgArr.push(img);
+            var playDiv = $('<div></div>');
+            var ImageDiv = $('<div></div>');
+            ImageDiv.append(img);
+            ImageDiv.append(playDiv);
+            var span = $('<span></span>');
+            span.text(config.videoArr[i].word);
+            var div = $('<div></div>');
+            div.append(ImageDiv);
+            div.append(span);
+            var li = $('<li></li>');
+            li.append(div);
+            ul.append(li);
+        }
+        $('.videoMessage_wrapper').append(ul);
+        $('.video_wrapper').css('width',$(window).width()).css('height',$(window).width()/375*211);
+    </script>
+    <!--视频点播-->
+    <script>
+        var nowId,nowLive;
+        var live = function (id,mid,w,h) {
+            var video = new tvp.VideoInfo();
+            var myplayer = new tvp.Player();
+            video.setChannelId(id);
+            myplayer.create({
+                width: w,
+                height: h,
+                video: video,
+                modId: mid,
+                autoplay: true,
+            });
+        }
+		var nolive = function(id,mid,w,h){
+            var video = new tvp.VideoInfo();
+            var myplayer = new tvp.Player();
+			video.setVid(id);
+            myplayer.create({
+                width:w,
+                height:h,
+                video:video,
+                modId:mid,
+				autoplay:true,
+            });
+        }
+        $('.video_wrapper img').on('click',function () {
+            nolive('p0015pqm9qx','video',$(window).width(),$(window).width()/16*9);
+            nowId = 'p0015pqm9qx';
+            nowLive = 'true';
+        })
+        $(imgArr).each(function () {
+            var _this = this;
+            $(this).on('click',function () {
+                for(var i = 0 ; i < imgArr.length ; i++)
+                    $(imgArr)[i].css('borderColor','#B6A898').next().css('display','none');               
+                $(_this).css('borderColor','#F3E685').next().css('display','block');
+                if($(_this).attr('nolive') == 'true') {
+                    nolive($(_this).attr('id'),"video",$(window).width(),$(window).width()/16*9);
+                }
+                else {
+                    live($(_this).attr('id'),"video",$(window).width(),$(window).width()/16*9);
+                }
+                nowId = $(_this).attr('id');
+                nowLive = $(_this).attr('nolive');
+            });
+        });
+        $(window).resize(function () {
+            if(nowLive == 'true') {
+                nolive(nowId,"video",$(window).width(),$(window).width()/16*9);
+            }
+            else if(nowLive == 'false')
+                live(nowId,"video",$(window).width(),$(window).width()/16*9);
+            $('.video_wrapper').css('width',$(window).width()).css('height',$(window).width()/16*9);
+        })
+    </script>
+    <!--分享功能-->
+    <script>
+        var shareData = {
+		    title: "腾讯新闻_腾讯网",
+		    desc: "专注我国两会",
+		    img: "http://mat1.gtimg.com/news/v_rranduan/test2/lianghui.jpg",
+		    link: window.location.href
+		};
+        var UA = function() {
+		    var userAgent = navigator.userAgent.toLowerCase();
+		    return {
+		        ipad: /ipad/.test(userAgent),
+		        iphone: /iphone/.test(userAgent),
+		        android: /android/.test(userAgent),
+		        qqnews: /qqnews/.test(userAgent),
+		        weixin: /micromessenger/.test(userAgent),
+		        qqnews_version: userAgent.match(/qqnews/i) == "qqnews" ? userAgent.split('qqnews/')[1] : ''
+		    }
+		};
+		function shareQQNews() {
+		    var ua = UA();
+		    switch (true) {
+		        case ua.qqnews:
+		            if (window.TencentNews && window.TencentNews.setShareArticleInfo) {
+		                window.TencentNews.setShareArticleInfo(shareData.title, shareData.desc, shareData.desc, shareData.link, shareData.img)
+		            }
+		            if (window.TencentNews && window.TencentNews.showShareMenu) {
+		                window.TencentNews.showShareMenu(shareData.link, shareData.title, shareData.desc, shareData.img, "news_news_wc")
+		            } else {
+		                window.TencentNews.shareFromWebView(shareData.title, shareData.desc, shareData.img)
+		            }
+		            break;
+		        case ua.weixin:
+		            var weixinLayout = document.querySelector(".weixin_layout");
+		            weixinLayout.style.display = "block";
+		            weixinLayout.addEventListener("click", function() {
+		                weixinLayout.style.display = "none"
+		            });
+		            break;
+		        default:
+		            window.location = "http://share.v.t.qq.com/index.php?c=share&a=index&appkey=801378464&url=" + shareData.link + "&title=" + shareData.desc + "&pic=" + shareData.img + "&des=" + shareData.title;
+		            break
+		    }
+		};
+		function onBridgeReady() {
+		    WeixinJSBridge.on("menu:share:timeline", function(e) {
+		        var data = {
+		            img_width: "150",
+		            img_height: "112.5",
+		            img_url: shareData.img,
+		            link: shareData.link,
+		            desc: shareData.title,
+		            title: shareData.desc
+		        };
+		        WeixinJSBridge.invoke("shareTimeline", data, function(res) {
+		            WeixinJSBridge.log(res.err_msg)
+		        })
+		    });
+		    WeixinJSBridge.on("menu:share:weibo", function() {
+		        WeixinJSBridge.invoke("shareWeibo", {
+		            "content": shareData.desc,
+		            "url": shareData.link
+		        }, function(res) {
+		            WeixinJSBridge.log(res.err_msg)
+		        })
+		    });
+		    WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+		        WeixinJSBridge.invoke("sendAppMessage", {
+		            img_width: "120",
+		            img_height: "120",
+		            img_url: shareData.img,
+		            link: shareData.link,
+		            desc: shareData.desc,
+		            title: shareData.title
+		        }, function(res) {
+		            WeixinJSBridge.log(res.err_msg)
+		        })
+		    })
+		};
+		document.addEventListener('WeixinJSBridgeReady', function() {
+		    onBridgeReady()
+		});
+		function androidQQNewsShare() {
+		    var head = document.getElementsByTagName('body')[0];
+		    var script = document.createElement('script');
+		    script.type = 'text/javascript';
+		    script.src = 'http://mat1.gtimg.com/www/js/newsapp/jsapi/news.js?_tsid=1';
+		    head.appendChild(script)
+		}
+		androidQQNewsShare();
+        $(".share_logo_one, .share_logo_two").off().on('click',function () {
+            // if(UA().weixin){
+		    //     $(".weixin_layout").show();
+		    //     $(".weixin_layout").addClass('sfadeIn');
+            //     $(".weixin_layout").off().on('click',function () {
+            //         $(this).hide();
+            //     });
+		    //     setTimeout(function(){
+		    //         $(".weixin_layout").removeClass('sfadeIn');
+		    //     },400);
+		    // }else{
+		    //     shareQQNews();
+		    // }
+            shareQQNews();
+        })
+    </script>
+</body>
+</html>
+<!--<html><head><title></title></head><body></body></html>-->

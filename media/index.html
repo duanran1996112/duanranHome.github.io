@@ -1,0 +1,593 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head lang="en">
+    <title>全媒派_腾讯新闻</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Keywords" />
+    <meta name="description" />
+    <script type="text/javascript">
+    var mobileUrl = "<ninja_mobile_url>$ninja_mobile_url</ninja_mobile_url>";
+    if (/iphone|nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|android|iPod/i.test(navigator.userAgent.toLowerCase())) {
+        if (mobileUrl) {
+            document.location.href = mobileUrl;
+        }
+    }
+    </script>
+    <style>
+        body,dd,dl,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,ol,p,select,td,textarea,th,ul{margin:0;padding:0}
+        body{font:12px SimSun,"Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;font-family:"微软雅黑";}
+        a{color:#2D374B;text-decoration:none}
+        a:hover{color:#2D374B;text-decoration:none}
+        em{font-style:normal}li{list-style:none}
+        img{border:0;vertical-align:middle}
+
+        /*header*/
+        #header {
+            width: 100%;
+            height: 147px;
+            background-image: url(http://mat1.gtimg.com/news/v_rranduan/qmp/banner.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #header .search {
+            position: relative;
+            width: 1200px;
+            height: 25px;
+            padding-top: 90px;
+            margin: 0 auto;
+        }
+        #header .search .text {
+            position: absolute;
+            left: 856px;
+            height: 23px;
+            line-height: 23px;
+            width: 250px;
+            border: 1px solid #00ffde;
+            background-color: transparent;
+            color: #fff;
+            text-indent: 10px;
+            line-height: 20px;
+            outline: none;
+            box-sizing: content-box;
+            z-index: 10;
+        }
+        #header .search .icon {
+            position: absolute;
+            bottom: 5.5px;
+            left: 1084px;
+            height: 16px;
+            width: 17px;
+            background-image: url(http://mat1.gtimg.com/news/v_rranduan/qmp/search.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 10;
+        }
+        #header .search .icon:hover {
+            cursor: pointer;
+        }
+
+        /*main*/
+        #main {
+            position: relative;
+            width: 1200px;
+            padding-top: 50px;
+            padding-bottom: 60px;
+            margin: 0 auto;
+            overflow: hidden;
+            _zoom: 1;
+        }
+        #main:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        #main .w-left {
+            float: left;
+        }
+        #main .w-left .focus {
+            position: relative;
+            height: 410px;
+            width: 800px;
+            overflow: hidden;
+        }
+        .focus ul {
+            height: 410px;
+            width: 800px;
+        }
+        .focus ul li {
+            display: none;
+            height: 410px;
+            width: 800px;
+        }
+        .focus ul li a {
+            display: block;
+            position: relative;
+            height: 410px;
+            width: 800px;
+        }
+        .focus ul li a img {
+            display: block;
+            width: 100%;
+        }
+        .focus ul li a .cover {
+            position: absolute;
+            height: 410px;
+            width: 378px;
+            left: 0;
+            top: 0;
+            background-image: url(http://mat1.gtimg.com/news/v_rranduan/qmp/rgba.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .focus ul li a .cover h2 {
+            width: 225px;
+            padding-top: 70px;
+            margin-left: 50px;
+            font-size: 28px;
+            line-height: 39px;
+            font-weight: bold;
+        }
+        .focus ul li a .cover p {
+            width: 225px;
+            padding-top: 30px;
+            margin-left: 50px;
+            font-size: 14px;
+            line-height: 26px;
+            font-weight: bold;
+            color: #4b4a4b;
+        }
+        .focus .left-turn {
+            position: absolute;
+            margin-top: -22px;
+            top: 50%;
+            left: 10px;
+            height: 44px;
+            width: 17px;
+            background-image: url(http://mat1.gtimg.com/news/v_rranduan/qmp/left-turn.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .focus .left-turn:hover {
+            cursor: pointer;
+        }
+        .focus .right-turn {
+            position: absolute;
+            margin-top: -22px;
+            top: 50%;
+            right: 10px;
+            height: 44px;
+            width: 17px;
+            background-image: url(http://mat1.gtimg.com/news/v_rranduan/qmp/right-turn.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .focus .right-turn:hover {
+            cursor: pointer;
+        }
+        .item-bottom {
+            position: relative;
+            width: 824px;
+            padding-top: 66px;
+            overflow: hidden;
+        }
+        .item-bottom ul {
+            width: 824px;
+            overflow: hidden;
+            _zoom: 1;
+        }
+         .item-bottom ul:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        .item-bottom ul li {
+            float: left;
+            display: none;
+            width: 390px;
+            height: 318px;
+            padding-bottom: 42px;
+            margin-right: 20px;
+        }
+        .item-bottom ul li a {
+            display: block;
+            width: 390px;
+            height: 318px;
+        }
+        .item-bottom ul li a img {
+            display: block;
+            width: 100%;
+            height: 200px;
+        }
+        .item-bottom ul li a h4 {
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: bold;
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+        .item-bottom ul li a p {
+            font-size: 14px;
+            line-height: 26px;
+            color: #818181;
+        }
+        .item-bottom .more {
+            width: 800px;
+            height: 47px;
+            margin-right: 24px;
+            background-image: url(http://mat1.gtimg.com/news/v_rranduan/qmp/more.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-align: center;
+            font-size: 16px;
+            line-height: 47px;
+        }
+        .item-bottom .more:hover {
+            cursor: pointer;
+        }
+        #main .w-right {
+            float: right;
+        }
+        #main .w-right .top-mes {
+            width: 344px;
+        }
+        #main .w-right .top-mes h2 {
+            font-size: 22px;
+            line-height: 22px;
+            padding-bottom: 17px;
+            border-bottom: 1px solid #cfcfcf;
+        }
+        #main .w-right .top-mes img {
+            margin: 31px 88px 28px 88px;
+        }
+        #main .w-right .top-mes p {
+            padding: 5px 0;
+            font-size: 14px;
+            line-height: 26px;
+            color: #3a3a32;
+        }
+        #main .w-right .bottom-mes {
+            width: 344px;
+            padding-top: 58px;
+        }
+        #main .w-right .bottom-mes h2 {
+            font-size: 22px;
+            line-height: 22px;
+            padding-bottom: 17px;
+            border-bottom: 1px solid #cfcfcf;
+        }
+        #main .w-right .bottom-mes ul {
+            width: 344px;
+            margin-top: 22px;
+        }
+        #main .w-right .bottom-mes ul a:hover {
+            text-decoration: underline;
+        }
+        #main .w-right .bottom-mes ul a li {
+            font-size: 14px;
+            line-height: 30px;
+        }
+        #main .w-right .bottom-mes ul a li em {
+            padding-right: 10px;
+        }
+        #main .go_top_btn {
+            position:fixed;
+            display:none;
+            bottom:50px;
+            right:50%;
+            height:61px;
+            width:61px;
+            margin-right:-600px;
+            background:url(http://mat1.gtimg.com/news/v_rranduan/qmp/up-down.png) no-repeat;
+            background-position: 100% 0;
+            background-size: cover;
+        }
+        #main .go_top_btn:hover {
+            background-position: 0 0;
+            cursor: pointer;
+        }
+    </style>
+    <script src="http://mat1.gtimg.com/www/js/jquery/jquery-1.9.1.min.js"></script>
+    <script src="http://qzs.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2.js" charset="utf-8"></script>
+</head>
+<body>
+<!-- 全站流量统计代码 开始 -->
+<!--#include virtual="/public/pingjs.htm"-->
+<!-- 全站流量统计代码 结束 -->
+<!--#include virtual="/public/site_nav/mini_nav2013.htm"-->
+    <!-- head -->
+    <div id="header">
+        <a href="http://news.qq.com/zt2017/quanmeipai/qmp.htm" style="display: block; height: 147px; width: 100%; position: absolute; z-index: 9;" target="_blank">
+        </a>
+        <div class="search">
+            <form action="http://www.sogou.com/sogou" method="get" target="_blank" class="go">
+                <input type="text" class="text" name="query" value="输入关键词搜索历史文章" onfocus="if(this.value=='输入关键词搜索历史文章')this.value='';" onblur="if(this.value=='')this.value='输入关键词搜索历史文章';">
+                <div class="icon"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- main -->
+    <div id="main">
+
+        <!-- 左边 -->
+        <div class="w-left">
+
+            <!-- header -->
+            <!-- 轮播图 -->
+            <div class="focus">
+                <ul>
+                    <li style="display: block;">
+                        <a href="http://news.qq.com/original/quanmeipai_ninja_beta_/qmp04.html" target="_blank">
+                            <img src="http://img1.gtimg.com/ninja/1/2017/03/ninja148869501288950.jpg" alt="">
+                            <div class="cover">
+                                <h2>千万别忽略芬兰正在崛起的游戏公司</h2>
+                                <p>其中游戏行业的从业人员还一直处于增长趋势，预计今年将超过2400人。他</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://news.qq.com/original/quanmeipai_ninja_beta_/qmp04.html" target="_blank">
+                            <img src="http://img1.gtimg.com/ninja/1/2017/03/ninja148869318628787.jpg" alt="">
+                            <div class="cover">
+                                <h2>千万别忽略芬兰正在崛起的游戏公司</h2>
+                                <p>在这个不足550万人口的国家，有超过200家的游戏公司。其中游戏行业的从业人员还一直处于增长趋势，预计今年将超过2400人。他</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://news.qq.com/original/quanmeipai_ninja_beta_/qmp04.html" target="_blank">
+                            <img src="http://img1.gtimg.com/ninja/1/2017/03/ninja148869501288950.jpg" alt="">
+                            <div class="cover">
+                                <h2>千万别忽略芬兰正在崛起的游戏公司</h2>
+                                <p>在这个不足550万人口的国家，有超过200家的游戏公司。其中游戏行业的从业人员还一直处于增长趋势，预计今年将超过2400人。他</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="left-turn"></div>
+                <div class="right-turn"></div>
+            </div>
+
+            <!-- left-bottom -->
+            <div class="item-bottom">
+                <ul>
+                    <!--<li>
+                        <a href="#" target="_blank">
+                            <img src="http://img1.gtimg.com/ninja/1/2017/02/ninja148819543348898.jpg" alt="">
+                            <h4>千万千万别忽视芬兰正在崛起的游戏</h4>
+                            <p>在这个不足550万人口的国家有超过200家的游戏公司。其中游戏行业的从业人员处于增长趋势，预计今年将超过2400人。</p>
+                        </a>
+                    </li>-->
+                </ul>
+                <div class="more"></div>
+            </div>
+        </div>
+
+        <!-- 右边 -->
+        <div class="w-right">
+
+            <!-- 二维码 -->
+            <div class="top-mes">
+                <h2>栏目介绍</h2>
+                <img src="http://mat1.gtimg.com/news/v_rranduan/qmp/weixin.jpg" alt="">
+                <p>全媒派，腾讯新闻旗下全球媒体资讯先锋站。一手捕捉全球行业动态，独家解读热点舆情事件，连接行业先锋人士。欢迎扫描二维码关注微信公众号（qq_qmp）。</p>
+                <p>内容合作、文章转载、读者互动、定制早报，可添加全媒派小助手微信号（qmp_001），一键直达编辑部。</p>
+            </div>
+
+            <!-- 热度榜 -->
+            <div class="bottom-mes" style="display: none;">
+                <h2>热度榜</h2>
+                <ul>
+                    <a href="#" target="_blank"><li><em style="color: #49e3cf;">1</em>拆开看苹果新iPhone生产成本仅200美元 外加股权</li></a>
+                    <a href="#" target="_blank"><li><em style="color: #49e3cf;">2</em>拆开看苹果新iPhone生产成本仅200美元 外加股权</li></a>
+                    <a href="#" target="_blank"><li><em style="color: #49e3cf;">3</em>拆开看苹果新iPhone生产成本仅200美元 外加股权</li></a>
+                    <a href="#" target="_blank"><li><em>4</em>拆开看苹果新iPhone生产成本仅200美元 外加股权</li></a>
+                    <a href="#" target="_blank"><li><em>5</em>拆开看苹果新iPhone生产成本仅200美元 外加股权</li></a>
+                    <a href="#" target="_blank"><li><em>6</em>拆开看苹果新iPhone生产成本仅200美元 外加股权</li></a>
+                    <a href="#" target="_blank"><li><em>7</em>拆开看苹果新iPhone生产成本仅200美元 外加股权</li></a>
+                    <a href="#" target="_blank"><li><em>8</em>拆开看苹果新iPhone生产成本仅200美元 外加股权</li></a>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 按钮 -->
+        <a href="javascript:;" class="go_top_btn"></a>
+    </div>
+
+    <!-- 版权页面片 开始 -->
+    <script>
+        var NavNoticeSiteName = ["sports","tech","games","cul","edu","fashion","house","auto","ent","finance"];
+    </script>
+    <script src="http://mat1.gtimg.com/www/chrometips/notification2017_v0118.js"></script><!--[if !IE]>|xGv00|e7bf48c644b26e461447db5b94ec54d2<![endif]-->
+    <style>
+        .tcopyright {width:100%;margin:0 auto;padding:80px 0;font-size:12px;line-height:28px;color:#666666; background-color: #e3e3e3;text-align:center; overflow:hidden;clear:both;}
+        .tcopyright .en{font-family:Arial;}
+        .tcopyright a{color:#666666;text-decoration: none;}
+        .tcopyright a:hover{color:#bd0a01;text-decoration: underline;}
+    </style>
+    <div id="tcopyright" class="tcopyright" bossZone="footer" role="contentinfo">
+        <div>
+            <a href="http://www.tencent.com/" target="_blank" rel="nofollow">关于腾讯</a> | <a href="http://www.tencent.com/index_e.shtml" target="_blank" rel="nofollow">About Tencent</a> | <a href="http://www.qq.com/contract.shtml" target="_blank" rel="nofollow">服务协议</a> | <a href="http://www.qq.com/privacy.htm" target="_blank" rel="nofollow">隐私政策</a> | <a href="http://open.qq.com/" target="_blank" rel="nofollow">开放平台</a> | <a href="http://www.tencentmind.com/" target="_blank" rel="nofollow">广告服务</a> | <a href="http://hr.tencent.com/" target="_blank" rel="nofollow">腾讯招聘</a> | <a href="http://gongyi.qq.com/" target="_blank" rel="nofollow">腾讯公益</a> | <a href="http://service.qq.com/" target="_blank" rel="nofollow">客服中心</a> | <a href="http://news.qq.com/zt2014/2014qtnews/ccybspxd.htm" target="_blank" rel="nofollow">举报中心</a> | <a href="http://www.qq.com/map/" target="_blank" rel="nofollow">网站导航</a>
+        </div>
+        <div class="en">Copyright &copy; 1998 - 2017 Tencent. All Rights Reserved</div>
+        <div>
+            <a href="http://www.tencent.com/" target="_blank" rel="nofollow">腾讯公司</a> <a href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml" target="_blank" rel="nofollow">版权所有</a>
+        </div>
+    </div><!--[if !IE]>|xGv00|b6614ae390f3ba6a8cbcc269055b42da<![endif]-->
+    <!-- 版权页面片 结束 -->
+
+    <script charset="utf-8">
+        var config = {
+            item_bottom: [
+                {
+                    a_href: "http://news.qq.com/original/quanmeipai_ninja_beta_/qmp04.html",
+                    img_src: "http://img1.gtimg.com/ninja/1/2017/02/ninja148819543348898.jpg",
+                    h4_mes: "千万千万别忽视芬兰正在崛起的游戏",
+                    p_mes: "在这个不足550万人口的国家有超过200家的游戏公司。其中游戏行业的从业人员处于增长趋势，预计今年将超过2400人。"
+                },
+                {
+                    a_href: "http://news.qq.com/original/quanmeipai_ninja_beta_/qmp04.html",
+                    img_src: "http://img1.gtimg.com/ninja/1/2017/02/ninja148819543348898.jpg",
+                    h4_mes: "千万千万别忽视芬兰正在崛起的游戏",
+                    p_mes: "在这个不足550万人口的国家有超过200家的游戏公司。其中游戏行业的从业人员处于增长趋势，预计今年将超过2400人。"
+                },
+                {
+                    a_href: "http://news.qq.com/original/quanmeipai_ninja_beta_/qmp04.html",
+                    img_src: "http://img1.gtimg.com/ninja/1/2017/02/ninja148819543348898.jpg",
+                    h4_mes: "千万千万别忽视芬兰正在崛起的游戏",
+                    p_mes: "在这个不足550万人口的国家有超过200家的游戏公司。其中游戏行业的从业人员处于增长趋势，预计今年将超过2400人。"
+                },
+                {
+                    a_href: "http://news.qq.com/original/quanmeipai_ninja_beta_/qmp04.html",
+                    img_src: "http://img1.gtimg.com/ninja/1/2017/02/ninja148819543348898.jpg",
+                    h4_mes: "千万千万别忽视芬兰正在崛起的游戏",
+                    p_mes: "在这个不足550万人口的国家有超过200家的游戏公司。其中游戏行业的从业人员处于增长趋势，预计今年将超过2400人。"
+                },
+                {
+                    a_href: "http://news.qq.com/original/quanmeipai_ninja_beta_/qmp04.html",
+                    img_src: "http://img1.gtimg.com/ninja/1/2017/02/ninja148819543348898.jpg",
+                    h4_mes: "千万千万别忽视芬兰正在崛起的游戏",
+                    p_mes: "在这个不足550万人口的国家有超过200家的游戏公司。其中游戏行业的从业人员处于增长趋势，预计今年将超过2400人。"
+                },
+                {
+                    a_href: "http://news.qq.com/original/quanmeipai_ninja_beta_/qmp04.html",
+                    img_src: "http://img1.gtimg.com/ninja/1/2017/02/ninja148819543348898.jpg",
+                    h4_mes: "千万千万别忽视芬兰正在崛起的游戏",
+                    p_mes: "在这个不足550万人口的国家有超过200家的游戏公司。其中游戏行业的从业人员处于增长趋势，预计今年将超过2400人。"
+                },
+                {
+                    a_href: "http://news.qq.com/original/quanmeipai_ninja_beta_/qmp04.html",
+                    img_src: "http://img1.gtimg.com/ninja/1/2017/02/ninja148819543348898.jpg",
+                    h4_mes: "千万千万别忽视芬兰正在崛起的游戏",
+                    p_mes: "在这个不足550万人口的国家有超过200家的游戏公司。其中游戏行业的从业人员处于增长趋势，预计今年将超过2400人。"
+                },
+                {
+                    a_href: "http://news.qq.com/original/quanmeipai_ninja_beta_/qmp04.html",
+                    img_src: "http://img1.gtimg.com/ninja/1/2017/02/ninja148819543348898.jpg",
+                    h4_mes: "千万千万别忽视芬兰正在崛起的游戏",
+                    p_mes: "在这个不足550万人口的国家有超过200家的游戏公司。其中游戏行业的从业人员处于增长趋势，预计今年将超过2400人。"
+                },
+                {
+                    a_href: "http://news.qq.com/original/quanmeipai_ninja_beta_/qmp04.html",
+                    img_src: "http://img1.gtimg.com/ninja/1/2017/02/ninja148819543348898.jpg",
+                    h4_mes: "千万千万别忽视芬兰正在崛起的游戏",
+                    p_mes: "在这个不足550万人口的国家有超过200家的游戏公司。其中游戏行业的从业人员处于增长趋势，预计今年将超过2400人。"
+                },
+                {
+                    a_href: "http://news.qq.com/original/quanmeipai_ninja_beta_/qmp04.html",
+                    img_src: "http://img1.gtimg.com/ninja/1/2017/02/ninja148819543348898.jpg",
+                    h4_mes: "千万千万别忽视芬兰正在崛起的游戏",
+                    p_mes: "在这个不足550万人口的国家有超过200家的游戏公司。其中游戏行业的从业人员处于增长趋势，预计今年将超过2400人。"
+                },
+                {
+                    a_href: "http://news.qq.com/original/quanmeipai_ninja_beta_/qmp04.html",
+                    img_src: "http://img1.gtimg.com/ninja/1/2017/02/ninja148819543348898.jpg",
+                    h4_mes: "千万千万别忽视芬兰正在崛起的游戏",
+                    p_mes: "在这个不足550万人口的国家有超过200家的游戏公司。其中游戏行业的从业人员处于增长趋势，预计今年将超过2400人。"
+                },
+                {
+                    a_href: "http://news.qq.com/original/quanmeipai_ninja_beta_/qmp04.html",
+                    img_src: "http://img1.gtimg.com/ninja/1/2017/02/ninja148819543348898.jpg",
+                    h4_mes: "千万千万别忽视芬兰正在崛起的游戏",
+                    p_mes: "在这个不足550万人口的国家有超过200家的游戏公司。其中游戏行业的从业人员处于增长趋势，预计今年将超过2400人。"
+                }
+            ]
+        }
+    </script>
+    <script charset="utf-8">
+        $(function () {
+            //初始化
+            for(var i = 0 ; i < config.item_bottom.length ; i++) {
+                var inner = '';
+                inner += '<li>';
+                inner += '<a href="' + config.item_bottom[i].a_href + '" target="_blank">';
+                inner += '<img src="' + config.item_bottom[i].img_src + '" alt="">';
+                inner += '<h4>' + config.item_bottom[i].h4_mes + '</h4>';
+                inner += '<p>' + config.item_bottom[i].p_mes + '</p>';
+                inner += '</a>';
+                inner += '</li>';
+                $('.item-bottom ul').append(inner);
+            }
+            for(var i = 0 ; i < 4 ; i++) {
+                $('.item-bottom ul li:eq(' + i + ')').show();
+            }
+
+            //轮播
+            var markTurn = 0;
+            $('.left-turn').off().on('click',function () {
+                for(var i = 0 ; i < $('.focus ul li').length ; i++) {
+                    $('.focus ul li:eq(' + i + ')').hide();
+                }
+                markTurn--;
+                if(markTurn == -1)
+                    markTurn = $('.focus ul li').length - 1;
+                $('.focus ul li:eq(' + markTurn + ')').show();
+            })
+            $('.right-turn').off().on('click',function () {
+                for(var i = 0 ; i < $('.focus ul li').length ; i++) {
+                    $('.focus ul li:eq(' + i + ')').hide();
+                }
+                markTurn++;
+                if(markTurn == $('.focus ul li').length)
+                    markTurn = 0;
+                $('.focus ul li:eq(' + markTurn + ')').show();
+            })
+            function change () {
+                var timer = setInterval(function () {
+                    clearInterval(timer);
+                    set();
+                },2000)
+            }
+            function set () {
+                var timer = setTimeout(function () {
+                    $('.right-turn').trigger('click');
+                    clearTimeout(timer);
+                    change();
+                },2000);
+            }
+            set();
+
+            //加载更多
+            var markMore = 4;
+            $('.more').off().on('click',function () {
+                if(markMore + 6 < config.item_bottom.length) {
+                    for(var i = markMore ; i < markMore + 6 ; i++) {
+                        $('.item-bottom ul li:eq(' + i + ')').show();
+                    }
+                    markMore += 6;
+                }
+                else {
+                    for(var i = markMore ; i < config.item_bottom.length ; i++) {
+                        $('.item-bottom ul li:eq(' + i + ')').show();
+                    }
+                    markMore = config.item_bottom.length - 1;
+                    $(this).css({"background-image": "url()","border": "1px solid #a1a1a1"}).text("没有更多了...")
+                }
+            })
+
+            //返回顶部
+            $('.btn-top').on('click',function () {
+                window.scroll(0,0);
+            })
+
+            //搜索
+            $('.text').on('keydown',function (e) {
+                if(e.keyCode == 13) {
+                    $('.icon').trigger('click');
+                }
+            })
+            $('.icon').on('click',function () {
+                $('.go').trigger('submit');
+            })
+        })
+    </script>
+    <script src="http://mat1.gtimg.com/www/qmp/js/share.js"></script>
+    <script src="http://mat1.gtimg.com/www/qmp/js/quanmp.js"></script>
+</body>
+</html>

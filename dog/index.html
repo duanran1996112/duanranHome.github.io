@@ -1,0 +1,2640 @@
+<!DOCTYPE html>
+<!--forbidden operators-->
+<!--<html><head><title></title></head><body></body></html>-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>北京狗生</title>
+    <meta name="Keywords" content="北京狗生腾讯新闻,腾讯网,QQ,Tencent" />
+    <meta name="description" content="北京狗生,四月5大食药谣言盘点" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <script type="text/javascript" src="http://mat1.gtimg.com/www/panshi/dist/js/jquery.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://mat1.gtimg.com/www/mobtosite/js/zepto.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://mat1.gtimg.com/news/2015/zt/js/touch.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2_mobile.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="http://mat1.gtimg.com/news/2016/zt/read/user_v1.js" charset="utf-8"></script>
+    <style lang="en">
+        /*全局*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 62.5%;
+            font-family: "Microsoft Yahei";
+        } 
+        img {
+            width: 100%;
+            display: block;
+        }
+        li {
+            list-style: none;
+        }
+        body {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        /*主体层*/
+        .main-wrapper {
+            display: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;        
+            overflow: hidden;
+        }
+
+
+        /*精选层*/      
+        .main-wrapper .jingxuan-content {
+            display: block;
+            width: 100%;
+            background-color: #f6f6f6;
+        }
+        /*banner*/
+        .main-wrapper .jingxuan-content .banner {
+            position: relative;
+            width: 100%;
+            padding-top: 47.6%;
+            background-color: #fff;
+        }
+        .main-wrapper .jingxuan-content .banner .banner-pos{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        .jingxuan-content .banner .banner-pos .banner-pic {
+            padding-top: 12.4%;
+            margin-top: 8.26%;
+            width: 100%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(http://home.duanran96.com/dog/images/dog-title.png);
+        }
+        .jingxuan-content .banner .banner-pos .banner-mes {
+            padding: 0 6%;
+            margin-top: 7%;
+            line-height: 1.8rem;
+            font-size: 1.1rem;
+            color: #4a4a4a;
+        }
+        /*main*/
+        .main-wrapper .jingxuan-content .main {
+            margin-top: 1.1%;
+            width: 100%;
+            background-color: #fff;
+        }
+        .main-wrapper .jingxuan-content .main .model-mes {
+            position: relative;
+            width: 100%;
+            padding-top: 15.1%;
+        }
+        /*信息部分*/
+        .main .model-mes .model-mes-pos {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+        }
+        .main .model-mes .model-mes-pos .model-mes-pic {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            top: 50%;
+            left: 6.1%;
+            width: 8.5%;
+            padding-top: 8.5%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(http://home.duanran96.com/dog/images/select-pic-1.png);
+        }
+        .main .model-mes .model-mes-pos .model-mes-name {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            top: 50%;
+            left: 18%;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #2a2a2a;
+        }
+        /*互动*/
+        .main .model-talk {
+            width: 100%;
+        }
+        .main .model-talk .model-talk-word {
+            padding: 5% 5.7%;
+            width: 88.6%;
+            color: #2a2a2a;
+            font-weight: bold;
+            font-size: 1.4rem;
+            line-height: 2.3rem;
+        }
+        .main .model-talk .model-interaction {
+            position: relative;
+            width: 100%;
+            padding-top: 6%;
+        }
+        .main .model-talk .model-interaction .model-interaction-pos {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .main .model-talk .model-interaction .model-fabulous , .main .model-talk .model-interaction .model-fabulous-num , .main .model-talk .model-interaction .model-comment , .main .model-talk .model-interaction .model-comment-num , .main .model-talk .model-interaction .model-share , .main .model-talk .model-talk-comment .model-more .model-more-pic {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            top: 50%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .main .model-talk .model-interaction .model-fabulous {
+            padding-top: 5.33%;
+            width: 6%;
+            left: 5.7%;
+            background-image: url(http://home.duanran96.com/dog/images/love-1.png);
+        }
+        .main .model-talk .model-interaction .model-fabulous-change {
+            background-image: url(http://home.duanran96.com/dog/images/love-2.png);
+        }
+        .main .model-talk .model-interaction .model-fabulous-num {
+            left: 14%;
+            color: #2a2a2a;
+            font-size: 1.25rem;
+        }
+        .main .model-talk .model-interaction .model-comment {
+            padding-top: 5.2%;
+            width: 6.2%;
+            left: 24.1%;
+            background-image: url(http://home.duanran96.com/dog/images/talk.png);
+        }
+        .main .model-talk .model-interaction .model-comment-num {
+            left: 32%;
+            color: #2a2a2a;
+            font-size: 1.25rem;
+        }
+        .main .model-talk .model-interaction .model-share {
+            padding-top: 4.9%;
+            width: 4.1%;
+            /*top: 40%;*/
+            left: 42.1%;
+            background-image: url(http://home.duanran96.com/dog/images/share.png);
+        }
+        .main .model-talk .model-talk-comment {
+            width: 100%;
+        }
+        .main .model-talk .model-talk-comment .model-comment-content {
+            padding: 2% 5.7%;
+            width: 88.6%;
+            color: #464545;
+            line-height: 1.8rem;
+        }
+        .main .model-talk .model-talk-comment .model-comment-content .model-comment-name {
+            font-weight: bold;
+        }
+        .main .model-talk .model-talk-comment .model-more {
+            position: relative;
+            width: 100%;
+            padding-top: 10%;
+        }
+        .main .model-talk .model-talk-comment .model-more .model-more-pos {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+        .main .model-talk .model-talk-comment .model-more .model-more-pic {
+            left: 5.7%;
+            width: 17.4%;
+            padding-top: 3.4%;
+            background-image: url(http://home.duanran96.com/dog/images/all-comment.png);
+        }
+        /*视频部分*/
+        .main .model-videoPlayer {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background-color: #000;
+        }
+        .main .model-videoPlayer .video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;        
+        }
+        .main .model-videoPlayer .video .tvp_poster_img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .main .model-videoPlayer .model-video-voice {
+            position: absolute;
+            width: 7.6%;
+            padding-top: 7.6%;
+            left: 4.5%;
+            /*top: 81.1%;*/
+            bottom: 81.1%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(http://home.duanran96.com/dog/images/no-voice.png);
+            z-index: 999;
+        }
+        /*图片*/
+        .main .model-img {
+            width: 100%;
+        }
+        /*轮播图片*/
+        .main  .model-carousel-img {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .main .model-carousel-img ul::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        .main .model-carousel-img ul li {
+            float: left;
+        }
+        .main .model-carousel-img .model-btn .model-btn-left , .main .model-carousel-img .model-btn .model-btn-right {
+            position: absolute;
+            transform: translate(0,-50%);
+            -webkit-transform: translate(0,-50%);
+            top: 50%; 
+            width: 8%;
+            padding-top: 8%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        }
+        .main .model-carousel-img .model-btn .model-btn-left {
+            left: 3.3%;
+            background-image: url(http://home.duanran96.com/dog/images/swipe-left.png);
+        }
+        .main .model-carousel-img .model-btn .model-btn-right {
+            right: 3.3%;
+            background-image: url(http://home.duanran96.com/dog/images/swipe-right.png);
+        }
+        .main .model-carousel-img .model-pic-btn {
+            position: absolute;
+            top: 90.6%;
+            width: 100%;
+            text-align: center;
+        }
+        .main .model-carousel-img .model-pic-btn .model-icon {
+            display: inline-block;
+            width: 2.3%;
+            padding-top: 2.3%;
+            margin: 0 1%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(http://home.duanran96.com/dog/images/point-style-1.png)
+        }
+        .main .model-carousel-img .model-pic-btn .model-icon-change {
+            background-image: url(http://home.duanran96.com/dog/images/point-style-2.png)
+        }
+        /*结尾*/
+        .main-wrapper .jingxuan-content .ender {
+            position: relative;
+            width: 100%;
+            padding-top: 29.6%;
+            margin-bottom: 15.7%;
+        }
+        .main-wrapper .jingxuan-content .ender-pos {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+        .main-wrapper .jingxuan-content .end-pic {
+            position: absolute;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+            width: 26.9%;
+            padding-top: 5.3%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(http://home.duanran96.com/dog/images/end.png)
+        }
+
+
+        /*精选评论*/
+        .main-wrapper .jingxuan-comment {
+            display: none;
+            width: 100%;
+        }
+        /*banner*/
+        .main-wrapper .jingxuan-comment .banner {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding-top: 12.5%;
+            background-color: #f6f6f6;
+            z-index: 999;
+        }
+        .main-wrapper .jingxuan-comment .banner .banner-pos {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .jingxuan-comment .banner .banner-pos .banenr-return {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            top: 50%;
+            left: 5.7%;
+            width: 13.3%;
+            padding-top: 3.9%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(http://home.duanran96.com/dog/images/return.png)
+        }
+        .jingxuan-comment .banner .banner-pos .banner-talk {
+            position: absolute;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+            font-size: 1.5rem;
+            color: #282528;
+        }
+        .jingxuan-comment .banner .banner-pos .banner-talk-num {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            top: 50%;
+            right: 5.7%;
+            font-size: 1.5rem;
+            color: #282528;
+        }
+        /*评论列表*/
+        .jingxuan-comment #comments_list_wrap {
+            padding: 0 6% 10% 6%;
+            width: 88%;
+            margin-top: 12.5%;
+            margin-bottom: 32.2%;
+            background-color: #fff;
+        }
+        #comments_list_wrap ul {
+            width: 100%;
+        }
+        #comments_list_wrap ul .chat_item {
+            width: 100%;
+        }
+        #comments_list_wrap ul .chat_item .chat_head {
+            position: relative;
+            width: 100%;
+            padding-top: 19.8%;
+        }
+        #comments_list_wrap ul .chat_item .chat_head img , #comments_list_wrap ul .chat_item .chat_head .message , #comments_list_wrap ul .chat_item .chat_head .support {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            top: 50%;
+            
+        }
+        #comments_list_wrap ul .chat_item .chat_head img {
+            display: block;
+            width: 9.6%;
+            left: 0;
+            border-radius: 50%;
+        }
+        #comments_list_wrap ul .chat_item .chat_head .message {
+            left: 13.9%;
+            width: 65%;
+            text-align: left;
+        }
+        #comments_list_wrap ul .chat_item .chat_head .name {
+            color: #2a2a2a;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding-right: 5%;
+        }
+        #comments_list_wrap ul .chat_item .chat_head .time {
+            color: #828080;
+            font-size: 1.2rem;
+        }
+        #comments_list_wrap ul .chat_item .chat_head .support {
+            right: 0;
+            color: #2a2a2a;
+            font-size: 1.25rem;
+        }
+        #comments_list_wrap ul .chat_item .chat_head .support:before {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            display: block;
+            content: "";
+            top: 50%;
+            right: 200%;
+            width: 2.25rem;
+            padding-top: 2rem;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(http://home.duanran96.com/dog/images/love-1.png)
+        }
+        #comments_list_wrap ul .chat_item .chat_head .chat_like:before {
+            background-image: url(http://home.duanran96.com/dog/images/love-2.png)
+        }
+        #comments_list_wrap ul .chat_item .chat_body {
+            position: relative;
+            width: 100%;
+            background-color: #F6F6F6;
+            text-align: left;
+            font-size: 1.3rem;
+            line-height: 2rem;
+        }
+        #comments_list_wrap ul .chat_item .chat_body:before{
+            position: absolute;
+            content: "";
+            top: -0.6rem;
+            left: 3.4%;
+            width: 0;
+            height: 0;
+            border-left: 0.6rem solid transparent;
+            border-right: 0.6rem solid transparent;
+            border-bottom: 0.6rem solid #F6F6F6;
+        }
+        /*我*/
+        #comments_list_wrap ul .chat_item_mine {
+            width: 100%;
+        }
+        #comments_list_wrap ul .chat_item_mine .chat_head {
+            position: relative;
+            width: 100%;
+            padding-top: 19.8%;
+        }
+        #comments_list_wrap ul .chat_item_mine .chat_head img , #comments_list_wrap ul .chat_item_mine .chat_head .message , #comments_list_wrap ul .chat_item_mine .chat_head .support {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            top: 50%;
+            
+        }
+        #comments_list_wrap ul .chat_item_mine .chat_head img {
+            display: block;
+            width: 9.6%;
+            right: 0;
+            border-radius: 50%;
+        }
+        #comments_list_wrap ul .chat_item_mine .chat_head .message {
+            right: 13.9%;
+            width: 65%;
+            text-align: right;
+        }
+        #comments_list_wrap ul .chat_item_mine .chat_head .name {
+            color: #2a2a2a;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding-left: 5%;
+        }
+        #comments_list_wrap ul .chat_item_mine .chat_head .time {
+            color: #828080;
+            font-size: 1.2rem;
+        }
+        #comments_list_wrap ul .chat_item_mine .chat_head .support {
+            left: 0;
+            color: #2a2a2a;
+            font-size: 1.25rem;
+        }
+        #comments_list_wrap ul .chat_item_mine .chat_head .support:before {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            display: block;
+            content: "";
+            top: 50%;
+            left: 200%;
+            width: 2.25rem;
+            padding-top: 2rem;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(http://home.duanran96.com/dog/images/love-1.png)
+        }
+        #comments_list_wrap ul .chat_item_mine .chat_head .chat_like:before {
+            background-image: url(http://home.duanran96.com/dog/images/love-2.png)
+        }
+        #comments_list_wrap ul .chat_item_mine .chat_body {
+            position: relative;
+            width: 100%;
+            background-color: #F6F6F6;
+            text-align: right;
+            font-size: 1.3rem;
+            line-height: 2rem;
+        }
+        #comments_list_wrap ul .chat_item_mine .chat_body:before{
+            position: absolute;
+            content: "";
+            top: -0.6rem;
+            right: 3.4%;
+            width: 0;
+            height: 0;
+            border-left: 0.6rem solid transparent;
+            border-right: 0.6rem solid transparent;
+            border-bottom: 0.6rem solid #F6F6F6;
+        }
+
+
+        /*晒我汪*/
+        .main-wrapper .shawowang-content {
+            display: none;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 15.7%;
+        }
+        /*banenr*/
+        .shawowang-content .banner {
+            position: relative;
+            width: 100%;
+            padding-top: 12.9%;
+            background-color: #f6f6f6;
+        }
+        .shawowang-content .banner .banner-pos {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+        .shawowang-content .banner .banner-pos .banner-mes {
+            position: absolute;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            color: #000;
+            font-size: 1.6rem;
+        }
+        .shawowang-content .banner .banner-pos .banner-btn {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            top: 50%;
+            right: 8.8%;
+            padding: 0.8% 5%;
+            font-size: 1.6rem;
+            border-radius: 0.5rem;
+            background-color: #242424;
+            color: #fff;
+        }
+        /*画板提交图片*/
+        .shawowang-content .canvasInp {
+            position: relative;
+            width: 20.8%;
+            padding-top: 20.8%;
+            margin-top: 5.8%;
+            margin-left: 39.6%;
+            margin-right: 39.6%;
+        }
+        .shawowang-content .canvasInp .canvasInp-pos {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .shawowang-content .canvasInp .canvasInp-pos canvas {
+            position: absolute;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+        }
+        .shawowang-content .canvasInp .canvasInp-pos .add_file {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            outline: none;
+            border: 0;
+        }
+        /*提交状态*/
+        .shawowang-content .put-img-word {
+            width: 100%;
+            font-size: 1.6rem;
+            line-height: 4rem;
+            text-align: center;
+            color: #000;
+        }
+        /*描述*/
+        .shawowang-content .des-my-dog , .shawowang-content .sign-my-dog {
+            padding: 0 6.5%;
+            width: 87%;
+        }
+        .shawowang-content .des-my-dog .des-title , .shawowang-content .sign-my-dog .sign-title {
+            font-size: 1.6rem;
+            line-height: 4rem;
+            color: #000;
+        }
+        .shawowang-content .des-my-dog .des-mes {
+            position: relative;
+            width: 100%;
+            padding-top: 37.6%;
+        }
+        .shawowang-content .des-my-dog #form_post_content {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 95%;
+            padding: 2.5% 2.5%;
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+            outline: none;
+            border: 0;
+            background-color: #f6f6f6;
+            box-sizing: border-box;
+        }
+        /*标签*/
+        .shawowang-content .sign-my-dog .sign {
+            width: 100%;
+        }
+        .shawowang-content .sign-my-dog .sign ul {
+            width: 100%;
+        }
+        .shawowang-content .sign-my-dog .sign ul:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        .shawowang-content .sign-my-dog .sign ul li {
+            position: relative;
+            float: left;
+            width: 25%;
+            padding-top: 7.6%;
+            margin: 2% 0;
+        }
+        .shawowang-content .sign-my-dog .sign ul li .my-sign {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 80%;
+            margin: 0 10%;
+            background-color: #fff;
+            color: #242424;
+            border-top-left-radius: 17% 50%;
+            border-top-right-radius: 17% 50%;
+            border-bottom-left-radius: 17% 50%;
+            border-bottom-right-radius: 17% 50%;
+            border: 1px solid #242424;
+            box-sizing: border-box;
+        }
+        .shawowang-content .sign-my-dog .sign ul li .my-sign span {
+            display: block;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+
+
+        /*汪圈层*/
+        .main-wrapper .wangquan-content {
+            display: none;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 15.7%;
+            background-color: #f6f6f6;
+        }
+        /*banner*/
+        .wangquan-content .banner {
+            position: relative;
+            width: 100%;
+            padding-top: 12.1%;
+            background: #fff;
+        }
+        .wangquan-content .banner .banner-pos {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height:100%;
+        }
+        .wangquan-content .banner .banner-pos .banner-talk {
+            position: absolute;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+            font-size: 1.5rem;
+            color: #282528;
+        }
+        .wangquan-content .banner .banner-pos .banner-talk-num {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            top: 50%;
+            right: 6.4%;
+            font-size: 1.5rem;
+            color: #282528;
+        }
+        /*汪圈评论列表*/
+        .wangquan-content #comments_dog_list_wrap {
+            width: 100%;
+            padding-top: 5%;
+        }
+        .wangquan-content #comments_dog_list_wrap:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        #comments_dog_list_wrap .ul_1 {
+            float: left;
+            width: 44%;     
+            padding-left: 4%;
+            padding-right: 2%;
+            overflow: hidden;
+        }
+        #comments_dog_list_wrap .ul_2 {
+            float: left;
+            width: 44%;     
+            padding-left: 2%;
+            padding-right: 4%;
+            overflow: hidden;
+        }
+        #comments_dog_list_wrap ul .chat_dog_item {
+            width: 100%;
+            background-color: #fff;
+            margin-bottom: 5%; 
+        }
+        #comments_dog_list_wrap ul .chat_dog_item .chat_head {
+            width: 100%;
+            position: relative;
+        }
+        #comments_dog_list_wrap ul .chat_dog_item .chat_head  .sign {
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            padding: 0 4%;
+            font-size: 1.4rem;
+            line-height: 2.3rem;
+            border-radius: 1.15rem;
+            color: white;
+            background-color: rgba(0,0,0,0.8);           
+        }
+        #comments_dog_list_wrap ul .chat_dog_item .chat_body {
+            width: 92%;
+            padding: 8% 4% 0 4%;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            color: #2a2a2a;
+        }
+        #comments_dog_list_wrap ul .chat_dog_item .chat_foot {           
+            position: relative;
+            width: 92%;
+            padding-top: 20%;
+            margin: 0 4%;
+        }
+        #comments_dog_list_wrap ul .chat_dog_item .chat_foot img {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            top: 50%;
+            left: 0;
+            width: 10%;
+            border-radius: 50%;
+        }
+        #comments_dog_list_wrap ul .chat_dog_item .chat_foot .name {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            top: 50%;
+            left: 12%;
+            font-size: 1.15rem;
+            color: #2a2a2a;
+        }
+        #comments_dog_list_wrap ul .chat_dog_item .chat_foot .support_dog {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            top: 50%;
+            right: 12%;
+            font-size: 1.2rem;  
+            color: #2a2a2a;
+        }
+         #comments_dog_list_wrap ul .chat_dog_item .chat_foot .support_dog:before {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            display: block;
+            content: "";
+            top: 50%;
+            right: 150%;
+            width: 1.5rem;
+            padding-top: 1.3rem;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(http://home.duanran96.com/dog/images/love-1.png)
+        }
+        #comments_dog_list_wrap ul .chat_dog_item .chat_foot .chat_like:before {
+            background-image: url(http://home.duanran96.com/dog/images/love-2.png)
+        }
+        #comments_dog_list_wrap ul .chat_dog_item .chat_foot .share {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            top: 50%;
+            right: 0;
+            width: 8%;
+            padding-top: 8%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(http://home.duanran96.com/dog/images/share.png)          
+        }
+        
+
+        /*滚动层*/
+        .fixed-wrapper {
+            display: none;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        /*按钮层*/
+        .btn-wrapper {
+            display: block;
+            position: relative;
+            width: 100%;
+            padding-top: 15.6%;
+            background-color: #fff;
+        }
+        .btn-wrapper .btn-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .btn-wrapper .btn-content ul {
+            padding: 0 5%;
+            width: 90%;
+            height: 100%;
+        }
+        .btn-wrapper .btn-content ul:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        .btn-wrapper .btn-content ul li {
+            float: left;
+            position: relative;
+            width: 33.3%;
+            height: 100%;
+        }
+        .btn-wrapper .btn-content .btn-jingxuan , .btn-wrapper .btn-content .btn-shaiwowang , .btn-wrapper .btn-content .btn-wangquan {
+            position: absolute;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+            width: 35%;
+            height: 74%;       
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .btn-wrapper .btn-content .btn-jingxuan {
+            background-image: url(http://home.duanran96.com/dog/images/jingxuan-1.png);
+        }
+        .btn-wrapper .btn-content .btn-shaiwowang {
+            background-image: url(http://home.duanran96.com/dog/images/shaiwowang-2.png);
+        }
+        .btn-wrapper .btn-content .btn-wangquan {
+            background-image: url(http://home.duanran96.com/dog/images/wangquan-2.png);
+        }
+        /*输入层*/
+        .inp-wrapper {
+            position: relative;
+            display: none;
+            width: 100%;
+            padding-top: 16.5%;
+            background-color: #282528;
+        }
+        .inp-wrapper .inp-wrapper-pos {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .inp-wrapper .inp-wrapper-pos .inp-text {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            top: 50%;
+            left: 10.6%;
+            width: 59.2%;
+            padding-top: 7.7%;
+        }
+        .inp-wrapper .inp-wrapper-pos .inp-text input {
+            position: absolute;
+            padding-left: 7.2%;
+            left: 0;
+            top: 0;
+            width: 92.8%;
+            height: 100%;
+            outline:none;  
+            border:0px;
+            font-size: 1.2rem;
+            color: #212025;
+            border-top-left-radius: 6.5% 50%; 
+            border-bottom-left-radius: 6.5% 50%;
+            border-top-right-radius: 6.5% 50%; 
+            border-bottom-right-radius: 6.5% 50%;  
+        }
+        .inp-wrapper .inp-wrapper-pos .inp-btn {
+            position: absolute;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            top: 50%;
+            right: 10.2%;
+            width: 17.6%;
+            padding-top: 7.7%;
+        }
+        .inp-wrapper .inp-wrapper-pos .inp-btn-pos {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;          
+            border: 0.5px solid #fff;
+            border-top-left-radius: 21.8% 50%; 
+            border-bottom-left-radius: 21.8% 50%;
+            border-top-right-radius: 21.8% 50%; 
+            border-bottom-right-radius: 21.8% 50%; 
+        }
+        .inp-wrapper .inp-wrapper-pos .inp-btn-pos span {
+            position: absolute;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;      
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        /*其他浮层模块*/
+        .else-wrapper {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.7);
+        }
+        /*发布成功*/
+        .else-wrapper .success {
+            display: none;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+            width: 39%;
+            padding-top: 10.8%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(http://home.duanran96.com/dog/images/success.png);
+        }
+        /*添加新标签*/
+        .else-wrapper .add-sign-content {
+            display: none;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+            width: 63.3%;
+        }
+        .else-wrapper .add-sign-content .add-sign-content-pos {
+            width: 66%;
+            height: 100%;
+            padding: 0 17%; 
+            background-color: #fff;
+            border-radius: 1rem;
+        }
+        .else-wrapper .add-sign-content .add-sign-content-pos .sign-title {       
+            padding-top: 7%;      
+            font-size: 1.5rem;
+            line-height: 2.25rem;
+            text-align: center;            
+            color: #050505;
+        }
+        .else-wrapper .add-sign-content .add-sign-content-pos .sign-des {
+            width: 88%;
+            padding: 4% 6%;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            text-align: center;
+            color: #434343;
+        }
+        .else-wrapper .add-sign-content .add-sign-content-pos input {
+            width: 100%;  
+            font-size: 1.2rem;
+            line-height: 2.3rem;
+            text-align: center;
+            color: #434343;
+            background-color: #e2e0e0;
+            border-radius: 0.3rem;
+            outline: none;
+            border: 0;
+        }
+        .else-wrapper .add-sign-content .add-sign-content-pos .sign-btn {
+            width: 100%;
+            padding: 7% 0 10% 0;
+        }
+        .else-wrapper .add-sign-content .add-sign-content-pos .sign-btn:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        .else-wrapper .add-sign-content .add-sign-content-pos .sign-btn .false-btn , .else-wrapper .add-sign-content .add-sign-content-pos .sign-btn .true-btn{
+            float: left;
+            width: 45%;
+            font-size: 1.4rem;
+            line-height: 2.3rem;
+            text-align: center;
+            color: #fff;
+            background-color: #000;    
+            border-radius: 0.3rem;
+        }
+        .else-wrapper .add-sign-content .add-sign-content-pos .sign-btn .true-btn {
+            float: right;
+        }
+
+        /*返回顶部*/
+        .go-top {
+            display: none;
+            position: fixed;
+            right: 6.4%;
+            bottom: 15.3%;
+            width: 11.6%;
+            padding-top: 11.6%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(http://home.duanran96.com/dog/images/top.png);
+        }
+
+        /*分享*/
+        .weixin_layout {
+            display: none;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,.7);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(http://mat1.gtimg.com/news/v_rranduan/rumorsOfApril/share-bg.png);
+            z-index: 999;
+        }
+
+        /*图片预加载*/
+        .loading-wrapper {
+            position: absolute;
+            display: block;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(http://home.duanran96.com/dog/images/loading.gif);
+        }
+    </style>
+</head>
+<body>
+    <!-- 全站流量统计代码 开始 -->
+    <!--#include virtual="/public/pingjs.htm"-->
+    <!--普通专题pgv统计代码请放在<body>标签下方,重大项目报道及频道首页改版pgv统计代码放于首屏后.-->
+    <!-- 全站流量统计代码 结束 -->
+
+    <div class="loading-wrapper"></div>
+
+    <div class="main-wrapper">
+
+        <div class="jingxuan-content">
+
+            <div class="banner">
+                <div class="banner-pos">
+                    <div class="banner-pic"></div>
+                    <div class="banner-mes"></div>
+                </div>
+            </div>
+
+            <div class="main">
+            </div>
+
+            <div class="ender">
+                <div class="ender-pos">
+                    <div class="end-pic"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="jingxuan-comment">
+            <div class="banner">
+                <div class="banner-pos">
+                    <div class="banenr-return"></div>
+                    <div class="banner-talk">评论</div>
+                    <div class="banner-talk-num"></div>
+                </div>
+            </div>
+
+            <div id="comments_list_wrap"></div>
+        </div>
+
+        <div class="shawowang-content">
+            <div class="banner">
+                <div class="banner-pos">
+                    <div class="banner-mes">晒我汪</div>
+                    <div class="banner-btn">发布</div>
+                </div>
+            </div>
+
+            <div class="canvasInp">
+                <div class="canvasInp-pos">
+                    <canvas></canvas>
+                    <form action="http://upload.coral.qq.com/image/upload" method="post" enctype="multipart/form-data" target="iframe0" id="form11">
+                        <input type="file" name="picture" accept="image/*" class="add_file">
+                        <input name="thrdes" type="hidden" value="np-reply-box">
+                        <input name="type" type="hidden" value="1">
+                        <input name="format" type="hidden" value="SCRIPT">
+                        <input name="callback" type="hidden" value="parent.upLoadImg">
+                        <input name="_method" type="hidden" value="put">
+                        <input name="g_tk" type="hidden" value="">
+                        <input name="code" type="hidden" value="0">
+                        <input name="source" type="hidden" value="1">
+                        <input name="logintype" type="hidden" value="">
+                        <input name="appid" type="hidden" value="">
+                        <input name="openid" type="hidden" value="">
+                        <input name="access_token" type="hidden" value="">
+                    </form>
+                    <span class="photoUrl" url="" /></span>
+                    <span class="word-in" word=""></span>
+                </div>
+            </div>
+
+            <div class="put-img-word">选择图片</div>
+
+            <div class="des-my-dog">
+                <div class="des-title">我汪大名 + 描述</div>
+                <div class="des-mes">
+                    <textarea id="form_post_content" placeholder="请输入文案"></textarea>
+                </div>           
+            </div>
+
+            <div class="sign-my-dog">
+                <div class="sign-title">选择标签</div>
+                <div class="sign">
+                    <ul>
+                        <li class="more-sign">
+                            <div class="my-sign"><span>＋新标签</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="wangquan-content">
+            <div class="banner">
+                <div class="banner-pos">
+                    <div class="banner-talk">汪圈</div>
+                    <div class="banner-talk-num">1212参与</div>
+                </div>
+            </div>
+
+            <div id="comments_dog_list_wrap">
+                <ul class="ul_1"></ul>
+                <ul class="ul_2"></ul>
+            </div>
+          
+        </div>
+
+    </div>
+
+    <div class="fixed-wrapper">
+
+        <div class="inp-wrapper">
+            <div class="inp-wrapper-pos">
+                <div class="inp-text">
+                    <input type="text" placeholder="说点什么~"/>
+                </div>
+                
+                <div class="inp-btn">
+                    <div class="inp-btn-pos">
+                        <span>发送</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-wrapper">
+            <div class="btn-content">
+                <ul>
+                    <li>
+                        <div class="btn-jingxuan"></div>
+                    </li>
+                    <li>
+                        <div class="btn-shaiwowang"></div>
+                    </li>
+                    <li>
+                        <div class="btn-wangquan"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="else-wrapper">
+
+        <div class="add-sign-content">
+            <div class="add-sign-content-pos">
+                <p class="sign-title">添加 标签</p>
+                <p class="sign-des">请输入你想添加的标签名称最多4个字</p>
+                <input class="sign-inp" type="text" placeholder="文案文案">
+                <div class="sign-btn">
+                    <div class="false-btn">取消</div>
+                    <div class="true-btn">确定</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="success"></div>
+
+    </div>
+    
+    <div class="go-top"></div>
+
+    <div class="weixin_layout"></div>
+
+    <iframe id="iframe0" name="iframe0" style="display:none"></iframe>
+
+    <script charset="utf-8"> // 精选配置信息
+        var config = { 
+            // 狗生下面的标题
+            title: "国外一主人表示，家里的汪星人见到自己的爸爸就一直要亲亲要抱抱，但是在自己面前却从来没有这样身为一只汪吗。",
+            // page 数组，每个对象为一个组件
+            page: [{ // 视频组件
+                id: '0', // id 不能相同
+                mark: 'video', // 视频组件写video
+                head: 'http://mat1.gtimg.com/news/v_rranduan/dogdog/select-pic-1.png', // 头像
+                name: 'meihoho', // 姓名
+                videoId: 'a0022rodhoz', // 视频id
+                videoPic: 'http://mat1.gtimg.com/news/v_rranduan/dogdog/select-pdog-1.png', // 视频图片
+                message: "昨天母亲节，大清早给你剃毛，累屎麻麻了，你爹买根冰棍欠我，给你吃你还只舔不咬，好吃吧，爽吧，麻麻腿都蹲酸了！汪星人你开心就好！", // 寄语
+                likeId: "11817846", // 点赞id
+                commentId: "1402618862" // 评论id
+
+            },{ // 图片组件
+                id: '1', // id 不能相同
+                mark: 'pic', // 图片组件写pic
+                head: 'http://mat1.gtimg.com/news/v_rranduan/dogdog/select-pic-1.png', // 头像
+                name: 'meihoho', // 姓名
+                pic: 'http://mat1.gtimg.com/news/v_rranduan/dogdog/select-pdog-2.png', // 中心图片地址
+                message: "昨天母亲节，大清早给你剃毛，累屎麻麻了，你爹买根冰棍欠我，给你吃你还只舔不咬，好吃吧，爽吧，麻麻腿都蹲酸了！汪星人你开心就好！", // 寄语
+                likeId: "11817828", // 点赞id
+                commentId: "1710295268" // 评论id
+            },{ // 轮播图片组件
+                id: '2', // id 不能相同
+                mark: 'picArr', // 轮播图片组件写picArr
+                head: 'http://mat1.gtimg.com/news/v_rranduan/dogdog/select-pic-1.png', // 头像
+                name: 'meihoho', // 姓名
+                // 每一张轮播图片的地址，有几张图片填几个地址
+                picArr: [
+                    'http://mat1.gtimg.com/news/v_rranduan/dogdog/select-pdog-1.png',
+                    'http://mat1.gtimg.com/news/v_rranduan/dogdog/select-pdog-2.png',
+                    'http://mat1.gtimg.com/news/v_rranduan/dogdog/select-pdog-3.png'
+                ],
+                message: "昨天母亲节，大清早给你剃毛，累屎麻麻了，你爹买根冰棍欠我，给你吃你还只舔不咬，好吃吧，爽吧，麻麻腿都蹲酸了！汪星人你开心就好！", // 寄语
+                likeId: "11826458", // 点赞id
+                commentId: "1465398517" // 评论id
+            }]
+        }
+    </script>
+
+     <script charset="utf-8"> // 汪圈id 与 初始标签
+        var commentId = "1700550669"; // 汪圈的评论id
+        // 晒我汪的初始标签，有几个标签填几个
+        var sign_config = ['萌萌哒','虎虎哒','萌萌哒','虎虎哒','萌萌哒','虎虎哒','萌萌哒','虎虎哒'] 
+    </script>
+
+    <script charset="utf-8"> // 微信授权
+        var g_wx_appid = "wxb21cb630ef1f157d";
+        var g_ps_appid = "wxb21cb630ef1f157d";
+    </script>
+
+    <script charset="utf-8"> // 图片预加载
+        $(document).ready(function () {
+            var picArr = [
+                'http://home.duanran96.com/dog/images/loading.gif',
+                'http://home.duanran96.com/dog/images/dog-title.png',
+                'http://home.duanran96.com/dog/images/no-voice.png',
+                'http://home.duanran96.com/dog/images/voice.png',
+                'http://home.duanran96.com/dog/images/point-style-1.png',
+                'http://home.duanran96.com/dog/images/point-style-2.png',
+                'http://home.duanran96.com/dog/images/swipe-left.png',
+                'http://home.duanran96.com/dog/images/swipe-right.png',
+                'http://home.duanran96.com/dog/images/love-1.png',
+                'http://home.duanran96.com/dog/images/love-2.png',
+                'http://home.duanran96.com/dog/images/talk.png',
+                'http://home.duanran96.com/dog/images/share.png',
+                'http://home.duanran96.com/dog/images/all-comment.png',
+                'http://home.duanran96.com/dog/images/top.png',
+                'http://home.duanran96.com/dog/images/end.png',
+                'http://home.duanran96.com/dog/images/my.png',
+                'http://home.duanran96.com/dog/images/return.png',
+                'http://home.duanran96.com/dog/images/jingxuan-1.png',
+                'http://home.duanran96.com/dog/images/jingxuan-2.png',
+                'http://home.duanran96.com/dog/images/shaiwowang-1.png',
+                'http://home.duanran96.com/dog/images/shaiwowang-2.png',
+                'http://home.duanran96.com/dog/images/wangquan-1.png',
+                'http://home.duanran96.com/dog/images/wangquan-2.png',
+                'http://home.duanran96.com/dog/images/success.png',
+                'http://home.duanran96.com/dog/images/share-bg.png'
+            ]
+            function loadImg(arr,callback) {
+                var len = arr.length;
+                var index = 0;
+                var imgArr = [];
+                function load () {
+                    var image = new Image();
+                    function loading () {
+                        imgArr.push(image);
+                        if(index < len) {
+                            callback && callback(imgArr);
+                            load();
+                        }else {
+                                imgArr.shift();
+                        }
+                        index ++;
+                    }
+                    image.onload = loading; // 图片预加载成功
+                    image.onerror = loading; // 图片预加载失败
+                    image.src = arr[index];
+                }
+                if (len > 0) {
+                    load();
+                }
+            }
+            function changeNumber (arr) {
+                if(parseInt(arr.length / picArr.length) * 100 == 100) {               
+                    $('.loading-wrapper').css('display','none');
+                    $('.main-wrapper').css('display','block');
+                    $('.fixed-wrapper').css('display','block');
+                }
+            }
+            loadImg(picArr,changeNumber);
+        })
+    </script>
+
+    <script charset="utf-8"> // 分享
+        var shareData = {
+            title: "小狗狗",
+            desc: "狗生狗生狗生狗生狗生狗生狗生狗生狗生狗生狗生狗生狗生狗生狗生狗生",
+            img: "http://home.duanran96.com/dog/images/select-pdog-3.png",
+            link: window.location.href
+        };
+        var UA = function() {
+            var userAgent = navigator.userAgent.toLowerCase();
+            return {
+                ipad: /ipad/.test(userAgent),
+                iphone: /iphone/.test(userAgent),
+                android: /android/.test(userAgent),
+                qqnews: /qqnews/.test(userAgent),
+                weixin: /micromessenger/.test(userAgent),
+                qqnews_version: userAgent.match(/qqnews/i) == "qqnews" ? userAgent.split('qqnews/')[1] : ''
+            }
+        };
+        function shareQQNews() {
+            var ua = UA();
+            switch (true) {
+                case ua.qqnews:
+                    if (window.TencentNews && window.TencentNews.setShareArticleInfo) {
+                        window.TencentNews.setShareArticleInfo(shareData.title, shareData.desc, shareData.desc, shareData.link, shareData.img)
+                    }
+                    if (window.TencentNews && window.TencentNews.showShareMenu) {
+                        window.TencentNews.showShareMenu(shareData.link, shareData.title, shareData.desc, shareData.img, "news_news_wc")
+                    } else {
+                        window.TencentNews.shareFromWebView(shareData.title, shareData.desc, shareData.img)
+                    }
+                    break;
+                case ua.weixin:
+                    var weixinLayout = document.querySelector(".weixin_layout");
+                    weixinLayout.style.display = "block";
+                    weixinLayout.addEventListener("click", function() {
+                        weixinLayout.style.display = "none"
+                    });
+                    break;
+                default:
+                    window.location = "http://share.v.t.qq.com/index.php?c=share&a=index&appkey=801378464&url=" + shareData.link + "&title=" + shareData.desc + "&pic=" + shareData.img + "&des=" + shareData.title;
+                    break;
+            }
+        };
+        function onBridgeReady() {
+            WeixinJSBridge.on("menu:share:timeline", function(e) {
+                var data = {
+                    img_width: "150",
+                    img_height: "112.5",
+                    img_url: shareData.img,
+                    link: shareData.link,
+                    desc: shareData.title,
+                    title: shareData.desc
+                };
+                WeixinJSBridge.invoke("shareTimeline", data, function(res) {
+                    WeixinJSBridge.log(res.err_msg)
+                })
+            });
+            WeixinJSBridge.on("menu:share:weibo", function() {
+                WeixinJSBridge.invoke("shareWeibo", {
+                    "content": shareData.desc,
+                    "url": shareData.link
+                }, function(res) {
+                    WeixinJSBridge.log(res.err_msg)
+                })
+            });
+            WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+                WeixinJSBridge.invoke("sendAppMessage", {
+                    img_width: "120",
+                    img_height: "120",
+                    img_url: shareData.img,
+                    link: shareData.link,
+                    desc: shareData.desc,
+                    title: shareData.title
+                }, function(res) {
+                    WeixinJSBridge.log(res.err_msg)
+                })
+            })
+        };
+        document.addEventListener('WeixinJSBridgeReady', function() {
+            onBridgeReady();
+        });
+        function androidQQNewsShare() {
+            var head = document.getElementsByTagName('body')[0];
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'http://mat1.gtimg.com/www/js/newsapp/jsapi/news.js?_tsid=1';
+            head.appendChild(script)
+        }
+        androidQQNewsShare(); 
+    </script>
+
+    <script charset="utf-8"> // 返回顶部
+        var markScroll = 0;
+        function goTop () { 
+            window.onscroll=function(){
+                if($(window).scrollTop()>100){
+                    if(markScroll == 0) {
+                        $('.go-top').show();
+                    } else {
+                        $('.go-top').hide();
+                    }
+                }else{
+                    $('.go-top').hide();
+                }        
+            }
+
+            $('.go-top').click(function(){
+                scroll('0px', 300);
+            });
+
+            function scroll(scrollTo, time) {
+                var scrollFrom = parseInt(document.body.scrollTop),
+                    i = 0,
+                    runEvery = 5; // run every 5ms
+
+                scrollTo = parseInt(scrollTo);
+                time /= runEvery;
+
+                var interval = setInterval(function () {
+                    i++;
+                    document.body.scrollTop = (scrollTo - scrollFrom) / time * i + scrollFrom;
+                    if (i >= time) {
+                        clearInterval(interval);
+                    }
+                }, runEvery);
+            }
+        }
+    </script>
+
+    <script charset="utf-8"> // 精选 与 精选 评论函数
+        function getCookie(name) { // cookie
+            var arr,reg = new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+            if(arr=document.cookie.match(reg))
+                return unescape(arr[2]);
+            else
+                return null;
+        }
+
+        var commentTime; // 评论刷新定时器
+
+        function like (urlId,id) { // 点赞
+            var promise = new Promise(function (resolve,reject) {
+                $.getScript('http://mat1.gtimg.com/news/2015/zt/lhdzz/digg2.js',function(){      
+                    $.ajax({
+                        type : "get",
+                        url : "http://panshi.qq.com/v2/vote/"+ urlId +"?source=1",
+                        dataType : 'jsonp',
+                        success : function(d){
+                            var data = d.data;
+                            var optionidArr = [];
+                            var subjectid;
+                            var optId = {};
+                            var k = 0;
+                            var html = [];
+                            $.each(data.subject,function(i,n){
+                                $.each(n.option,function(ii,nn){
+                                    optionidArr.push(nn.optionid);
+                                    subjectid = nn.subjectid;
+
+                                    html.push(id);
+
+                                    html.push($('<div class="digg vote_'+ii+' model-fabulous" onclick="AppPlatform.Survey.Digg.digg(this, '+nn.voteid+', '+nn.subjectid+', '+nn.optionid+');" id="apps_svy_opt_title_'+nn.voteid+'_'+k+'"></div>').on('click',function () {
+                                        $(this).addClass('model-fabulous-change');
+                                    }));
+
+                                    html.push($('<div class="count model-fabulous-num" percent="" id="apps_svy_opt_count_'+nn.voteid+'_'+k+'">'+nn.selected+'</div>'));
+                                    
+
+                                    k++;
+
+                                });
+                            });                         
+                            for(var i=0;i<optionidArr.length;i++){
+                                optId[optionidArr[i]] = i;
+                            }
+                            AppPlatform.Survey.Digg.init({
+                                PrjId: data.voteid, 
+                                SubjId: subjectid,
+                                DiggMode: 0,
+                                ShowResult: 0,
+                                OptIdObject: optId
+                            }); 
+                            resolve(html);                 
+                        }   
+                    });         
+                });
+            
+            })
+            return promise;      
+        }
+
+        function commentTalk (urlId,id) { // 评论
+            var promise = new Promise(function (resolve,reject) {
+                $.ajax({
+                    type: "GET",
+                    url: "http://coral.qq.com/article/" + urlId + "/comment",
+                    dataType: "jsonp",
+                    success: function (data) {
+                        var data = data.data;
+                        var domData = [];
+                        domData.push(id);
+                        domData.push(data);
+                        resolve(domData);
+                    }
+                })
+            })
+            return promise;       
+        }
+
+        function nolive (id,mid,pic){ // 直播
+            video = new tvp.VideoInfo();
+            myplayer = new tvp.Player();
+            video.setVid(id);
+            myplayer.create({
+                video:video,
+                modId:mid,
+                autoplay:false,
+                pic:pic,
+                appid: 10001,
+                loadingadAutoplay: true,
+                isHtml5ShowLoadingAdOnStart: true,
+                isHtml5ShowLoadingAdOnChange: true
+            });
+        } 
+
+        function noVoice (ele) { // 静音
+            ele.on('click',function () {
+                if($(this).prev().find('video').get(0).muted) {
+                    $(this).prev().find('video').get(0).muted = false;
+                    $('.main .model-videoPlayer .model-video-voice').css('backgroundImage','url(http://home.duanran96.com/dog/images/no-voice.png)');
+                } else {
+                    $(this).prev().find('video').get(0).muted = true;
+                    $('.main .model-videoPlayer .model-video-voice').css('backgroundImage','url(http://home.duanran96.com/dog/images/voice.png)');
+                }
+            })
+        } 
+
+        function pageImg (ele) { // 轮播
+            var _this = this;
+            _this.length = ele.find('ul').find('li').length;
+            _this.width = $(window).width();
+            _this.nowPage = 0;
+
+            ele.find('ul').width(_this.length * _this.width);
+            ele.find('ul').find('li').width( _this.width);
+
+            $(ele.find('.model-icon').get(_this.nowPage)).addClass('model-icon-change');
+
+            page();
+
+            function changeLeft () {
+                if(_this.nowPage == (_this.length - 1)) {
+                    _this.nowPage = -1;             
+                } 
+            }
+
+            function changeRight () {
+                if(_this.nowPage == 0) {
+                    _this.nowPage = _this.length;   
+                }
+            }
+
+            ele.find('.model-btn-right').on('click',function () {
+                $(ele.find('.model-icon').get(_this.nowPage)).removeClass('model-icon-change');
+                changeLeft();
+                _this.nowPage++;
+                $(ele.find('.model-icon').get(_this.nowPage)).addClass('model-icon-change');
+                page();
+            })
+
+            ele.find('.model-btn-left').on('click',function () {
+                $(ele.find('.model-icon').get(_this.nowPage)).removeClass('model-icon-change');
+                changeRight();
+                _this.nowPage--;
+                $(ele.find('.model-icon').get(_this.nowPage)).addClass('model-icon-change');
+                page();
+            })
+
+            function page () {
+                if(_this.nowPage < 0) {
+                    _this.nowPage = 0;
+                } else if (_this.nowPage >= _this.length) {
+                    _this.nowPage = _this.length - 1;
+                } else {
+                    _this.nowPage = _this.nowPage;
+                }
+                ele.find('ul').css({
+                    "transform": "translate3d(-" + _this.nowPage * _this.width + "px,0,0)",
+                    "-webkit-transform": "translate3d(-" + _this.nowPage * _this.width + "px,0,0)"
+                })    
+            }
+            
+        }
+
+        function moreComment (ele) { // 阅读更多
+            ele.on('click',function () {
+                // 置顶隐藏
+                markScroll = 1;
+                $('.go-top').hide();
+
+                clearInterval(commentTime);
+
+                $('.jingxuan-content').css('display','none');
+                $('.jingxuan-comment').css('display','block');
+                $('.inp-wrapper').css('display','block');
+
+                var comment = { // 显示评论列表的函数
+                    durTime: 30000,
+                    init: function(id,num) {
+                        this.id = id;
+                        this.num = num;
+                        this.getCommentList();
+                    },
+                    getCommentList: function() {
+                        var _this = comment;
+                        var cmtUrl = "http://coral.qq.com/article/";
+                        $.ajax({
+                            url: cmtUrl + _this.id + "/comment?" + new Date(),
+                            dataType: "jsonp",
+                            success: function(res) {
+                                var data = res.data;
+                                var total = this.num;
+                                var ototal = data.total;
+                                data.commentid.length = data.commentid.length > total ? total : data.commentid.length;
+                                var newComment = data.commentid;
+                                var h = '';
+                                if(user.islogin()) {
+                                    var id;
+                                    if(host.brower() === "wx") {   						
+                                    id = getCookie('uid');   						
+                                        comment.returnComments(newComment,id,ototal);    							 						
+                                    } else {
+                                        user.userinfo(function(loginData) {
+                                            if(loginData && loginData.user_id) {
+                                                id = loginData.user_id;
+                                            }
+                                            comment.returnComments(newComment,id,ototal);
+                                        });
+                                    }
+                                } else {
+                                    comment.returnComments(newComment,id,ototal);
+                                }
+                            }
+                        });
+                        commentTime = setTimeout(comment.getCommentList,comment.durTime);
+                    },
+                    returnComments: function(data,id,ototal) {
+                        var _this = this;
+                        var h = '';  		
+                        if(id) {
+                            for(var item in data) {
+                                if(id == data[item].userinfo.userid) {
+                                    h += '<div class="chat_add chat_item_mine" data-cid="' + data[item].id + '">';
+                                        h += '<div class="chat_head">';
+                                            h += '<img src="http://home.duanran96.com/dog/images/my.png" class="avatar">';
+                                            h += '<div class="message">';
+                                                h += '<span class="time">' + data[item].timeDifference + '</span>';
+                                                h += '<span class="name" nick="' + data[item].userinfo.nick + '">我</span>';
+                                            h += '</div>';
+                                            h += '<span class="support">' + data[item].up + '</span>';                           
+                                        h += '</div>';
+                                } else {
+                                    h += '<div class="chat_add chat_item" data-cid="' + data[item].id + '">';
+                                        h += '<div class="chat_head">';
+                                            h += '<img src="' + data[item].userinfo.head + '" class="avatar">';
+                                            h += '<div class="message">';
+                                                h += '<span class="name" nick="' + data[item].userinfo.nick + '">' + data[item].userinfo.nick + '</span>';
+                                                h += '<span class="time">' + data[item].timeDifference + '</span>';
+                                            h += '</div>';
+                                            h += '<span class="support">' + data[item].up + '</span>';                                  
+                                        h += '</div>';
+                                }
+                                h += '<div class="chat_body">' + data[item].content + '</div></div>';
+                            }
+                        
+                        } else {
+                            for(var item in data) {
+                                h += '<div class="chat_add chat_item" data-cid="' + data[item].id + '">';
+                                    h += '<div class="chat_head">';
+                                        h += '<img src="' + data[item].userinfo.head + '" class="avatar">';
+                                        h += '<div class="message">';
+                                            h += '<span class="name" nick="' + data[item].userinfo.nick + '">' + data[item].userinfo.nick + '</span>';
+                                            h += '<span class="time">' + data[item].timeDifference + '</span>';
+                                        h += '</div>';
+                                        h += '<span class="support">' + data[item].up + '</span>';                       
+                                    h += '</div>';
+                                    h += '<div class="chat_body">' + data[item].content + '</div>';
+                                h += '</div>';
+                            }             
+                        }    			
+                
+                        var comWrap = $("#comments_list_wrap");
+
+                        comWrap.html('<ul>' + h + '</ul>');
+
+                        $('.jingxuan-comment .banner .banner-pos .banner-talk-num').html(ototal + ' 评');
+                    
+                        _this.active();
+                    },
+                    showCurrCommnet: function() {
+                        var _this = this;
+                        var input = $(".inp-wrapper .inp-wrapper-pos .inp-text input");
+                        var content = input.val();
+                        var h = '<div class="chat_add chat_item_mine">';
+                        h += '<div class="chat_head">';
+                        h += '<img src="http://home.duanran96.com/dog/images/my.png" class="avatar">';
+                        h += '<div class="message"><span class="time">刚刚</span><span class="name">我</span></div>';
+                        h += '</div>';
+                        h += '<div class="chat_body">' + content + '</div>'
+                        h += '</div>';
+
+                        $(h).insertBefore($($("#comments_list_wrap ul").find('.chat_add').get(0)));
+                        $('.go-top').trigger('click');
+
+                        input.val("");
+                    },
+                    commentSubmit: function() {
+                        var _this = this;
+                        if(user.islogin()) {
+                            if(host.brower() === "wx") {
+                                data = {
+                                    targetid: _this.id,
+                                    type: 1,
+                                    format: "SCRIPT",
+                                    content: $(".inp-wrapper .inp-wrapper-pos .inp-text input").val(),
+                                    _method: "put",
+                                    g_tk: user.gtk(),
+                                    source: 1,
+                                    code: 0,
+                                    subsource: 0,
+                                    logintype: user.login_type,
+                                    openid: user.user_info.openid,
+                                    access_token: user.user_info.access_token,
+                                    appid: user.user_info.appid
+                                };
+                            } else {
+                                data = {
+                                    targetid: _this.id,
+                                    type: 1,
+                                    format: "SCRIPT",
+                                    content: $(".inp-wrapper .inp-wrapper-pos .inp-text input").val(),
+                                    _method: "put",
+                                    g_tk: user.gtk(),
+                                    source: 1,
+                                    code: 0,
+                                    subsource: 0
+                                };
+                            }
+                            _this.iframepost("http://w.coral.qq.com/article/comment", data, null);
+                        } else {
+                            return user.login();
+                        }
+                    },
+                    iframepost: function(url, data) {
+                        var _this = this;
+                        if(!$('#post_iframe_cm').length) {
+                            $("body").append('<iframe id="post_iframe_cm" name="post_iframe_cm" style="display:none"></iframe>');
+                        }
+                        if(!$("#_messageform_cm").length) {
+                            $("body").append('<form action="' + url + '" method="post" target="post_iframe_cm" id="_messageform_cm" style="display:none;" accept-charset="utf-8"></form>');
+                        } else {
+                            $('#_messageform_cm').attr('action', url).empty();
+                        }
+                        for(name in data) {
+                            $("#_messageform_cm").append($('<input name="' + name + '" type="hidden" value="' + data[name] + '" />'));
+                        }
+                        $('#_messageform_cm').submit();
+
+                        _this.showCurrCommnet(); //暂时显示假数据
+                    },
+                    setUp: function(_cid, cmt_id, callback) {
+                        var _this = this;
+                        $.ajax({
+                            url: "http://coral.qq.com/article/comment/up/to/" + _cid + "?targetid=" + cmt_id,
+                            dataType: "jsonp",
+                            success: function(res) {
+                                if(res.errCode == 0) {
+                                    callback();
+                                } else {
+                                    Video.pop_msg("\u4f60\u5df2\u70b9\u8fc7\u8d5e\u4e86~");
+                                }
+                            }
+                        });
+                    },
+                    active: function() {
+                        var _this = this;
+                        $(".inp-wrapper .inp-wrapper-pos .inp-btn-pos").off().on("click",function() {
+                            _this.commentSubmit();
+                        });
+                        $(".inp-wrapper .inp-wrapper-pos .inp-text input").on("focus",function() {
+                            if(!user.islogin()) {
+                                return user.login();
+                            } else {
+                                return $.get("http://coral.qq.com/user/0",{},function(res) {
+                                    if(res.errCode === 0) {
+                                        //登录状态没问题，可正常评论
+                                    } else {
+                                        return user.login();
+                                    }
+                                }, "jsonp");
+                            }
+                        });
+
+                        $(".chat_item").off().on("click", function() {
+                            var input = $(".inp-wrapper .inp-wrapper-pos .inp-text input");
+                            var nick = input.attr("data-nick");
+                            var newNick = $(this).find(".name").attr("nick");
+                            input.attr("data-nick", "@" + newNick);
+                            input.val("@" + newNick + " " + $.trim(input.val().replace(nick, "")));
+                        });
+                        $(".support").off().on("click", function(e) {
+                            e.stopPropagation();
+                            var _obj = $(this);
+                            var dataCid = _obj.closest(".chat_item").attr("data-cid");
+                            if(!_obj.hasClass('chat_like')) {
+                                _this.setUp(dataCid, _this.id, function() {
+                                    var n = parseInt(_obj.html());
+                                    _obj.addClass('chat_like');
+                                    n++;
+                                    _obj.html(n);
+                                });
+                            } else {
+                                Video.pop_msg("\u4f60\u5df2\u70b9\u8fc7\u8d5e\u4e86~");
+                            }
+
+                        });
+                    }
+                };
+
+                comment.init(ele.attr('commentId'),9950);
+            })
+        }
+                
+        function ret () { // 返回
+            $('.jingxuan-comment .banner .banner-pos .banenr-return').on('click',function () {
+                // 置顶显示
+                markScroll = 0;
+                if($(window).scrollTop()>100){
+                    $('.go-top').show();
+                }
+
+                $('.jingxuan-content').css('display','block');
+                $('.jingxuan-comment').css('display','none');
+                $('.inp-wrapper').css('display','none');
+
+                $('#comments_list_wrap').empty();
+                $('.jingxuan-comment .banner .banner-pos .banner-talk-num').empty();
+            })
+        }
+
+        function share () { // 分享              
+            $('.model .model-share').each(function () { // 每一页的分享按钮
+                $(this).off().on('click',function () {
+                    shareQQNews();
+                })
+            })  
+        }
+
+        function pageDom (obj,mark,index) { // 生成 dom 结构
+            // 信息
+            obj.modelMesPos.append(obj.modelMesPic).append(obj.modelMesName);
+            obj.modelMes.append(obj.modelMesPos);
+
+            //中间模块
+            if(mark == "video") {
+                obj.modelVideoPlayer.append(obj.modelVideo.attr('id','video-' + index)).append(obj.modelVideoVoice)
+            } else if (mark == "pic") {
+
+            } else {
+                obj.modelBtn.append(obj.modelBtnLeft).append(obj.modelBtnRight);
+                obj.modelCarouselImg.append(obj.modelBtn).append(obj.modelPicBtn)
+            }
+    
+            // 互动
+            obj.modelInteractionPos.append(obj.modelComment).append(obj.modelCommentNum).append(obj.modelShare)
+            obj.modelInteraction.append(obj.modelInteractionPos);
+
+            obj.modelCommentContent[0].append(obj.modelCommentName[0]).append(obj.modelCommentMes[0]);
+            obj.modelCommentContent[1].append(obj.modelCommentName[1]).append(obj.modelCommentMes[1]);
+
+            obj.modelMorePos.append(obj.modelMorePic);
+            obj.modelMore.append(obj.modelMorePos)
+
+            obj.modelTalkComment.append(obj.modelCommentContent[0]).append(obj.modelCommentContent[1]).append(obj.modelMore);
+
+            obj.modelTalk.append(obj.modelTalkWord).append(obj.modelInteraction).append(obj.modelTalkComment)
+
+            // 最后
+            if(mark == "video") {
+               obj.model.append(obj.modelMes).append(obj.modelVideoPlayer).append(obj.modelTalk).appendTo('.main');
+            } else if(mark == "pic") {
+                obj.model.append(obj.modelMes).append(obj.modelImg).append(obj.modelTalk).appendTo('.main');
+            } else {
+                obj.model.append(obj.modelMes).append(obj.modelCarouselImg).append(obj.modelTalk).appendTo('.main');
+                 pageImg(obj.modelCarouselImg);
+            }
+        }
+
+        function configDom (config) { // 向 dom 添加 信息与方法
+            $('.jingxuan-content .banner .banner-pos .banner-mes').html(config.title);
+            var len  = config.page.length;
+            for(var i = 0 ; i < len ; i++) {
+                var objModel = { // 模板组件
+                    // 信息组件
+                    model: $('<div class="model"></div>') ,
+                    modelMes: $('<div class="model-mes"></div>'),
+                    modelMesPos: $('<div class="model-mes-pos"></div>'),
+                    modelMesPic: $('<div class="model-mes-pic"></div>'),
+                    modelMesName: $('<div class="model-mes-name">meihoho</div>'),
+                    // 视频组件
+                    modelVideoPlayer: $('<div class="model-videoPlayer">'),
+                    modelVideo: $('<div class="video" id="video-1"></div>'),
+                    modelVideoVoice: $('<div class="model-video-voice"></div>'),
+                    // 图片组件
+                    modelImg: $('<div class="model-img"></div>'),
+                    // 轮播图片组件
+                    modelCarouselImg: $('<div class="model-carousel-img"></div>'),
+                    modelBtn: $('<div class="model-btn"></div>'),
+                    modelBtnLeft: $('<div class="model-btn-left"></div>'),
+                    modelBtnRight: $('<div class="model-btn-right"></div>'),
+                    modelPicBtn: $('<div class="model-pic-btn"></div>'),
+                    // 评论组件
+                    modelTalk: $('<div class="model-talk">'),
+                    modelTalkWord: $('<div class="model-talk-word"></div>'),
+                    modelInteraction: $('<div class="model-interaction"></div>'),
+                    modelInteractionPos: $('<div class="model-interaction-pos"></div>'),
+                    modelComment: $('<div class="model-comment"></div>'),
+                    modelCommentNum: $('<div class="model-comment-num"></div>'),
+                    modelShare: $('<div class="model-share"></div>'),
+                    modelTalkComment: $('<div class="model-talk-comment"></div>'),
+                    modelCommentContent: [$('<div class="model-comment-content"></div>'),$('<div class="model-comment-content"></div>')],
+                    modelCommentName: [$('<span class="model-comment-name"></span>'),$('<span class="model-comment-name"></span>')],
+                    modelCommentMes: [$('<span class="model-comment-mes"></span>'),$('<span class="model-comment-mes"></span>')],
+                    modelMore: $('<div class="model-more"></div>'),
+                    modelMorePos: $('<div class="model-more-pos"></div>'),
+                    modelMorePic: $('<div class="model-more-pic"></div>')
+                }
+
+                objModel.modelMesPic.css({"background-image": "url(" + config.page[i].head + ");"}); // 头像
+                objModel.modelMesName.html(config.page[i].name); // 姓名
+
+
+                if(config.page[i].mark == "video") {                 
+                    nolive(config.page[i].videoId,"video-" + i,config.page[i].videoPic); // 视频
+                    noVoice(objModel.modelVideoVoice);
+                } else if(config.page[i].mark == "pic") {
+                    $('<img src="' + config.page[i].pic + '" alt="小狗狗">').appendTo(objModel.modelImg) // 图片
+                } else {
+                    var htmlImg = ''; // 轮播图片
+                    for(var j = 0 ; j < config.page[i].picArr.length ; j++) {
+                        htmlImg += "<li>";
+                        htmlImg += "<img src='" + config.page[i].picArr[j] +"' alt='小狗狗'>";
+                        htmlImg += "</li>";
+                        $('<div class="model-icon"></div>').appendTo(objModel.modelPicBtn); // 轮播按钮
+                    }
+                    $('<ul>' + htmlImg + '</ul>').appendTo(objModel.modelCarouselImg); 
+                }
+
+                objModel.modelTalkWord.html(config.page[i].message); // 寄语
+
+                like(config.page[i].likeId,config.page[i].id).then(function (data) { // 点赞
+                    for(var j = 0 ; j < config.page.length ; j++) {
+                        if(config.page[j].id == data[0]) {
+                            $($('.model-interaction-pos').get(j)).append(data[1]).append(data[2]);  
+                        }
+                    }                 
+                })
+
+                commentTalk(config.page[i].commentId,config.page[i].id).then(function (data) { // 评论
+                    for(var j = 0 ; j < config.page.length ; j++) {
+                        if(config.page[j].id == data[0]) {
+                            $($('.model-comment-num').get(j)).html(data[1].total);
+                            $.each(data[1].commentid,function (index,value) {
+                                if(index < 2) {
+                                    $($($('.model-talk-comment').get(j)).find('.model-comment-name').get(index)).html(value.userinfo.nick + "&nbsp&nbsp")
+                                    $($($('.model-talk-comment').get(j)).find('.model-comment-mes').get(index)).html(value.content)
+                                }
+                            })
+                        }
+                    }
+                })
+
+                objModel.modelComment.attr("commentId",config.page[i].commentId) // 阅读更多
+                objModel.modelMorePic.attr("commentId",config.page[i].commentId) // 阅读更多
+                moreComment(objModel.modelComment);
+                moreComment(objModel.modelMorePic);
+
+                pageDom(objModel,config.page[i].mark,i);
+
+                share();
+            }
+        }
+    </script>
+
+    <script charset="utf-8"> // 晒我汪 与 汪圈函数
+        try {
+            document.domain = "qq.com"; // 跨域
+        } catch (e) {};
+
+        // 配置 canvas 画板
+        $('.main-wrapper').css('display','block');
+        $('.shawowang-content').css('display','block');
+        var canvas = $('canvas').get(0);
+        var ctx = canvas.getContext('2d');
+        canvas.width = $('.canvasInp .canvasInp-pos').width() + 2;
+        canvas.height = $('.canvasInp .canvasInp-pos').height() + 2;
+        var width = canvas.width;
+        var height = canvas.height;
+        var x = width / 2;
+        var y = height / 2;
+        var r = width / 4;
+        $('.shawowang-content').css('display','none');
+        $('.main-wrapper').css('display','none');
+
+        var markSuccess = 0; // loading 图片 标志位
+
+        var commentTime_dog; // 更新 汪圈 定时器
+
+        function drawCanvas (x,y,r) { // canvas 画图  
+            ctx.lineWidth = "2";         
+            ctx.strokeStyle = "#fff";
+            ctx.beginPath();
+            ctx.arc(x,y,r,60,0,2 * Math.PI,0);
+            ctx.closePath();
+            ctx.stroke();
+            
+            ctx.lineWidth = "2"; 
+            ctx.strokeStyle = "#fff";
+            ctx.beginPath();
+            ctx.moveTo(x,y - r / 2);
+            ctx.lineTo(x,y + r / 2);
+            ctx.stroke();
+            ctx.closePath();
+
+            ctx.lineWidth = "2"; 
+            ctx.strokeStyle = "#fff";
+            ctx.beginPath();
+            ctx.moveTo(x - r / 2,y);
+            ctx.lineTo(x + r / 2,y);
+            ctx.closePath();
+            ctx.stroke();
+        }
+
+        function roundCanvas (x,y,r,deg,width,height) { // canvas 加载
+            ctx.clearRect(0,0,width,height);
+            ctx.fillStyle = "#242424";
+            ctx.fillRect(0,0,width,height);
+
+            if(deg /  (2 * Math.PI) >= 1) {
+                deg = deg % (2 * Math.PI)
+            }
+
+            var offsetX = r * Math.cos(deg);
+            var offsetY = r * Math.sin(deg);
+
+            offsetX = x + offsetX;
+            offsetY = y - offsetY;
+            
+            ctx.fillStyle="#fff";
+            ctx.beginPath();
+            ctx.arc(offsetX,offsetY,r / 10 + 1,0,2 * Math.PI,0);
+            ctx.closePath();
+            ctx.fill();
+
+            drawCanvas(x,y,r);
+        }
+
+        function beginCanvas () { // canvas 一直加载
+            var deg = 0;
+            var timer = setInterval(function () {
+                if(markSuccess == 1) {
+                    clearInterval(timer);
+                    return;
+                }
+                deg += 2 * Math.PI / 180;
+                roundCanvas(x,y,r,deg,width,height);
+            },1/60*1000);
+        }
+  
+        function pageSign (arr) { // 生成默认的标签
+            for(var i = 0 ; i < arr.length ; i++) {
+                $('<li class="sign-click"><div class="my-sign"><span>' + arr[i] + '</span></div></li>').insertBefore('.shawowang-content .sign-my-dog .sign ul .more-sign')
+            }
+        }
+
+        function setPageSign () { // 点击标签事件
+            $('.sign-click .my-sign').css({"color": "#242424","background-color": "#fff"});
+            $($('.sign-click .my-sign').get(0)).css({"color": "#fff","background-color": "#242424"});
+            $('.word-in').attr('word',$($('.sign-click .my-sign span').get(0)).html());
+
+            $('.sign-click .my-sign').off().on('click',function () {
+                $('.sign-click .my-sign').css({"color": "#242424","background-color": "#fff"})
+                $(this).css({"color": "#fff","background-color": "#242424"});
+
+                $('.word-in').attr('word',$(this).find('span').html())
+            })
+        }
+
+        function addNewSign () { // 添加新的标签
+            $('.more-sign .my-sign').off().on('click',function () { // 新标签
+                $('.else-wrapper').css('display','block');
+                $('.else-wrapper .add-sign-content').css('display','block');
+            })
+
+            $('.else-wrapper .add-sign-content .add-sign-content-pos .sign-btn .false-btn').off().on('click',function () { // 取消
+                $('.else-wrapper').css('display','none');
+                $('.else-wrapper .add-sign-content').css('display','none');
+                $('.else-wrapper .add-sign-content .add-sign-content-pos .sign-inp').val('');
+            })
+
+            $('.else-wrapper .add-sign-content .add-sign-content-pos .sign-btn .true-btn').off().on('click',function () { // 确定
+                var value = $('.else-wrapper .add-sign-content .add-sign-content-pos .sign-inp').val();
+                var reg = /[a-z0-9_]/;
+                var len = 0;
+
+                for(var i = 0 ; i < value.length ; i++) { 
+                    if(reg.test(value[i])) {
+                        len++;
+                    } else {
+                        len += 2;
+                    }                   
+                }
+
+                if(0 < len && len < 9) {
+                    $('<li class="sign-click"><div class="my-sign"><span>' + value + '</span></div></li>').insertBefore('.shawowang-content .sign-my-dog .sign ul .more-sign');
+                    $('.else-wrapper').css('display','none');
+                    $('.else-wrapper .add-sign-content').css('display','none');
+                    $('.else-wrapper .add-sign-content .add-sign-content-pos .sign-inp').val('');
+                    
+                    $('.sign-click .my-sign').off().on('click',function () {
+                        $('.sign-click .my-sign').css({"color": "#242424","background-color": "#fff"})
+                        $(this).css({"color": "#fff","background-color": "#242424"})
+
+                        $('.word-in').attr('word',$(this).find('span').html())
+                    })
+                }     
+            })
+        }
+
+        function upLoadImg(data) { // 上传图片回调函数
+            markSuccess = 1;
+
+            ctx.fillStyle = "#242424";
+            ctx.fillRect(0,0,width,height);
+            drawCanvas(x,y,r);
+
+            $('.photoUrl').attr('url',data.data.picture[0].url);
+            $('.photoUrl').attr('width',data.data.picture[0].width);
+            $('.photoUrl').attr('height',data.data.picture[0].height);
+            $('.shawowang-content .canvasInp .canvasInp-pos').css('backgroundImage','url(' + data.data.picture[0].url + '/100)')
+            $('.shawowang-content .canvasInp .canvasInp-pos canvas').css('opacity','0.6');         
+            $('.shawowang-content .put-img-word').html('重新选择');
+        }
+
+        var MComment = { // 晒我汪提交函数
+            topCallback: function(res) {
+                var _this = MComment;
+                if (res.errCode === 0) {
+                    $('.else-wrapper').css('display','block');
+                    $('.else-wrapper .success').css('display','block');
+                    $('.photoUrl').attr('url','');
+                    $('.word-in').attr('word','萌萌哒');
+                    $('.shawowang-content .put-img-word').html('选择图片');
+                    $("#form_post_content").val('');
+                    $('.shawowang-content .canvasInp .canvasInp-pos').css('backgroundImage','url()');
+                    $('.shawowang-content .canvasInp .canvasInp-pos canvas').css('opacity','1');
+                    $('.sign-click .my-sign').css({"color": "#242424","background-color": "#fff"});
+                    $($('.sign-click .my-sign').get(0)).css({"color": "#fff","background-color": "#242424"});
+                    setTimeout(function () {
+                        $('.else-wrapper').css('display','none');
+                        $('.else-wrapper .success').css('display','none');
+                        
+                        $('.btn-jingxuan').css('backgroundImage','url(http://home.duanran96.com/dog/images/jingxuan-2.png)');
+                        $('.btn-shaiwowang').css('backgroundImage','url(http://home.duanran96.com/dog/images/shaiwowang-2.png)');
+                        $('.btn-wangquan').css('backgroundImage','url(http://home.duanran96.com/dog/images/wangquan-1.png)');
+
+                        $('.jingxuan-content').css('display','none');
+                        $('.shawowang-content').css('display','none');
+                        $('.wangquan-content').css('display','block');
+                    },2000)    
+                    return null;
+                } else if (res.errCode === 8) {
+                    return user.dologin();
+                } else {
+                    return null;
+                }
+            },
+            upLoadchange:function($this){
+                if ($this.val() != '') {
+                    if (!/\.(gif|jpg|jpeg|png)$/i.test($this.val())) {
+                        return false;
+                    }
+                    if(host.brower() === "wx"){
+                        $this.parent().find('input[name=g_tk]').val(user.gtk());
+                        $this.parent().find('input[name=appid]').val(user.user_info.appid);
+                        $this.parent().find('input[name=openid]').val(user.user_info.openid);
+                        $this.parent().find('input[name=access_token]').val(user.user_info.access_token);
+                        $this.parent().find('input[name=logintype]').val(1);
+                    }else{
+                        $this.parent().find('input[name=g_tk]').val(user.gtk()); // 获取uin
+                    }
+                    $this.parent().submit(); // 提交表单
+                    $('.shawowang-content .canvasInp .canvasInp-pos canvas').css('opacity','1');
+                    markSuccess = 0;
+                    beginCanvas();
+                }
+            },
+
+            upLoadImg:function(){
+                var _this = this;
+                $('.add_file').on('change',function(){
+                    if (!user.islogin()) {
+                        return user.login();
+                    }
+                    
+                    _this.upLoadchange($(this));
+                })
+            },
+            getWord: function() {
+                var html = $(".word-in").attr('word');
+                return html;
+            },
+            click: function() {
+                var _this = this;
+                $('.shawowang-content .banner .banner-pos .banner-btn').on("click", function() {
+                    var data;
+                    if (user.islogin()) {
+                        if($('.photoUrl').attr('url') == ''){
+                            alert('请选择图片');
+                            return;
+                        }
+                        if($('#form_post_content').val() == '') {
+                            alert('请输入内容');
+                            return;
+                        }
+
+                        var pictureArr = '[{\"url\":\"' + $('.photoUrl').attr('url') + '\",\"width\":' + $('.photoUrl').attr('width') + ',\"height\":' + $('.photoUrl').attr('height') + '}]';
+                        var content = "#" + _this.getWord() + "# " + $("#form_post_content").val();
+
+                        if (host.brower() === "wx") {
+                            data = {
+                                targetid: _this.id,
+                                type: 1,
+                                format: "SCRIPT",
+                                callback: "parent.topCallback",
+                                content:  content,
+                                _method: "put",
+                                g_tk: user.gtk(),
+                                source: 1,
+                                code: 0,
+                                subsource: 0,
+                                picture: pictureArr,
+                                logintype: user.login_type,
+                                openid: user.user_info.openid,
+                                access_token: user.user_info.access_token,
+                                appid: user.user_info.appid
+                            };
+                        } else {
+                            data = {
+                                targetid: _this.id,
+                                type: 1,
+                                format: "SCRIPT",
+                                callback: "parent.topCallback",
+                                content: content,
+                                _method: "put",
+                                g_tk: user.gtk(),
+                                source: 1,
+                                code: 0,
+                                subsource: 0,
+                                picture: pictureArr
+                            };
+                        }
+                        _this.iframepost("http://w.coral.qq.com/article/comment", data, null);   
+                    } else {
+                        return user.login();
+                    }
+                });
+            },
+            iframepost: function(url, data) {
+                if (!$('#post_iframe_cm').length) {
+                    $("body").append('<iframe id="post_iframe_cm" name="post_iframe_cm" style="display:none"></iframe>');
+                }
+                if (!$("#_messageform_cm").length) {
+                    $("body").append('<form action="' + url + '" method="post" target="post_iframe_cm" id="_messageform_cm" style="display:none;" accept-charset="utf-8"></form>');
+                } else {
+                    $('#_messageform_cm').attr('action', url).empty();
+                }
+                for (name in data) {
+                    $("#_messageform_cm").append($('<input name=\"' + name + '\" type="hidden" value=\'' + data[name] + '\' />'));
+                }
+                $('#_messageform_cm').submit();
+            },
+            focus: function() {
+                $("#form_post_content").on("focus", function() {
+                    if (!user.islogin()) {
+                        return user.login();
+                    }
+                });
+            },
+            init: function(id) {
+                this.id = id
+                this.click();
+                this.upLoadImg();
+                window.topCallback = this.topCallback;
+            }
+        }
+
+        var showComment = { // 汪圈获取信息函数
+            durTime: 30000,
+            init: function(id,num) {
+                this.id = id;
+                this.num = num;
+                this.getCommentList();
+            },
+            getCommentList: function() {
+                var _this = showComment;
+                var cmtUrl = "http://coral.qq.com/article/";
+                $.ajax({
+                    url: cmtUrl + _this.id + "/comment?" + new Date(),
+                    dataType: "jsonp",
+                    success: function(res) {
+                        var data = res.data;
+                        var total = this.num;
+                        var ototal = data.total;
+                        data.commentid.length = data.commentid.length > total ? total : data.commentid.length;
+                        var newComment = data.commentid;
+                        var h = '';
+                        showComment.returnComments(newComment,'',ototal);
+                    }
+                });
+                commentTime_dog = setTimeout(showComment.getCommentList,showComment.durTime);
+            },
+            returnComments: function(data,id,ototal) {
+                var _this = this;    
+                $("#comments_dog_list_wrap").find('.ul_1').html('');
+                $("#comments_dog_list_wrap").find('.ul_2').html('');	
+                for(var item in data) {
+                    var sign = data[item].content.split('#')[1];
+                    var content = data[item].content.split('#')[2];
+        
+                    var h = ''; 
+                    h += '<div class="chat_dog_item" data-cid="' + data[item].id + '">';
+                        h += '<div class="chat_head">';
+                            if(data[item].picture)
+                                h += '<img src="' + data[item].picture[0].url + '/100" class="">';
+                            h += '<div class="sign">' + sign + '</div>';
+                        h += '</div>';
+                        h += '<div class="chat_body">' + content + '</div>';
+                        h += '<div class="chat_foot">'
+                            h += '<img src="' + data[item].userinfo.head + '" class="avatar">';
+                            h += '<span class="name" nick="' + data[item].userinfo.nick + '">' + data[item].userinfo.nick + '</span>';
+                            h += '<span class="support_dog">' + data[item].up + '</span>';  
+                            h += '<div class="share"></div>';                         
+                        h += '</div>';
+                    h += '</div>';
+
+                    if(item % 2 == 0) {
+                        var comWrap = $("#comments_dog_list_wrap").find('.ul_1');
+                    } else {
+                        var comWrap = $("#comments_dog_list_wrap").find('.ul_2');
+                    }
+                    comWrap.append(h);
+                }        
+            
+                $('.wangquan-comment .banner .banner-pos .banner-talk-num').html(ototal + '参与');           
+
+                _this.active();
+            },
+            setUp: function(_cid, cmt_id, callback) {
+                var _this = this;
+                $.ajax({
+                    url: "http://coral.qq.com/article/comment/up/to/" + _cid + "?targetid=" + cmt_id,
+                    dataType: "jsonp",
+                    success: function(res) {
+                        if(res.errCode == 0) {
+                            callback();
+                        }
+                    }
+                });
+            },
+            active: function() {
+                var _this = this;
+                $(".support_dog").off().on("click", function(e) {
+                    e.stopPropagation();
+                    var _obj = $(this);
+                    var dataCid = _obj.closest(".chat_dog_item").attr("data-cid");
+                    if(!_obj.hasClass('chat_like')) {
+                        _this.setUp(dataCid, _this.id, function() {
+                            var n = parseInt(_obj.html());
+                            _obj.addClass('chat_like');
+                            n++;
+                            _obj.html(n);
+                        });
+                    }
+
+                });
+
+                $('#comments_dog_list_wrap ul .chat_dog_item .chat_foot .share').each(function () { 
+                    $(this).on('click',function () {
+                        shareQQNews();
+                    })
+                })
+            }
+        }
+
+    </script>
+
+    <script charset="utf-8"> // (精选，晒我汪，汪圈)切换按钮点击事件
+        $(document).ready(function () {
+            $('.btn-jingxuan').on('click',function () { // 精选
+                // 置顶显示
+                markScroll = 0;
+                if($(window).scrollTop()>100){
+                    $('.go-top').show();
+                }
+
+                $('.btn-jingxuan').css('backgroundImage','url(http://home.duanran96.com/dog/images/jingxuan-1.png)');
+                $('.btn-shaiwowang').css('backgroundImage','url(http://home.duanran96.com/dog/images/shaiwowang-2.png)');
+                $('.btn-wangquan').css('backgroundImage','url(http://home.duanran96.com/dog/images/wangquan-2.png)');
+
+                $('.jingxuan-content').css('display','block');
+                $('.shawowang-content').css('display','none');
+                $('.wangquan-content').css('display','none');
+
+                $('.jingxuan-comment').css('display','none');
+                $('.inp-wrapper').css('display','none');
+
+                $('#comments_list_wrap').empty();
+                $('.jingxuan-comment .banner .banner-pos .banner-talk-num').empty();
+            })
+
+            $('.btn-shaiwowang').on('click',function () { // 晒我汪
+                // 置顶隐藏
+                markScroll = 1;
+                $('.go-top').hide();
+
+                $('.btn-jingxuan').css('backgroundImage','url(http://home.duanran96.com/dog/images/jingxuan-2.png)');
+                $('.btn-shaiwowang').css('backgroundImage','url(http://home.duanran96.com/dog/images/shaiwowang-1.png)');
+                $('.btn-wangquan').css('backgroundImage','url(http://home.duanran96.com/dog/images/wangquan-2.png)');
+
+                $('.jingxuan-content').css('display','none');
+                $('.shawowang-content').css('display','block');
+                $('.wangquan-content').css('display','none');
+               
+                $('.jingxuan-comment').css('display','none');
+                $('.inp-wrapper').css('display','none');
+
+                $('#comments_list_wrap').empty();
+                $('.jingxuan-comment .banner .banner-pos .banner-talk-num').empty();
+            })
+
+            $('.btn-wangquan').on('click',function () { // 汪圈
+                // 置顶隐藏
+                markScroll = 1;
+                $('.go-top').hide();
+
+                $('.btn-jingxuan').css('backgroundImage','url(http://home.duanran96.com/dog/images/jingxuan-2.png)');
+                $('.btn-shaiwowang').css('backgroundImage','url(http://home.duanran96.com/dog/images/shaiwowang-2.png)');
+                $('.btn-wangquan').css('backgroundImage','url(http://home.duanran96.com/dog/images/wangquan-1.png)');
+
+                $('.jingxuan-content').css('display','none');
+                $('.shawowang-content').css('display','none');
+                $('.wangquan-content').css('display','block');
+
+                $('.jingxuan-comment').css('display','none');
+                $('.inp-wrapper').css('display','none');
+
+                $('#comments_list_wrap').empty();
+                $('.jingxuan-comment .banner .banner-pos .banner-talk-num').empty();
+            })
+
+        })
+    </script>
+
+    <script charset="utf-8"> // 配置页面的内容
+        $(document).ready(function () {
+            configDom(config);
+            ret();
+
+            MComment.init(commentId);
+                
+            ctx.fillStyle = "#242424";
+            ctx.fillRect(0,0,width,height);
+            drawCanvas(x,y,r);
+
+            pageSign(sign_config);
+            setPageSign();
+            addNewSign();
+
+            showComment.init(commentId,9950)
+
+            goTop();
+        })
+    </script>
+
+</body>
+</html><!--[if !IE]>|xGv00|aa1616b4276a13bc97ca5755e3e914e5<![endif]-->
+<!--<html><head><title></title></head><body></body></html>-->

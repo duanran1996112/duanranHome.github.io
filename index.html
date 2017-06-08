@@ -1,1 +1,329 @@
-你好 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="keywords" content="段然的个人主页">
+    <meta name="description" content="段然的个人主页">
+    <title>段然的个人主页</title>
+    <style>
+        body,dd,dl,dt,form,h1,h2,h3,h4,h5,h6,li,ol,p,ul {
+            margin: 0;
+            padding: 0
+        }
+        body {
+            color: #666;
+            font-size: 14px
+        }
+        *,:after,:before,input[type=search] {
+            box-sizing: border-box
+        }
+        li {
+            list-style: none
+        }
+        a {
+            color: #428bca;
+            text-decoration: none;
+            cursor: pointer
+        }
+        .leaf-nav {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 10000;
+            width: 75pt;
+            min-height: 450px;
+            background-color: #3e434a
+        }
+        .leaf-nav li {
+            width: 100%;
+            height: 89px;
+            border-bottom: 1px solid #464c54;
+            text-align: center;
+            line-height: 89px
+        }
+        .leaf-nav li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px
+        }
+        .leaf-nav li a:hover {
+            color: #aaa
+        }
+        .main {
+            overflow: hidden;
+            padding-left: 75pt;
+            width: 100%;
+            min-height: 600px
+        }
+        .leaf-index-title {
+            position: relative;
+            float: left;
+            margin-left: 30px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            width: 100%;
+            border-bottom: 1px solid#b2c8db
+        }
+        h2 {
+            text-shadow: 0 0 1px rgba(0,0,0,.01);
+            font-weight: 400;
+            font-style: normal;
+            font-size: 28px;
+            line-height: 28px
+        }
+        .ct-letterpress {
+            margin-left: 5px;
+            padding: 10px 0;
+            color: #b2c8db
+        }
+        .plugthumb {
+            position: relative;
+            float: left;
+            overflow: hidden;
+            margin: 20px auto;
+            margin-top: 2%;
+            margin-left: 2%;
+            padding-bottom: 1px;
+            width: 250px;
+            height: 380px;
+            background: #fff;
+            box-shadow: 0 0 4px rgba(0,0,0,.2)
+        }
+        .plugthumb:before {
+            position: absolute;
+            right: -6px;
+            bottom: -9px;
+            display: block;
+            width: 75pt;
+            height: 15px;
+            background: url(http://mat1.gtimg.com/news/2015/zt/lynnenie/img/shadow-right.png) bottom center no-repeat;
+            content: ''
+        }
+        .htmleaf-adv:after,.leaf-gongju:after,.leaf-jiaoc:after,.plugthumb:after {
+            position: absolute;
+            bottom: -11px;
+            left: -3px;
+            clear: both;
+            display: block;
+            width: 75pt;
+            height: 15px;
+            background: url(http://mat1.gtimg.com/news/2015/zt/lynnenie/img/shadow-left.png) bottom left no-repeat;
+            content: ''
+        }
+        .plugthumb .tp {
+            overflow: hidden;
+            width: 250px;
+            height: 11pc
+        }
+        .plugthumb .tp img {
+            width: 100%;
+            height: auto
+        }
+        .plugthumb .info {
+            padding: 15px;
+            height: 162px;
+            border-right: 1px solid#eee;
+            border-left: 1px solid#eee;
+            background-color: #fff;
+            color: #8e8e8e;
+            line-height: 20px
+        }
+        .plugthumb .info .title {
+            font-size: 1.2em;
+            line-height: 18px
+        }
+        .plugthumb .info .description {
+            overflow: hidden;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            height: 120px;
+        }
+        .plugthumb .mesg {
+            padding: 0 15px;
+            height: 40px;
+            border-top: 1px solid#f2f2f2;
+            line-height: 40px
+        }
+        .plugthumb .mesg .right {
+            float: right!important
+        }
+    </style>
+</head>
+<body>
+    <div class="leaf-nav">
+        <ul>
+            
+        <ul>
+    </div>
+    <div class="main">
+
+        <div class="leaf-index-title">
+            <h2 class="ct-letterpress">
+                最新demo
+            </h2>
+        </div>
+
+        <div class="item"> 
+        </div>
+
+        <div class="item">
+        </div>
+
+        <div class="item">         
+        </div>
+
+    </div>
+    <script src="http://mat1.gtimg.com/news/v_rranduan/waixingren/zepto.js"></script>
+    <script language="javascript">
+        $(function(){
+            var demos = [{
+                type:"h5",
+                img:"http://mat1.gtimg.com/news/v_rranduan/test2/lianghui.jpg",
+                url:"http://home.duanran96.com/meeting/",
+                title:"全景两会",
+                desc:"一个播放视频的小demo，使用了图片预加载的功能",
+                time:"2017-02"
+            },{
+                type:"h5",
+                img:"http://img1.gtimg.com/news/pics/hv1/224/137/2190/142439909.jpg",
+                url:"http://home.duanran96.com/talk/",
+                title:"论道h5",
+                desc:"基于ajax获取数据的，数据驱动界面",
+                time:"2017-02"
+            },{
+                type:"pc",
+                img:"http://img1.gtimg.com/news/pics/hv1/224/137/2190/142439909.jpg",
+                url:"http://home.duanran96.com/talk/",
+                title:"论道pc",
+                desc:"基于ajax获取数据的，数据驱动界面",
+                time:"2017-02"
+            },{
+                type:"h5",
+                img:"http://img1.gtimg.com/news/pics/hv1/146/29/2192/142542341.png",
+                url:"http://home.duanran96.com/invite/",
+                title:"十三邀",
+                desc:"一个播放视频的数据驱动页面，项目中有多个模块的互相交互",
+                time:"2017-02"
+            },{
+                type:"pc",
+                img:"http://img1.gtimg.com/ninja/1/2017/02/ninja148819543348898.jpg",
+                url:"http://home.duanran96.com/media/",
+                title:"全媒派",
+                desc:"一个传统的pc页面，使用轮播图与瀑布流加载内容",
+                time:"2017-03"
+            },{
+                type:"h5",
+                img:"http://home.duanran96.com/march/images/share-01.jpg",
+                url:"http://home.duanran96.com/march/",
+                title:"三月谣言",
+                desc:"一个使用jquery封装的翻页组建框架，项目中做到了适应各种屏幕的手机",
+                time:"2017-03"
+            },{
+                type:"h5",
+                img:"http://home.duanran96.com/april/images/share-01.jpg",
+                url:"http://home.duanran96.com/april/",
+                title:"四月谣言",
+                desc:"一个使用jquery封装的翻页组建框架，项目中做到了适应各种屏幕的手机",
+                time:"2017-04"
+            },{
+                type:"h5",
+                img:"http://home.duanran96.com/reduxAlien/images/share-one.jpg",
+                url:"http://home.duanran96.com/reduxAlien/",
+                title:"redux外星入侵",
+                desc:"一个使用react框架，配合redux重构数据流的项目，使用了对象加密等方法，项目中做到了pc与h5的兼容，以及适应各种大小的窗口与手机屏幕",
+                time:"2017-04"
+            },{
+                type:"h5",
+                img:"http://home.duanran96.com/vueCat/images/share.jpg",
+                url:"http://home.duanran96.com/vueCat/",
+                title:"vue较真猫",
+                desc:"一个使用vue框架，内部嵌入翻页组件的项目，项目中做到了适应各种屏幕的手机",
+                time:"2017-04"
+            },{
+                type:"point",
+                img:"http://home.duanran96.com/expressWebsocket/images/show.jpg",
+                url:"https://github.com/duanran1996112/duanranHome.github.io/tree/master/expressWebsocket",
+                title:"express+websocket通信",
+                desc:"一个使用express框架配合express-ws模块，实现的服务器与客户端之间的通信，项目中使用了jade模版。由于项目没有上线，只能在github中查看源码",
+                time:"2017-05"
+            },{
+                type:"point",
+                img:"http://home.duanran96.com/expressMongoDB/images/show.jpg",
+                url:"https://github.com/duanran1996112/duanranHome.github.io/tree/master/expressMongoDB",
+                title:"express+mongoDB学籍管理系统",
+                desc:"一个使用express框架配合mongoDB数据库，实现了在数据库中的存储，，项目中使用了jade模版。由于项目没有上线，只能在github中查看源码",
+                time:"2017-05"
+            },{
+                type:"h5",
+                img:"http://mat1.gtimg.com/news/v_rranduan/dogdog/select-pdog-1.png",
+                url:"http://home.duanran96.com/dog/",
+                title:"北京狗生",
+                desc:"一个使用form表单和ajax向服务端发送请求与数据，并且获取到数据的项目。项目足足写了3000行代码。由于离开了腾讯域名，只能做到ajax获取数据，发送数据需要在腾讯域名下实现",
+                time:"2017-06"
+            }];
+        var page ={
+            init: function(){
+                this.show(demos);
+                this.active();
+            },
+            show: function(data){
+                var h = nav = '';
+                var types = [];
+                nav += '<li type="all"><a class="index">all</a></li>';
+                for(var i = 0 ; i < data.length ; i++) {
+                    var img = data[i].img || 'http://mat1.gtimg.com/news/2015/zt/lynnenie/img/default.jpg';
+                    var time = data[i].time || '';
+
+                    if(types.indexOf(data[i].type) < 0){
+                        types.push(data[i].type);
+                        nav += '<li type="' + data[i].type + '"><a>' + data[i].type + '</a></li>';
+                    }
+
+                    h += '<div class="plugthumb" type="' + data[i].type + '">';
+                        h += '<div class="tp">';
+                            h += '<a target="_blank" href="' + data[i].url + '">';
+                                h += '<img src="' + img + '" alt="' + data[i].title+'">';
+                            h += '</a>';
+                        h += '</div>';
+                        h += '<div class="info">';
+                            h += '<div class="title">';
+                                h += '<a target="_blank" href="' + data[i].url + '" title="' + data[i].title + '">' + data[i].title+'</a>';
+                            h += '</div>';
+                            h += '<div class="description" title="' + data[i].desc + '">' + data[i].desc + '</div>';
+                        h += '</div>';
+                        h += '<div class="mesg">';
+                            h += '<span class="right">'+time+'</span>';
+                        h += '</div>';
+                    h += '</div>';
+                }
+
+                $(".main").html(h);
+                $(".leaf-nav ul").html(nav);
+            },
+            active:function(){
+                $(".leaf-nav li").each(function(i){
+                    $(this).on("click",function(){
+                        var f = $(this);
+                        $(".leaf-nav li").removeClass("active").eq(i).addClass("active");
+                        if($(this).attr("type") == "all"){
+                            $(".plugthumb").show();
+                        }else{
+                            $(".plugthumb").hide();
+                            $(".plugthumb[type='" + $(this).attr("type") + "']").show();
+                        }
+                    });
+                });
+            }
+        }  
+        page.init();    
+    });
+</script>
+</body>
+</html>

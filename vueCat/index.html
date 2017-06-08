@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<!--forbidden operators-->
+<!--<html><head><title></title></head><body></body></html>-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>食品安全让你心慌慌？较真喵教你几招！_腾讯新闻</title>
+    <meta name="Keywords" content="较真发布,较真喵,腾讯新闻,腾讯网,QQ,Tencent" />
+    <meta name="description" content="较真发布,较真喵" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <script src="http://mat1.gtimg.com/news/v_rranduan/waixingren/zepto.js"></script>
+    <!--<script src="http://mat1.gtimg.com/news/v_rranduan/waixingren/touch.js "></script>-->
+    <script type="text/javascript" src="http://mat1.gtimg.com/news/2015/zt/js/touch.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js" charset="utf-8"></script>
+    <style lang="">
+        /*主体部分*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            font-size: 62.5%;
+            font-family: "Microsoft Yahei";
+        }
+        img {
+            display: block;
+            width: 100%;
+        }
+        body {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+        .wrapper {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .wrapper .screen {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            transition: all 1s ease-in-out;
+            -webkit-transition: all 1s ease-in-out;
+        }
+        .wrapper .screen .page {
+            position: relative;
+        }
+
+
+        /*封皮*/
+        .page .page-message-one , .page .page-message-two , .page .page-message-three , .page .page-message-four , .page .page-message-five , .page .page-message-six {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            opacity: 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .page .page-swipe {
+            position: absolute;
+            transform: translateX(-50%);
+            left: 50%;
+            opacity: 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .page-00 {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(http://home.duanran96.com/vueCat/images/bg.jpg)
+        }
+
+        .page .page-message-one {
+            background-image: url(http://home.duanran96.com/vueCat/images/p-m-3.png);
+        }
+        .page .page-message-two {
+            background-image: url(http://home.duanran96.com/vueCat/images/p-m-4.png);
+        }
+        .page .page-message-three {
+            background-image: url(http://home.duanran96.com/vueCat/images/p-m-1.png);
+        }
+        .page .page-message-four {
+            background-image: url(http://home.duanran96.com/vueCat/images/p-m-2.png);
+        }
+        .page .page-message-five {
+            background-image: url(http://home.duanran96.com/vueCat/images/p-m-5.png);
+        }
+        .page .page-message-six {
+            background-image: url(http://home.duanran96.com/vueCat/images/p-m-6.png);
+        }
+        .page .page-swipe {
+            background-image: url(http://home.duanran96.com/vueCat/images/swipe.png);
+        }
+
+        /*封皮运动*/
+        .active .page-message-one {
+            animation: pageMessageOneMove 2.5s ease-in-out 1s forwards;
+            -webkit-animation: pageMessageOneMove 2.5s ease-in-out 1s forwards;
+        }
+        .active .page-message-two {
+            animation: pageMessageTwoMove 2s ease-in-out 1.5s forwards;
+            -webkit-animation: pageMessageTwoMove 2s ease-in-out 1.5s forwards;
+        }
+        .active .page-message-three {
+            animation: pageMessageThreeMove 1.5s ease-in-out 2s forwards;
+            -webkit-animation: pageMessageThreeMove 1.5s ease-in-out 2s forwards;
+        }
+        .active .page-message-four {
+            animation: pageMessageFourMove 1s ease-in-out 2.5s forwards;
+            -webkit-animation: pageMessageFourMove 1s ease-in-out 2.5s forwards;
+        }
+        .active .page-message-five {
+            animation: pageMessageFiveMove 0.5s ease-in-out 3.5s forwards;
+            -webkit-animation: pageMessageFiveMove 0.5s ease-in-out 3.5s forwards;
+        }
+        .active .page-message-six {
+            animation: pageMessageSixMove 0.5s ease-in-out 4s forwards;
+            -webkit-animation: pageMessageSixMove 0.5s ease-in-out 4s forwards;
+        }
+        .active .page-swipe {
+            animation: pageSwipeMove 1s ease-in-out 4.5s infinite;
+            -webkit-animation: pageSwipeMove 1s ease-in-out 4.5s infinite;
+        }
+
+        @keyframes pageMessageOneMove {
+            0% {
+                opacity: 0;
+                transform: translate(-10%,0);
+                -webkit-transform: translate(-10%,0);
+            }
+            25% {
+                opacity: 1;
+                transform: translate(0,0);
+                -webkit-transform: translate(0,0);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @-webkit-keyframes pageMessageOneMove {
+            0% {
+                opacity: 0;
+                transform: translate(-10%,0);
+                -webkit-transform: translate(-10%,0);
+            }
+            25% {
+                opacity: 1;
+                transform: translate(0,0);
+                -webkit-transform: translate(0,0);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @keyframes pageMessageTwoMove {
+            0% {
+                opacity: 0;
+                transform: translate(10%,0);
+                -webkit-transform: translate(10%,0);
+            }
+            20% {
+                opacity: 1;
+                transform: translate(0,0);
+                -webkit-transform: translate(0,0);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @-webkit-keyframes pageMessageTwoMove {
+            0% {
+                opacity: 0;
+                transform: translate(10%,0);
+                -webkit-transform: translate(10%,0);
+            }
+            20% {
+                opacity: 1;
+                transform: translate(0,0);
+                -webkit-transform: translate(0,0);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @keyframes pageMessageThreeMove {
+            0% {
+                opacity: 0;
+                transform: translate(0,10%);
+                -webkit-transform: translate(0,10%);
+            }
+            33% {
+                opacity: 1;
+                transform: translate(0,0);
+                -webkit-transform: translate(0,0);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @-webkit-keyframes pageMessageThreeMove {
+            0% {
+                opacity: 0;
+                transform: translate(0,10%);
+                -webkit-transform: translate(0,10%);
+            }
+            33% {
+                opacity: 1;
+                transform: translate(0,0);
+                -webkit-transform: translate(0,0);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @keyframes pageMessageFourMove {
+            0% {
+                opacity: 0;
+                transform: translate(0,10%);
+                -webkit-transform: translate(0,10%);
+            }
+            50% {
+                opacity: 1;
+                transform: translate(0,0);
+                -webkit-transform: translate(0,0);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @-webkit-keyframes pageMessageFourMove {
+            0% {
+                opacity: 0;
+                transform: translate(0,10%);
+                -webkit-transform: translate(0,10%);
+            }
+            50% {
+                opacity: 1;
+                transform: translate(0,0);
+                -webkit-transform: translate(0,0);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @keyframes pageMessageFiveMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes pageMessageFiveMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes pageMessageSixMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes pageMessageSixMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes pageSwipeMove {
+            0% {
+                opacity: 0.3;
+                transform: translate3d(-50%,0,0);
+                -webkit-transform: translate3d(-50%,0,0);
+            }
+            50% {
+                opacity: 0.7;
+                transform: translate3d(-50%,50%,0);
+                -webkit-transform: translate3d(-50%,50%,0);
+            }
+            100% {
+                opacity: 0.3;
+                transform: translate3d(-50%,0,0);
+                -webkit-transform: translate3d(-50%,0,0);
+            }
+        }
+        @-webkit-keyframes pageSwipeMove {
+            0% {
+                opacity: 0.3;
+                transform: translate3d(-50%,0,0);
+                -webkit-transform: translate3d(-50%,0,0);
+            }
+            50% {
+                opacity: 0.7;
+                transform: translate3d(-50%,50%,0);
+                -webkit-transform: translate3d(-50%,50%,0);
+            }
+            100% {
+                opacity: 0.3;
+                transform: translate3d(-50%,0,0);
+                -webkit-transform: translate3d(-50%,0,0);
+            }
+        }
+
+        /*漫画部分*/
+        .page .model {
+            position: absolute;
+            transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+        }
+        .page .model .model-content {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .page .model .model-content img {
+            position: relative;
+            opacity: 0;
+        }
+        .page .model-swipe {
+            position: absolute;
+            transform: translateX(-50%);
+            left: 50%;
+            opacity: 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(http://home.duanran96.com/vueCat/images/swipe.png);
+        }
+
+        /*漫画运动*/
+        .active .model .model-content img:nth-of-type(1) {
+            animation: modelImgMove 0.5s ease-in-out 1s forwards;
+            -webkit-animation: modelImgMove 0.5s ease-in-out 1s forwards;
+        }
+        .active .model .model-content img:nth-of-type(2) {
+            animation: modelImgMove 0.5s ease-in-out 1.25s forwards;
+            -webkit-animation: modelImgMove 0.5s ease-in-out 1.25s forwards;
+        }
+        .active .model .model-content img:nth-of-type(3) {
+            animation: modelImgMove 0.5s ease-in-out 1.5s forwards;
+            -webkit-animation: modelImgMove 0.5s ease-in-out 1.5s forwards;
+        }
+        .active .model .model-content img:nth-of-type(4) {
+            animation: modelImgMove 0.5s ease-in-out 1.75s forwards;
+            -webkit-animation: modelImgMove 0.5s ease-in-out 1.75s forwards;
+        }
+        .active .model .model-content img:nth-of-type(5) {
+            animation: modelImgMove 0.5s ease-in-out 2s forwards;
+            -webkit-animation: modelImgMove 0.5s ease-in-out 2s forwards;
+        }
+        .active .model-swipe {
+            animation: modelSwipeMove 1s ease-in-out 2.5s infinite;
+            -webkit-animation: modelSwipeMove 1s ease-in-out 2.5s infinite;
+        }
+
+        @keyframes modelImgMove {
+            0% {
+                opacity: 0;
+                transform: translate3d(0,50%,0);
+                -webkit-transform: translate3d(0,50%,0);
+            }
+            100% {
+                opacity: 1;
+                transform: translate3d(0,0,0);
+                -webkit-transform: translate3d(0,0,0);
+            }
+        }
+        @-webkit-keyframes modelImgMove {
+            0% {
+                opacity: 0;
+                transform: translate3d(0,50%,0);
+                -webkit-transform: translate3d(0,50%,0);
+            }
+            100% {
+                opacity: 1;
+                transform: translate3d(0,0,0);
+                -webkit-transform: translate3d(0,0,0);
+            }
+        }
+        @keyframes modelSwipeMove {
+            0% {
+                opacity: 0.3;
+                transform: translate3d(-50%,0,0);
+                -webkit-transform: translate3d(-50%,0,0);
+            }
+            50% {
+                opacity: 0.7;
+                transform: translate3d(-50%,50%,0);
+                -webkit-transform: translate3d(-50%,50%,0);
+            }
+            100% {
+                opacity: 0.3;
+                transform: translate3d(-50%,0,0);
+                -webkit-transform: translate3d(-50%,0,0);
+            }
+        }
+        @-webkit-keyframes modelSwipeMove {
+            0% {
+                opacity: 0.3;
+                transform: translate3d(-50%,0,0);
+                -webkit-transform: translate3d(-50%,0,0);
+            }
+            50% {
+                opacity: 0.7;
+                transform: translate3d(-50%,50%,0);
+                -webkit-transform: translate3d(-50%,50%,0);
+            }
+            100% {
+                opacity: 0.3;
+                transform: translate3d(-50%,0,0);
+                -webkit-transform: translate3d(-50%,0,0);
+            }
+        }
+
+        /*结尾页*/
+        .page .page-answer-one , .page .page-answer-two , .page .page-answer-three , .page .page-answer-four , .page .page-answer-five ,.page .page-wrong-message , .page .page-correct-message {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            opacity: 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .page .page-answer-button , .page .page-correct-button , .page .page-wrong-button {
+            position: absolute;
+            transform: translateX(-50%);
+            left: 50%;
+            opacity: 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .page .page-answer-logo-one , .page .page-answer-logo-two , .page .page-answer-logo-three , .page .page-answer-logo-four , .page .page-answer-wrong-one , .page .page-answer-wrong-two , .page .page-answer-wrong-three , .page .page-answer-correct , .page .page-wrong-word-one , .page .page-wrong-word-two , .page .page-wrong-word-three {
+            position: absolute;
+            opacity: 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;       
+        }
+
+        .page-09 {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(http://home.duanran96.com/vueCat/images/bg.jpg);
+        }
+
+        .page .page-answer-one {
+            opacity: 0;
+            background-image: url(http://home.duanran96.com/vueCat/images/p-a-1.png);
+        }
+        .page .page-answer-two {
+            opacity: 0;
+            background-image: url(http://home.duanran96.com/vueCat/images/p-a-2.png);
+        }
+        .page .page-answer-three {
+            background-size: cover;
+            background-image: url(http://home.duanran96.com/vueCat/images/p-a-3.png);
+        }
+        .page .page-answer-four {
+            background-image: url(http://home.duanran96.com/vueCat/images/p-a-4.png);
+        }
+        .page .page-answer-five {
+            background-image: url(http://home.duanran96.com/vueCat/images/p-a-5.png);
+        }
+
+        .page .page-answer-logo-one , .page .page-answer-logo-two , .page .page-answer-logo-three , .page .page-answer-logo-four , .page .page-answer-wrong-one , .page .page-answer-wrong-two , .page .page-answer-wrong-three , .page .page-answer-correct {
+            opacity: 1;
+        }
+
+        .page .page-wrong-message {
+            background-image: url(http://home.duanran96.com/vueCat/images/w-mes.png);
+        }
+        .page .page-correct-message {
+            background-image: url(http://home.duanran96.com/vueCat/images/c-mes.png);
+        }
+
+        .page-answer-wrong-one , .page-answer-wrong-two , .page-answer-wrong-three {
+            background-image: url(http://home.duanran96.com/vueCat/images/wrong.png);
+        }
+        .page-answer-correct {
+            background-image: url(http://home.duanran96.com/vueCat/images/correct.png);
+        }
+
+        .page-wrong-word-one {
+            background-image: url(http://home.duanran96.com/vueCat/images/w-1.png);
+        }
+        .page-wrong-word-two {
+            background-image: url(http://home.duanran96.com/vueCat/images/w-2.png);
+        }
+        .page-wrong-word-three {
+            background-image: url(http://home.duanran96.com/vueCat/images/w-3.png);
+        }
+
+        .page .page-answer-button {
+            background-image: url(http://home.duanran96.com/vueCat/images/submit.png);
+        }
+        .page .page-correct-button {
+            background-image: url(http://home.duanran96.com/vueCat/images/c-btn.png);
+        }
+        .page .page-wrong-button {
+            background-image: url(http://home.duanran96.com/vueCat/images/w-btn.png);
+        }
+
+        /*结尾运动*/
+        .active .page-answer-one {
+            animation: pageAnswerOneMove 1.5s ease-in-out 1s forwards;
+            -webkit-animation: pageAnswerOneMove 1.5s ease-in-out 1s forwards;
+        }
+        .active .page-answer-two {
+            animation: pageAnswerTwoMove 1s ease-in-out 1.5s forwards;
+            -webkit-animation: pageAnswerTwoMove 1s ease-in-out 1.5s forwards;
+        }
+        .active .page-answer-three {
+            animation: pageAnswerThreeMove 0.5s ease-in-out 2.5s forwards;
+            -webkit-animation: pageAnswerThreeMove 0.5s ease-in-out 2.5s forwards;
+        }
+        .active .page-answer-four {
+            animation: pageAnswerFourMove 0.5s ease-in-out 3s forwards;
+            -webkit-animation: pageAnswerFourMove 0.5s ease-in-out 3s forwards;
+        }
+        .active .page-answer-five {
+            animation: pageAnswerFiveMove 0.5s ease-in-out 3.5s forwards;
+            -webkit-animation: pageAnswerFiveMove 0.5s ease-in-out 3.5s forwards;
+        }
+        .active .page-answer-button {
+            animation: pageAnswerButtonMove 0.5s ease-in-out 4s forwards;
+            -webkit-animation: pageAnswerButtonMove 0.5s ease-in-out 4s forwards;
+        }
+
+        @keyframes pageAnswerOneMove {
+            0% {
+                opacity: 0;
+            }
+            33% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @-webkit-keyframes pageAnswerOneMove {
+            0% {
+                opacity: 0;
+            }
+            33% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @keyframes pageAnswerTwoMove {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @-webkit-keyframes pageAnswerTwoMove {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @keyframes pageAnswerThreeMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes pageAnswerThreeMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes pageAnswerFourMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes pageAnswerFourMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes pageAnswerFiveMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes pageAnswerFiveMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes pageAnswerButtonMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes pageAnswerButtonMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /*答题运动*/
+        .answer-active .page-wrong-message , .answer-active .page-correct-message {
+            animation: pageWrongOrCorrectMessageMove 0.5s ease-in-out 0.5s forwards;
+            -webkit-animation: pageWrongOrCorrectMessageMove 0.5s ease-in-out 0.5s forwards;
+        }
+        .answer-active .page-wrong-word-one {
+            animation: pageWrongWordOneMove 0.5s ease-in-out 1s forwards;
+            -webkit-animation: pageWrongWordOneMove 0.5s ease-in-out 1s forwards;
+        } 
+        .answer-active .page-wrong-word-two {
+            animation: pageWrongWordTwoMove 0.5s ease-in-out 1.5s forwards;
+            -webkit-animation: pageWrongWordTwoMove 0.5s ease-in-out 1.5s forwards;
+        } 
+        .answer-active .page-wrong-word-three {
+            animation: pageWrongWordThreeMove 0.5s ease-in-out 2s forwards;
+            -webkit-animation: pageWrongWordThreeMove 0.5s ease-in-out 2s forwards;
+        }
+        .answer-active .page-correct-button , .answer-active .page-wrong-button {
+            animation: pageWrongOrCorrectButtonMove 0.5s ease-in-out forwards;
+            -webkit-animation: pageWrongOrCorrectButtonMove 0.5s ease-in-out forwards;
+        }
+
+        @keyframes pageWrongOrCorrectMessageMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes pageWrongOrCorrectMessageMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes pageWrongWordOneMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes pageWrongWordOneMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes pageWrongWordTwoMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes pageWrongWordTwoMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes pageWrongWordThreeMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes pageWrongWordThreeMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes pageWrongOrCorrectButtonMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes pageWrongOrCorrectButtonMove {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /*loading模块*/
+        .wrapper .loading {
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 100%;
+            background-color: #EFEFEF;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(http://home.duanran96.com/vueCat/images/loading.gif);
+        }
+    </style>
+</head>
+<body>
+    <!-- 全站流量统计代码 开始 -->
+    <!--#include virtual="/public/pingjs.htm"-->
+    <!--普通专题pgv统计代码请放在<body>标签下方,重大项目报道及频道首页改版pgv统计代码放于首屏后.-->
+    <!-- 全站流量统计代码 结束 -->
+    <div id="app" class="wrapper">
+        <div v-show="styleAlive.loadingAlive" class="loading"></div>
+        <div v-show="styleAlive.screenAlive" class="screen" v-bind:style="{height: pageStyle.height * pageNum + 'px',width: pageStyle.width + 'px'}">
+            <component-one class="page page-00" v-bind:style="{height: pageStyle.height + 'px',width: pageStyle.width + 'px'}">
+            </component-one>
+            <div class="page" v-for="item in htmlDom" v-bind:style="{height: pageStyle.height + 'px',width: pageStyle.width + 'px'}">
+                <div class="model" v-bind:style="{width: pageStyle.model.width,paddingTop: pageStyle.model.paddingTop}">
+                    <div class="model-content" v-html="item">
+                    </div>
+                </div>
+                <div class="model-swipe" v-bind:style="{width: pageStyle.modelSwipe.width,paddingTop: pageStyle.modelSwipe.paddingTop,top: pageStyle.modelSwipe.top}"></div>
+            </div>
+            <component-two v-bind:fatherpagenum="nowPageNum" class="page page-09" v-bind:style="{height: pageStyle.height + 'px',width: pageStyle.width + 'px'}"></component-two>
+        </div>
+    </div>
+
+
+    <script charset="UTF-8">
+        var picArr = [ // 图片预加载数组
+            'http://home.duanran96.com/vueCat/images/loading.gif',
+            'http://home.duanran96.com/vueCat/images/bg.jpg',
+            'http://home.duanran96.com/vueCat/images/swipe.png',
+            'http://home.duanran96.com/vueCat/images/p-m-1.png',
+            'http://home.duanran96.com/vueCat/images/p-m-2.png',
+            'http://home.duanran96.com/vueCat/images/p-m-3.png',
+            'http://home.duanran96.com/vueCat/images/p-m-4.png',
+            'http://home.duanran96.com/vueCat/images/p-m-5.png',
+            'http://home.duanran96.com/vueCat/images/p-m-6.png',
+            'http://home.duanran96.com/vueCat/images/joke-1-1.png',
+            'http://home.duanran96.com/vueCat/images/joke-1-2.png',
+            'http://home.duanran96.com/vueCat/images/joke-1-3.png',
+            'http://home.duanran96.com/vueCat/images/joke-1-4.png',
+            'http://home.duanran96.com/vueCat/images/joke-1-5.png',
+            'http://home.duanran96.com/vueCat/images/joke-2-1.png',
+            'http://home.duanran96.com/vueCat/images/joke-2-2.png',
+            'http://home.duanran96.com/vueCat/images/joke-2-3.png',
+            'http://home.duanran96.com/vueCat/images/joke-2-4.png',
+            'http://home.duanran96.com/vueCat/images/joke-2-5.png',
+            'http://home.duanran96.com/vueCat/images/joke-3-1.png',
+            'http://home.duanran96.com/vueCat/images/joke-3-2.png',
+            'http://home.duanran96.com/vueCat/images/joke-3-3.png',
+            'http://home.duanran96.com/vueCat/images/joke-3-4.png',
+            'http://home.duanran96.com/vueCat/images/joke-3-5.png',
+            'http://home.duanran96.com/vueCat/images/joke-4-1.png',
+            'http://home.duanran96.com/vueCat/images/joke-4-2.png',
+            'http://home.duanran96.com/vueCat/images/joke-4-3.png',
+            'http://home.duanran96.com/vueCat/images/joke-4-4.png',
+            'http://home.duanran96.com/vueCat/images/joke-4-5.png',
+            'http://home.duanran96.com/vueCat/images/joke-5-1.png',
+            'http://home.duanran96.com/vueCat/images/joke-5-2.png',
+            'http://home.duanran96.com/vueCat/images/joke-5-3.png',
+            'http://home.duanran96.com/vueCat/images/joke-5-4.png',
+            'http://home.duanran96.com/vueCat/images/joke-5-5.png',
+            'http://home.duanran96.com/vueCat/images/joke-6-1.png',
+            'http://home.duanran96.com/vueCat/images/joke-6-2.png',
+            'http://home.duanran96.com/vueCat/images/joke-6-3.png',
+            'http://home.duanran96.com/vueCat/images/joke-6-4.png',
+            'http://home.duanran96.com/vueCat/images/joke-6-5.png',
+            'http://home.duanran96.com/vueCat/images/joke-7-1.png',
+            'http://home.duanran96.com/vueCat/images/joke-7-2.png',
+            'http://home.duanran96.com/vueCat/images/joke-7-3.png',
+            'http://home.duanran96.com/vueCat/images/joke-7-4.png',
+            'http://home.duanran96.com/vueCat/images/joke-7-5.png',
+            'http://home.duanran96.com/vueCat/images/joke-8-1.png',
+            'http://home.duanran96.com/vueCat/images/joke-8-2.png',
+            'http://home.duanran96.com/vueCat/images/joke-8-3.png',
+            'http://home.duanran96.com/vueCat/images/joke-8-4.png',
+            'http://home.duanran96.com/vueCat/images/p-a-1.png',
+            'http://home.duanran96.com/vueCat/images/p-a-2.png',
+            'http://home.duanran96.com/vueCat/images/p-a-3.png',
+            'http://home.duanran96.com/vueCat/images/p-a-4.png',
+            'http://home.duanran96.com/vueCat/images/p-a-5.png',
+            'http://home.duanran96.com/vueCat/images/submit.png',
+            'http://home.duanran96.com/vueCat/images/c-btn.png',
+            'http://home.duanran96.com/vueCat/images/w-btn.png',
+            'http://home.duanran96.com/vueCat/images/c-mes.png',
+            'http://home.duanran96.com/vueCat/images/w-mes.png',
+            'http://home.duanran96.com/vueCat/images/select.png',
+            'http://home.duanran96.com/vueCat/images/w-1.png',
+            'http://home.duanran96.com/vueCat/images/w-2.png',
+            'http://home.duanran96.com/vueCat/images/w-3.png',
+            'http://home.duanran96.com/vueCat/images/wrong.png',
+            'http://home.duanran96.com/vueCat/images/correct.png',
+            'http://home.duanran96.com/vueCat/images/long.jpg',
+            'http://home.duanran96.com/vueCat/images/l-btn.png',
+            'http://home.duanran96.com/vueCat/images/share.jpg',
+            'http://home.duanran96.com/vueCat/images/share-bg.png'
+         ];       
+
+         function countRect(obj) { // 计算icon位置封装函数
+            var _h = obj.height;
+            var _w = obj.width;
+            var _r = obj.right;
+            var _l = obj.left;
+            var _t = obj.top;
+            var _b = obj.bottom;
+            var oldH = obj.printHeight;
+            var oldW = obj.printWidth;
+            var newH = $(window).height();
+            var newW = $(window).width();
+            var viewH;
+            var viewW;
+            if((newW / newH) < (oldW / oldH)) {
+                viewH = oldH * newW / oldW;
+                return {
+                    width: _w * 100 / oldW,
+                    padding_top: _h * 100 / oldW,
+                    right: _r * 100 / oldW,
+                    left: _l * 100 / oldW,
+                    top: _t * 100 / oldH * viewH / newH + ((newH - viewH) / 2 / newH * 100),
+                    bottom: _b * 100 / oldH * viewH / newH + ((newH - viewH) / 2 / newH * 100)
+                }
+            } else {
+                viewW = oldW * newH / oldH;
+                return {
+                    width: _w * 100 / oldW * viewW / newW,
+                    padding_top: _h * 100 / oldW * viewW / newW,
+                    right: _r * 100 / oldW * viewW / newW + ((newW - viewW) / 2 / newW * 100),
+                    left: _l * 100 / oldW * viewW / newW + ((newW - viewW) / 2 / newW * 100),
+                    top: _t * 100 / oldH,
+                    bottom: _b * 100 / oldH,
+                }
+            }
+        }
+
+        var componentOne = { // 组件--第一页
+            template: '', // 模板
+            data: function () {
+                return { // 需要用到的数据
+                    pageSwipe: { // v-style 数据
+                        width: countRect({printHeight: 1206,printWidth: 750,width: 71}).width + '%',
+                        paddingTop: countRect({printHeight: 1206,printWidth: 750,height: 39}).padding_top + '%',
+                        top: countRect({printHeight: 1206,printWidth: 750,top: 1158}).top + '%',
+                    }
+                }
+            },
+            mounted: function () { // 组件生成时加载的函数
+                this.$nextTick(function () {
+                    this.resize();
+                })
+            },
+            methods: { // 需要用到的方法
+                resize: function () { // 改变窗口的尺寸
+                    var _this = this;
+                    $(window).resize(function () {
+                        _this.pageSwipe.width = countRect({printHeight: 1206,printWidth: 750,width: 71}).width + '%';
+                        _this.pageSwipe.paddingTop = countRect({printHeight: 1206,printWidth: 750,height: 39}).padding_top + '%';
+                        _this.pageSwipe.top = countRect({printHeight: 1206,printWidth: 750,top: 1158}).top + '%';
+                    })
+                }
+            }
+        }
+        componentOne.template += '<div>'
+        componentOne.template += '<div class="page-message-one"></div>';
+        componentOne.template += '<div class="page-message-two"></div>';
+        componentOne.template += '<div class="page-message-three"></div>';
+        componentOne.template += '<div class="page-message-four"></div>';
+        componentOne.template += '<div class="page-message-five"></div>';
+        componentOne.template += '<div class="page-message-six"></div>';
+        componentOne.template += '<div class="page-swipe" v-bind:style="{width: pageSwipe.width,paddingTop: pageSwipe.paddingTop,top: pageSwipe.top}"></div>';
+        componentOne.template += '</div>'
+
+        var componentTwo = { // 组件--结尾页
+            template: '', // 模板
+            data: function () { // 需要用到的数据
+                return {
+                    pageAnswerLogoOne: { // v-style 数据
+                        width: countRect({printHeight: 1206,printWidth: 750,width: 74}).width + '%',
+                        paddingTop: countRect({printHeight: 1206,printWidth: 750,height: 71}).padding_top + '%',
+                        top: countRect({printHeight: 1206,printWidth: 750,top: 369}).top + '%',
+                        left: countRect({printHeight: 1206,printWidth: 750,left: 60}).left + '%',
+                        backgroundImage: ''
+                    },
+                    pageAnswerLogoTwo: { // v-style 数据
+                        width: countRect({printHeight: 1206,printWidth: 750,width: 74}).width + '%',
+                        paddingTop: countRect({printHeight: 1206,printWidth: 750,height: 71}).padding_top + '%',
+                        top: countRect({printHeight: 1206,printWidth: 750,top: 506}).top + '%',
+                        left: countRect({printHeight: 1206,printWidth: 750,left: 60}).left + '%',
+                        backgroundImage: ''
+                    },
+                    pageAnswerLogoThree: { // v-style 数据
+                        width: countRect({printHeight: 1206,printWidth: 750,width: 74}).width + '%',
+                        paddingTop: countRect({printHeight: 1206,printWidth: 750,height: 71}).padding_top + '%',
+                        top: countRect({printHeight: 1206,printWidth: 750,top: 654}).top + '%',
+                        left: countRect({printHeight: 1206,printWidth: 750,left: 60}).left + '%',
+                        backgroundImage: ''
+                    },
+                    pageAnswerLogoFour: { // v-style 数据
+                        width: countRect({printHeight: 1206,printWidth: 750,width: 74}).width + '%',
+                        paddingTop: countRect({printHeight: 1206,printWidth: 750,height: 71}).padding_top + '%',
+                        top: countRect({printHeight: 1206,printWidth: 750,top: 800}).top + '%',
+                        left: countRect({printHeight: 1206,printWidth: 750,left: 60}).left + '%',
+                        backgroundImage: ''
+                    },
+                    pageAnswerWrongOne: { // v-style 数据
+                        width: countRect({printHeight: 1206,printWidth: 750,width: 79}).width + '%',
+                        paddingTop: countRect({printHeight: 1206,printWidth: 750,height: 56}).padding_top + '%',
+                        top: countRect({printHeight: 1206,printWidth: 750,top: 389}).top + '%',
+                        left: countRect({printHeight: 1206,printWidth: 750,left: 90}).left + '%',
+                    },
+                    pageAnswerWrongTwo: { // v-style 数据
+                        width: countRect({printHeight: 1206,printWidth: 750,width: 79}).width + '%',
+                        paddingTop: countRect({printHeight: 1206,printWidth: 750,height: 56}).padding_top + '%',
+                        top: countRect({printHeight: 1206,printWidth: 750,top: 527}).top + '%',
+                        left: countRect({printHeight: 1206,printWidth: 750,left: 90}).left + '%',
+                    },
+                    pageAnswerCorrect: { // v-style 数据
+                        width: countRect({printHeight: 1206,printWidth: 750,width: 79}).width + '%',
+                        paddingTop: countRect({printHeight: 1206,printWidth: 750,height: 56}).padding_top + '%',
+                        top: countRect({printHeight: 1206,printWidth: 750,top: 678}).top + '%',
+                        left: countRect({printHeight: 1206,printWidth: 750,left: 90}).left + '%',
+                    },
+                    pageAnswerWrongThree: { // v-style 数据
+                        width: countRect({printHeight: 1206,printWidth: 750,width: 79}).width + '%',
+                        paddingTop: countRect({printHeight: 1206,printWidth: 750,height: 56}).padding_top + '%',
+                        top: countRect({printHeight: 1206,printWidth: 750,top: 821}).top + '%',
+                        left: countRect({printHeight: 1206,printWidth: 750,left: 90}).left + '%',
+                    },
+                    pageWrongWordOne: { // v-style 数据
+                        width: countRect({printHeight: 1206,printWidth: 750,width: 102}).width + '%',
+                        paddingTop: countRect({printHeight: 1206,printWidth: 750,height: 102}).padding_top + '%',
+                        top: countRect({printHeight: 1206,printWidth: 750,top: 351}).top + '%',
+                        left: countRect({printHeight: 1206,printWidth: 750,left: 513}).left + '%',
+                    },
+                    pageWrongWordTwo: { // v-style 数据
+                        width: countRect({printHeight: 1206,printWidth: 750,width: 102}).width + '%',
+                        paddingTop: countRect({printHeight: 1206,printWidth: 750,height: 102}).padding_top + '%',
+                        top: countRect({printHeight: 1206,printWidth: 750,top: 484}).top + '%',
+                        left: countRect({printHeight: 1206,printWidth: 750,left: 513}).left + '%',
+                    },
+                    pageWrongWordThree: { // v-style 数据
+                        width: countRect({printHeight: 1206,printWidth: 750,width: 102}).width + '%',
+                        paddingTop: countRect({printHeight: 1206,printWidth: 750,height: 102}).padding_top + '%',
+                        top: countRect({printHeight: 1206,printWidth: 750,top: 784}).top + '%',
+                        left: countRect({printHeight: 1206,printWidth: 750,left: 513}).left + '%',
+                    },
+                    pageAnswerButton: { // v-style 数据
+                        width: countRect({printHeight: 1206,printWidth: 750,width: 373}).width + '%',
+                        paddingTop: countRect({printHeight: 1206,printWidth: 750,height: 89}).padding_top + '%',
+                        top: countRect({printHeight: 1206,printWidth: 750,top: 984}).top + '%',
+                    },
+                    pageWrongButton: { // v-style 数据
+                        width: countRect({printHeight: 1206,printWidth: 750,width: 450}).width + '%',
+                        paddingTop: countRect({printHeight: 1206,printWidth: 750,height: 116}).padding_top + '%',
+                        top: countRect({printHeight: 1206,printWidth: 750,top: 1028}).top + '%',
+                    },
+                    pageCorrectButton: { // v-style 数据
+                        width: countRect({printHeight: 1206,printWidth: 750,width: 450}).width + '%',
+                        paddingTop: countRect({printHeight: 1206,printWidth: 750,height: 116}).padding_top + '%',
+                        top: countRect({printHeight: 1206,printWidth: 750,top: 1028}).top + '%',
+                    },
+                    styleAlive: { // v-if数据
+                        showWrong: false,
+                        showCorrect: false,
+                        showLogo: false,
+                        showWrongAnswerOne: false,
+                        showWrongAnswerTwo: false,
+                        showWrongAnswerThree: false,
+                        showCorrectAnswer: false,
+                        showWord: false,
+                        showButton: true,
+                        showWrongDisplay: false,
+                        showCorrectDisplay: false
+                    },
+                    answerMark: [false,false,false,false], // 选项标记数组
+                    ifAnswer: false // 是否提交答案
+                }          
+            },
+            props: ['fatherpagenum'], // 从父级组件获取当前 翻页的 页数
+            mounted: function () { // 组件生成时加载的函数
+                this.$nextTick(function () {
+                    this.resize();
+                })
+            },
+            watch: { // 监听函数
+                fatherpagenum: { // 从父级组件获取当前 翻页的 页数 改变时
+                    handler: function () {
+                        if(this.fatherpagenum == 9) { // 当是 该 子组件 所在页数的时候
+                            var _this = this;
+                            var timer = setTimeout(function () {
+                                _this.styleAlive.showLogo = true; // 过4.5s后才可答题
+                            },4500)
+                        } else {
+                             this.styleAlive.showLogo = false; // 从该组件离开后不可答题
+                             this.changeStyles(); // 从该组件离开时需要改变的样式
+                        }
+                    },
+                    deep: true // 深度监听
+                }
+            },
+            methods: { // 需要用到的方法
+                changeStyles: function () { // 从该组件离开时需要改变的样式
+                    this.ifAnswer = false;
+
+                    this.answerMark = [false,false,false,false];
+
+                    this.pageAnswerLogoOne.backgroundImage = '';
+                    this.pageAnswerLogoTwo.backgroundImage = '';
+                    this.pageAnswerLogoThree.backgroundImage = '';
+                    this.pageAnswerLogoFour.backgroundImage = '';
+
+                    this.styleAlive.showWrongAnswerOne = false;
+                    this.styleAlive.showWrongAnswerTwo = false;
+                    this.styleAlive.showWrongAnswerThree = false;
+                    this.styleAlive.showCorrectAnswer = false;
+
+                    this.styleAlive.showButton = true;
+
+                    this.styleAlive.showWrong = false;
+                    this.styleAlive.showCorrect = false;
+
+                    this.styleAlive.showWord = false;
+
+                    this.styleAlive.showWrongDisplay = false;
+                    this.styleAlive.showCorrectDisplay = false;
+                },
+                resize: function () { // 改变窗口的尺寸
+                    var _this = this;
+                    $(window).resize(function () {
+                        _this.pageAnswerLogoOne.width = countRect({printHeight: 1206,printWidth: 750,width: 74}).width + '%';
+                        _this.pageAnswerLogoOne.paddingTop = countRect({printHeight: 1206,printWidth: 750,height: 71}).padding_top + '%';
+                        _this.pageAnswerLogoOne.top = countRect({printHeight: 1206,printWidth: 750,top: 369}).top + '%';
+                        _this.pageAnswerLogoOne.left = countRect({printHeight: 1206,printWidth: 750,left: 60}).left + '%';
+            
+                        _this.pageAnswerLogoTwo.width = countRect({printHeight: 1206,printWidth: 750,width: 74}).width + '%';
+                        _this.pageAnswerLogoTwo.paddingTop = countRect({printHeight: 1206,printWidth: 750,height: 71}).padding_top + '%';
+                        _this.pageAnswerLogoTwo.top = countRect({printHeight: 1206,printWidth: 750,top: 506}).top + '%';
+                        _this.pageAnswerLogoTwo.left = countRect({printHeight: 1206,printWidth: 750,left: 60}).left + '%';
+                 
+                        _this.pageAnswerLogoThree.width = countRect({printHeight: 1206,printWidth: 750,width: 74}).width + '%';
+                        _this.pageAnswerLogoThree.paddingTop = countRect({printHeight: 1206,printWidth: 750,height: 71}).padding_top + '%';
+                        _this.pageAnswerLogoThree.top = countRect({printHeight: 1206,printWidth: 750,top: 654}).top + '%';
+                        _this.pageAnswerLogoThree.left = countRect({printHeight: 1206,printWidth: 750,left: 60}).left + '%';
+                      
+                        _this.pageAnswerLogoFour.width = countRect({printHeight: 1206,printWidth: 750,width: 74}).width + '%';
+                        _this.pageAnswerLogoFour.paddingTop = countRect({printHeight: 1206,printWidth: 750,height: 71}).padding_top + '%';
+                        _this.pageAnswerLogoFour.top = countRect({printHeight: 1206,printWidth: 750,top: 800}).top + '%';
+                        _this.pageAnswerLogoFour.left = countRect({printHeight: 1206,printWidth: 750,left: 60}).left + '%';
+                       
+                        _this.pageAnswerWrongOne.width = countRect({printHeight: 1206,printWidth: 750,width: 79}).width + '%';
+                        _this.pageAnswerWrongOne.paddingTop = countRect({printHeight: 1206,printWidth: 750,height: 56}).padding_top + '%';
+                        _this.pageAnswerWrongOne.top = countRect({printHeight: 1206,printWidth: 750,top: 389}).top + '%';
+                        _this.pageAnswerWrongOne.left = countRect({printHeight: 1206,printWidth: 750,left: 90}).left + '%';
+                      
+                        _this.pageAnswerWrongTwo.width = countRect({printHeight: 1206,printWidth: 750,width: 79}).width + '%';
+                        _this.pageAnswerWrongTwo.paddingTop = countRect({printHeight: 1206,printWidth: 750,height: 56}).padding_top + '%';
+                        _this.pageAnswerWrongTwo.top = countRect({printHeight: 1206,printWidth: 750,top: 527}).top + '%';
+                        _this.pageAnswerWrongTwo.left = countRect({printHeight: 1206,printWidth: 750,left: 90}).left + '%';
+
+                        _this.pageAnswerCorrect.width = countRect({printHeight: 1206,printWidth: 750,width: 79}).width + '%';
+                        _this.pageAnswerCorrect.paddingTop = countRect({printHeight: 1206,printWidth: 750,height: 56}).padding_top + '%';
+                        _this.pageAnswerCorrect.top = countRect({printHeight: 1206,printWidth: 750,top: 678}).top + '%';
+                        _this.pageAnswerCorrect.left = countRect({printHeight: 1206,printWidth: 750,left: 90}).left + '%';
+                        
+                        _this.pageAnswerWrongThree.width = countRect({printHeight: 1206,printWidth: 750,width: 79}).width + '%';
+                        _this.pageAnswerWrongThree.paddingTop = countRect({printHeight: 1206,printWidth: 750,height: 56}).padding_top + '%';
+                        _this.pageAnswerWrongThree.top = countRect({printHeight: 1206,printWidth: 750,top: 821}).top + '%';
+                        _this.pageAnswerWrongThree.left = countRect({printHeight: 1206,printWidth: 750,left: 90}).left + '%';
+
+                        _this.pageWrongWordOne.width = countRect({printHeight: 1206,printWidth: 750,width: 102}).width + '%';
+                        _this.pageWrongWordOne.paddingTop = countRect({printHeight: 1206,printWidth: 750,height: 102}).padding_top + '%';
+                        _this.pageWrongWordOne.top = countRect({printHeight: 1206,printWidth: 750,top: 351}).top + '%';
+                        _this.pageWrongWordOne.left = countRect({printHeight: 1206,printWidth: 750,left: 513}).left + '%';
+                     
+                        _this.pageWrongWordTwo.width = countRect({printHeight: 1206,printWidth: 750,width: 102}).width + '%';
+                        _this.pageWrongWordTwo.paddingTop = countRect({printHeight: 1206,printWidth: 750,height: 102}).padding_top + '%';
+                        _this.pageWrongWordTwo.top = countRect({printHeight: 1206,printWidth: 750,top: 484}).top + '%';
+                        _this.pageWrongWordTwo.left = countRect({printHeight: 1206,printWidth: 750,left: 513}).left + '%';
+
+                        _this.pageWrongWordThree.width = countRect({printHeight: 1206,printWidth: 750,width: 102}).width + '%';
+                        _this.pageWrongWordThree.paddingTop = countRect({printHeight: 1206,printWidth: 750,height: 102}).padding_top + '%';
+                        _this.pageWrongWordThree.top = countRect({printHeight: 1206,printWidth: 750,top: 784}).top + '%';
+                        _this.pageWrongWordThree.left = countRect({printHeight: 1206,printWidth: 750,left: 513}).left + '%';
+                       
+                        _this.pageAnswerButton.width = countRect({printHeight: 1206,printWidth: 750,width: 373}).width + '%';
+                        _this.pageAnswerButton.paddingTop = countRect({printHeight: 1206,printWidth: 750,height: 89}).padding_top + '%';
+                        _this.pageAnswerButton.top = countRect({printHeight: 1206,printWidth: 750,top: 984}).top + '%';
+                        
+                        _this.pageWrongButton.width = countRect({printHeight: 1206,printWidth: 750,width: 450}).width + '%';
+                        _this.pageWrongButton.paddingTop = countRect({printHeight: 1206,printWidth: 750,height: 116}).padding_top + '%';
+                        _this.pageWrongButton.top = countRect({printHeight: 1206,printWidth: 750,top: 1028}).top + '%';
+
+                        _this.pageCorrectButton.width = countRect({printHeight: 1206,printWidth: 750,width: 450}).width + '%';
+                        _this.pageCorrectButton.paddingTop = countRect({printHeight: 1206,printWidth: 750,height: 116}).padding_top + '%';
+                        _this.pageCorrectButton.top = countRect({printHeight: 1206,printWidth: 750,top: 1028}).top + '%';
+                    })
+                },
+                logoClickOne: function () { // 点击答题按钮一
+                    if(!this.ifAnswer) {
+                        this.answerMark = [true,false,false,false];                  
+                        this.pageAnswerLogoOne.backgroundImage = 'url(http://home.duanran96.com/vueCat/images/select.png)';
+                        this.pageAnswerLogoTwo.backgroundImage = '';
+                        this.pageAnswerLogoThree.backgroundImage = '';
+                        this.pageAnswerLogoFour.backgroundImage = '';
+                    }          
+                },
+                logoClickTwo: function () { // 点击答题按钮二
+                    if(!this.ifAnswer) {
+                        this.answerMark = [false,true,false,false];
+                        this.pageAnswerLogoOne.backgroundImage = '';
+                        this.pageAnswerLogoTwo.backgroundImage = 'url(http://home.duanran96.com/vueCat/images/select.png)';
+                        this.pageAnswerLogoThree.backgroundImage = '';
+                        this.pageAnswerLogoFour.backgroundImage = '';
+                    }                
+                },
+                logoClickThree: function () { // 点击答题按钮三
+                    if(!this.ifAnswer) {
+                        this.answerMark = [false,false,true,false];
+                        this.pageAnswerLogoOne.backgroundImage = '';
+                        this.pageAnswerLogoTwo.backgroundImage = '';
+                        this.pageAnswerLogoThree.backgroundImage = 'url(http://home.duanran96.com/vueCat/images/select.png)';
+                        this.pageAnswerLogoFour.backgroundImage = '';
+                    }   
+                    
+                },
+                logoClickFour: function () { // 点击答题按钮四
+                    if(!this.ifAnswer) {
+                        this.answerMark = [false,false,false,true];
+                        this.pageAnswerLogoOne.backgroundImage = '';
+                        this.pageAnswerLogoTwo.backgroundImage = '';
+                        this.pageAnswerLogoThree.backgroundImage = '';
+                        this.pageAnswerLogoFour.backgroundImage = 'url(http://home.duanran96.com/vueCat/images/select.png)';
+                    }         
+                },
+                btnClick: function () {  // 点击提交按钮
+                    if(this.answerMark[0] || this.answerMark[1] || this.answerMark[2] || this.answerMark[3]) { // 如果有答案
+                        this.ifAnswer = true;
+                        var _this = this;
+                        if(this.answerMark[0]) {
+                            this.styleAlive.showWrongAnswerOne = true;
+                            this.styleAlive.showCorrectAnswer = true;
+                            this.styleAlive.showButton = false;
+                            this.styleAlive.showWrong = true;
+                            var timer = setTimeout(function () {
+                                _this.styleAlive.showWrongDisplay = true;
+                                clearTimeout(timer);
+                            },2500);
+                        } else if(this.answerMark[1]) {
+                            this.styleAlive.showWrongAnswerTwo = true;
+                            this.styleAlive.showCorrectAnswer = true;
+                            this.styleAlive.showButton = false;
+                            this.styleAlive.showWrong = true;
+                            var timer = setTimeout(function () {
+                                _this.styleAlive.showWrongDisplay = true;
+                                clearTimeout(timer);
+                            },2500);
+                        } else if(this.answerMark[2]) {
+                            this.styleAlive.showCorrectAnswer = true;
+                            this.styleAlive.showButton = false;
+                            this.styleAlive.showCorrect = true;
+                            var timer = setTimeout(function () {
+                                _this.styleAlive.showCorrectDisplay = true;
+                                clearTimeout(timer);
+                            },2500);
+                        } else{
+                            this.styleAlive.showWrongAnswerThree = true;
+                            this.styleAlive.showCorrectAnswer = true;
+                            this.styleAlive.showButton = false;
+                            this.styleAlive.showWrong = true;
+                            var timer = setTimeout(function () {
+                                _this.styleAlive.showWrongDisplay = true;
+                                clearTimeout(timer);
+                            },2500);
+                        }
+                        this.styleAlive.showWord = true;
+                        $($('.page').get(this.fatherpagenum)).addClass('answer-active'); // 添加answer active类,开始运动
+                    }
+                }
+            }
+        }
+
+        componentTwo.template += '<div>'
+        componentTwo.template += '<div class="page-answer-one"></div>';
+        componentTwo.template += '<div class="page-answer-two"></div>';
+        componentTwo.template += '<div class="page-answer-three"></div>';
+        componentTwo.template += '<div class="page-answer-four"></div>';
+        componentTwo.template += '<div class="page-answer-five"></div>';
+
+        componentTwo.template += '<div v-if="styleAlive.showWrong" class="page-wrong-message"></div>';
+        componentTwo.template += '<div v-if="styleAlive.showCorrect" class="page-correct-message"></div>';
+
+        componentTwo.template += '<div v-if="styleAlive.showLogo" v-on:tap="logoClickOne" class="page-answer-logo-one" v-bind:style="{width: pageAnswerLogoOne.width,paddingTop: pageAnswerLogoOne.paddingTop,top: pageAnswerLogoOne.top,left: pageAnswerLogoOne.left,backgroundImage: pageAnswerLogoOne.backgroundImage}"></div>';
+        componentTwo.template += '<div v-if="styleAlive.showLogo" v-on:tap="logoClickTwo" class="page-answer-logo-two" v-bind:style="{width: pageAnswerLogoTwo.width,paddingTop: pageAnswerLogoTwo.paddingTop,top: pageAnswerLogoTwo.top,left: pageAnswerLogoTwo.left,backgroundImage: pageAnswerLogoTwo.backgroundImage}"></div>';
+        componentTwo.template += '<div v-if="styleAlive.showLogo" v-on:tap="logoClickThree" class="page-answer-logo-three" v-bind:style="{width: pageAnswerLogoThree.width,paddingTop: pageAnswerLogoThree.paddingTop,top: pageAnswerLogoThree.top,left: pageAnswerLogoThree.left,backgroundImage: pageAnswerLogoThree.backgroundImage}"></div>';
+        componentTwo.template += '<div v-if="styleAlive.showLogo" v-on:tap="logoClickFour" class="page-answer-logo-four" v-bind:style="{width: pageAnswerLogoFour.width,paddingTop: pageAnswerLogoFour.paddingTop,top: pageAnswerLogoFour.top,left: pageAnswerLogoFour.left,backgroundImage: pageAnswerLogoFour.backgroundImage}"></div>';
+
+        componentTwo.template += '<div v-if="styleAlive.showWrongAnswerOne" class="page-answer-wrong-one" v-bind:style="{width: pageAnswerWrongOne.width,paddingTop: pageAnswerWrongOne.paddingTop,top: pageAnswerWrongOne.top,left: pageAnswerWrongOne.left}"></div>';
+        componentTwo.template += '<div v-if="styleAlive.showWrongAnswerTwo" class="page-answer-wrong-two" v-bind:style="{width: pageAnswerWrongTwo.width,paddingTop: pageAnswerWrongTwo.paddingTop,top: pageAnswerWrongTwo.top,left: pageAnswerWrongTwo.left}"></div>';
+        componentTwo.template += '<div v-if="styleAlive.showCorrectAnswer"class="page-answer-correct" v-bind:style="{width: pageAnswerCorrect.width,paddingTop: pageAnswerCorrect.paddingTop,top: pageAnswerCorrect.top,left: pageAnswerCorrect.left}"></div>';
+        componentTwo.template += '<div v-if="styleAlive.showWrongAnswerThree" class="page-answer-wrong-three" v-bind:style="{width: pageAnswerWrongThree.width,paddingTop: pageAnswerWrongThree.paddingTop,top: pageAnswerWrongThree.top,left: pageAnswerWrongThree.left}"></div>';
+
+        componentTwo.template += '<div v-if="styleAlive.showWord" class="page-wrong-word-one" v-bind:style="{width: pageWrongWordOne.width,paddingTop: pageWrongWordOne.paddingTop,top: pageWrongWordOne.top,left: pageWrongWordOne.left}"></div>';
+        componentTwo.template += '<div v-if="styleAlive.showWord" class="page-wrong-word-two" v-bind:style="{width: pageWrongWordTwo.width,paddingTop: pageWrongWordTwo.paddingTop,top: pageWrongWordTwo.top,left: pageWrongWordTwo.left}"></div>';
+        componentTwo.template += '<div v-if="styleAlive.showWord" class="page-wrong-word-three" v-bind:style="{width: pageWrongWordThree.width,paddingTop: pageWrongWordThree.paddingTop,top: pageWrongWordThree.top,left: pageWrongWordThree.left}"></div>';
+
+        componentTwo.template += '<div  v-if="styleAlive.showButton" v-on:tap="btnClick" class="page-answer-button" v-bind:style="{width: pageAnswerButton.width,paddingTop: pageAnswerButton.paddingTop,top: pageAnswerButton.top}"></div>';
+        componentTwo.template += '<a href="./demo.html"><div v-if="styleAlive.showWrongDisplay" class="page-wrong-button" v-bind:style="{width: pageWrongButton.width,paddingTop: pageWrongButton.paddingTop,top: pageWrongButton.top}"></div></a>';
+        componentTwo.template += '<a href="./demo.html"><div v-if="styleAlive.showCorrectDisplay" class="page-correct-button" v-bind:style="{width: pageCorrectButton.width,paddingTop: pageCorrectButton.paddingTop,top: pageCorrectButton.top}"></div></a>';
+
+        componentTwo.template += '</div>'
+
+        var app = new Vue({ // 主体结构
+            el: '#app',
+            data: {
+                pageNum: 0, // 页面个数
+                nowPageNum: 0, // 当前页面个数
+                pageStyle: { // v-style
+                    height: $(window).height(),
+                    width: $(window).width(),
+                    modelSwipe: {
+                        width: countRect({printHeight: 1206,printWidth: 750,width: 71}).width + '%',
+                        paddingTop: countRect({printHeight: 1206,printWidth: 750,height: 39}).padding_top + '%',
+                        top: countRect({printHeight: 1206,printWidth: 750,top: 1158}).top + '%',
+                    },
+                    model: {
+                        width: countRect({printHeight: 1206,printWidth: 750,width: 750}).width + '%',
+                        paddingTop: countRect({printHeight: 1206,printWidth: 750,height: 1206}).padding_top + '%',
+                    }
+                },
+                styleAlive: { // v-if
+                    screenAlive: false,
+                    loadingAlive: true,
+                },
+                htmlDom:['','','','','','','',''] // v-html
+            },
+            components: {
+                'component-one': componentOne, // 封皮组件
+                'component-two': componentTwo, // 结尾组件              
+            },
+            mounted: function () { // 组件生成时加载的函数 
+                this.$nextTick(function () {
+                    document.addEventListener('touchmove',function (event) { // 取消默认事件
+                        var event = event || window.event;
+                        event.preventDefault();
+                    }, false);
+                    this.share(); // 分享
+                    this.loadImage(picArr,this.changeNumber); // 图片预加载
+                })
+            },
+            methods: { // 需要用到的方法  
+                loadImage: function (arr,callback) { // 图片预加载
+                    var len = arr.length;
+                    var index = 0;
+                    var imgArr = [];
+                    function load () {
+                        var image = new Image();
+                        function loading () {
+                            imgArr.push(image);
+                            if(index < len) {
+                                callback && callback(imgArr);
+                                load();
+                            }else {
+                                    imgArr.shift();
+                            }
+                            index ++;
+                        }
+                        image.onload = loading; // 图片预加载成功
+                        image.onerror = loading; // 图片预加载失败
+                        image.src = arr[index];
+                    }
+                    if (len > 0) {
+                        load();
+                    }
+                },
+                changeNumber: function (arr) { // 图片预加载完成
+                    if(parseInt(arr.length / picArr.length) * 100 == 100) {   
+                        this.styleAlive.loadingAlive = false;    
+                        this.styleAlive.screenAlive = true;
+                        this.init();             
+                    }
+                },
+                init: function () { // 配置翻页属性
+                    var _this = this;
+                    _this.pageNum = $('.page').length;
+                    $('.page-0' + _this.nowPageNum).addClass('active');
+                    _this.active();   
+                    _this.resize();               
+                },
+                resize: function () { // 改变窗口尺寸
+                    var _this = this;
+                    $(window).resize(function () {
+                        _this.pageStyle.height = $(window).height();
+                        _this.pageStyle.width = $(window).width();
+
+                        _this.pageStyle.modelSwipe.width = countRect({printHeight: 1206,printWidth: 750,width: 71}).width + '%';
+                        _this.pageStyle.modelSwipe.paddingTop = countRect({printHeight: 1206,printWidth: 750,height: 39}).padding_top + '%';
+                        _this.pageStyle.modelSwipe.top = countRect({printHeight: 1206,printWidth: 750,top: 1158}).top + '%';
+
+                        _this.pageStyle.model.width = countRect({printHeight: 1206,printWidth: 750,width: 750}).width + '%';
+                        _this.pageStyle.model.paddingTop = countRect({printHeight: 1206,printWidth: 750,height: 1206}).padding_top + '%';
+                    })
+                },
+                sub: function () { // 从页面离开时删除 html 结构
+                    if(this.nowPageNum >= 1 && this.nowPageNum <= 8) {
+                        this.htmlDom[this.nowPageNum - 1] = ''
+                    }                    
+                },
+                add: function () { // 进入下一个页面时增加 html 结构
+                    if(this.nowPageNum >= 1 && this.nowPageNum <= 7) {
+                        this.htmlDom[this.nowPageNum - 1] += '<img src="http://home.duanran96.com/vueCat/images/joke-' + this.nowPageNum + '-1.png" alt="漫画">';
+                        this.htmlDom[this.nowPageNum - 1] += '<img src="http://home.duanran96.com/vueCat/images/joke-' + this.nowPageNum + '-2.png" alt="漫画">';
+                        this.htmlDom[this.nowPageNum - 1] += '<img src="http://home.duanran96.com/vueCat/images/joke-' + this.nowPageNum + '-3.png" alt="漫画">';
+                        this.htmlDom[this.nowPageNum - 1] += '<img src="http://home.duanran96.com/vueCat/images/joke-' + this.nowPageNum + '-4.png" alt="漫画">';
+                        this.htmlDom[this.nowPageNum - 1] += '<img src="http://home.duanran96.com/vueCat/images/joke-' + this.nowPageNum + '-5.png" alt="漫画">';
+                    } else if (this.nowPageNum == 8) {
+                        this.htmlDom[this.nowPageNum - 1] += '<img src="http://home.duanran96.com/vueCat/images/joke-' + this.nowPageNum + '-1.png" alt="漫画">';
+                        this.htmlDom[this.nowPageNum - 1] += '<img src="http://home.duanran96.com/vueCat/images/joke-' + this.nowPageNum + '-2.png" alt="漫画">';
+                        this.htmlDom[this.nowPageNum - 1] += '<img src="http://home.duanran96.com/vueCat/images/joke-' + this.nowPageNum + '-3.png" alt="漫画">';
+                        this.htmlDom[this.nowPageNum - 1] += '<img src="http://home.duanran96.com/vueCat/images/joke-' + this.nowPageNum + '-4.png" alt="漫画">';
+                    }                    
+                },
+                leave: function () { // 从该页面离开时,去除运动类
+                    var _this = this;
+                    if(_this.nowPageNum == 0 || _this.nowPageNum == 9) {
+                        $('.page-0' + _this.nowPageNum).removeClass('active');
+                    } else {
+                        $($('.page').get(_this.nowPageNum)).removeClass('active');
+                    }
+                },
+                arrive: function () { // 进入下一个页面时,增加运动类
+                    var _this = this;
+                    if(_this.nowPageNum == 0 || _this.nowPageNum == 9) {
+                        $('.page-0' + _this.nowPageNum).addClass('active');
+                    } else {
+                        $($('.page').get(_this.nowPageNum)).addClass('active');
+                    }
+                },
+                active: function () { // 绑定swipe事件,当从该页面离开时
+                    var _this = this;
+                    $('.wrapper .screen').on('swipeUp swipeDown',function (event) {
+                        var event = event || window.event;
+                        _this.leave();
+                        _this.sub();
+                        if(event.type == "swipeUp") {
+                            _this.nowPageNum++;
+                        } else {
+                            _this.nowPageNum--;
+                        }
+                        _this.page();
+                    });
+                },
+                page: function () { // 配置翻页的属性,当进入下一个页面时
+                    var _this = this;
+                    if (_this.nowPageNum < 0) {
+                        _this.nowPageNum = 0;
+                    } else if (_this.nowPageNum >= _this.pageNum) {
+                        _this.nowPageNum = _this.pageNum - 1;
+                    } else {
+                        _this.nowPageNum = _this.nowPageNum;
+                    }
+                    $('.wrapper .screen').css({
+                        "transform": "translate3d(0,-" +  (_this.nowPageNum * _this.pageStyle.height) + "px,0)",
+                        "-webkit-transform": "translate3d(0,-" +  (_this.nowPageNum * _this.pageStyle.height) + "px,0)"
+                    });
+                    _this.arrive();
+                    _this.add();
+                },
+                share: function () { // 分享
+                    var shareData = {
+                        title: "食品安全让你心慌慌？较真喵教你几招！",
+                        desc: "微波炉致癌？草莓农残超标欧盟7倍？这些报道你怕了吗？其实不必担心。",
+                        img: "http://home.duanran96.com/vueCat/images/share.jpg",
+                        link: window.location.href
+                    };
+                    var UA = function() {
+                        var userAgent = navigator.userAgent.toLowerCase();
+                        return {
+                            ipad: /ipad/.test(userAgent),
+                            iphone: /iphone/.test(userAgent),
+                            android: /android/.test(userAgent),
+                            qqnews: /qqnews/.test(userAgent),
+                            weixin: /micromessenger/.test(userAgent),
+                            qqnews_version: userAgent.match(/qqnews/i) == "qqnews" ? userAgent.split('qqnews/')[1] : ''
+                        }
+                    };
+                    function shareQQNews() {
+                        var ua = UA();
+                        switch (true) {
+                            case ua.qqnews:
+                                if (window.TencentNews && window.TencentNews.setShareArticleInfo) {
+                                    window.TencentNews.setShareArticleInfo(shareData.title, shareData.desc, shareData.desc, shareData.link, shareData.img)
+                                }
+                                if (window.TencentNews && window.TencentNews.showShareMenu) {
+                                    window.TencentNews.showShareMenu(shareData.link, shareData.title, shareData.desc, shareData.img, "news_news_wc")
+                                } else {
+                                    window.TencentNews.shareFromWebView(shareData.title, shareData.desc, shareData.img)
+                                }
+                                break;
+                            case ua.weixin:
+                                var weixinLayout = document.querySelector(".weixin_layout");
+                                weixinLayout.style.display = "block";
+                                weixinLayout.addEventListener("tap", function() {
+                                    weixinLayout.style.display = "none"
+                                });
+                                break;
+                            default:
+                                window.location = "http://share.v.t.qq.com/index.php?c=share&a=index&appkey=801378464&url=" + shareData.link + "&title=" + shareData.desc + "&pic=" + shareData.img + "&des=" + shareData.title;
+                                break;
+                        }
+                    };
+                    function onBridgeReady() {
+                        WeixinJSBridge.on("menu:share:timeline", function(e) {
+                            var data = {
+                                img_width: "150",
+                                img_height: "112.5",
+                                img_url: shareData.img,
+                                link: shareData.link,
+                                desc: shareData.title,
+                                title: shareData.desc
+                            };
+                            WeixinJSBridge.invoke("shareTimeline", data, function(res) {
+                                WeixinJSBridge.log(res.err_msg)
+                            })
+                        });
+                        WeixinJSBridge.on("menu:share:weibo", function() {
+                            WeixinJSBridge.invoke("shareWeibo", {
+                                "content": shareData.desc,
+                                "url": shareData.link
+                            }, function(res) {
+                                WeixinJSBridge.log(res.err_msg)
+                            })
+                        });
+                        WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+                            WeixinJSBridge.invoke("sendAppMessage", {
+                                img_width: "120",
+                                img_height: "120",
+                                img_url: shareData.img,
+                                link: shareData.link,
+                                desc: shareData.desc,
+                                title: shareData.title
+                            }, function(res) {
+                                WeixinJSBridge.log(res.err_msg)
+                            })
+                        })
+                    };
+                    document.addEventListener('WeixinJSBridgeReady', function() {
+                        onBridgeReady();
+                    });
+                    function androidQQNewsShare() {
+                        var head = document.getElementsByTagName('body')[0];
+                        var script = document.createElement('script');
+                        script.type = 'text/javascript';
+                        script.src = 'http://mat1.gtimg.com/www/js/newsapp/jsapi/news.js?_tsid=1';
+                        head.appendChild(script)
+                    }
+                    androidQQNewsShare();  
+                }
+            }
+        })  
+    </script>
+</body>
+</html>
+<!--<html><head><title></title></head><body></body></html>-->
