@@ -116,7 +116,6 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            background-image: url(http://home.duanran96.com/dog/images/select-pic-1.png);
         }
         .main .model-mes .model-mes-pos .model-mes-name {
             position: absolute;
@@ -2078,7 +2077,7 @@
                     modelMorePic: $('<div class="model-more-pic"></div>')
                 }
 
-                objModel.modelMesPic.css({"backgroundImage": "url(" + config.page[i].head + ");"}); // 头像
+                objModel.modelMesPic.css("backgroundImage","url(" + config.page[i].head + ")") // 头像
                 objModel.modelMesName.html(config.page[i].name); // 姓名
 
 
