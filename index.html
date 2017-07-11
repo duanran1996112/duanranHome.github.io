@@ -184,89 +184,124 @@
     <script language="javascript">
         $(function(){
             var demos = [{
+                type: "blog",
+                img:"http://home.duanran96.com/showImages/showBlog.jpg",
+                url:"http://www.duanran96.com/",
+                title:"个人博客",
+                desc:"基于hexo的next主题搭建的个人博客，对平时学习的知识进行总结并且记录。",
+                time:"2017"
+            },{
                 type:"h5",
                 img:"http://mat1.gtimg.com/news/v_rranduan/test2/lianghui.jpg",
                 url:"http://home.duanran96.com/meeting/",
                 title:"全景两会",
-                desc:"一个播放视频的小demo，使用了图片预加载的功能",
+                desc:"一个播放视频的小demo，使用了图片预加载的功能。",
                 time:"2017-02"
             },{
                 type:"h5",
                 img:"http://img1.gtimg.com/news/pics/hv1/224/137/2190/142439909.jpg",
                 url:"http://home.duanran96.com/talk/",
                 title:"论道h5",
-                desc:"基于ajax获取数据的，数据驱动h5界面",
+                desc:"基于ajax获取数据的，数据驱动h5界面。",
                 time:"2017-02"
             },{
                 type:"pc",
                 img:"http://img1.gtimg.com/news/pics/hv1/224/137/2190/142439909.jpg",
                 url:"http://home.duanran96.com/talk/",
                 title:"论道pc",
-                desc:"基于ajax获取数据的，数据驱动pc界面",
+                desc:"基于ajax获取数据的，数据驱动pc界面。",
                 time:"2017-02"
             },{
                 type:"h5",
                 img:"http://img1.gtimg.com/news/pics/hv1/146/29/2192/142542341.png",
                 url:"http://home.duanran96.com/invite/",
                 title:"十三邀",
-                desc:"一个播放视频的数据驱动h5页面，项目中有多个模块的互相交互",
+                desc:"一个播放视频的数据驱动h5页面，项目中有多个模块的互相交互。",
                 time:"2017-02"
             },{
                 type:"pc",
                 img:"http://img1.gtimg.com/ninja/1/2017/02/ninja148819543348898.jpg",
                 url:"http://home.duanran96.com/media/",
                 title:"全媒派",
-                desc:"一个传统的pc页面，使用轮播图与瀑布流加载内容",
+                desc:"一个传统的pc页面，使用轮播图与瀑布流加载内容。",
                 time:"2017-03"
             },{
                 type:"h5",
                 img:"http://home.duanran96.com/march/images/share-01.jpg",
                 url:"http://home.duanran96.com/march/",
                 title:"三月谣言",
-                desc:"一个使用jquery封装的翻页组建框架，项目中做到了适应各种屏幕的手机",
+                desc:"一个使用jquery封装的翻页组建框架，项目中做到了适应各种屏幕的手机。",
                 time:"2017-03"
             },{
                 type:"h5",
                 img:"http://home.duanran96.com/april/images/share-01.jpg",
                 url:"http://home.duanran96.com/april/",
                 title:"四月谣言",
-                desc:"一个使用jquery封装的翻页组建框架，项目中做到了适应各种屏幕的手机",
+                desc:"一个使用jquery封装的翻页组建框架，项目中做到了适应各种屏幕的手机。",
                 time:"2017-04"
             },{
                 type:"h5",
                 img:"http://home.duanran96.com/reduxAlien/images/share-one.jpg",
                 url:"http://home.duanran96.com/reduxAlien/",
                 title:"redux外星入侵",
-                desc:"一个使用react框架，配合redux重构数据流的项目，使用了对象加密等方法，项目中做到了pc与h5的兼容，以及适应各种大小的窗口与手机屏幕",
+                desc:"一个使用react框架，配合redux重构数据流的项目，使用了对象加密等方法，项目中做到了pc与h5的兼容，以及适应各种大小的窗口与手机屏幕。",
                 time:"2017-04"
             },{
                 type:"h5",
                 img:"http://home.duanran96.com/vueCat/images/share.jpg",
                 url:"http://home.duanran96.com/vueCat/",
                 title:"vue较真猫",
-                desc:"一个使用vue框架，内部嵌入翻页组件的项目，项目中做到了适应各种屏幕的手机",
+                desc:"一个使用vue框架，内部嵌入翻页组件的项目，项目中做到了适应各种屏幕的手机。",
                 time:"2017-04"
             },{
                 type:"point",
                 img:"http://home.duanran96.com/showImages/show1.jpg",
                 url:"https://github.com/duanran1996112/duanranPoint/tree/master/websocket",
                 title:"websocket通信",
-                desc:"一个使用ws模块，实现了客户端与服务器之间聊天通信的项目。由于项目没有上线，只能在github中查看源码",
+                desc:"一个使用ws模块，实现了客户端与服务器之间聊天通信的项目。由于项目没有上线，只能在github中查看源码并在本地运行。",
                 time:"2017-05"
             },{
                 type:"point",
                 img:"http://home.duanran96.com/showImages/show2.jpg",
                 url:"https://github.com/duanran1996112/duanranPoint/tree/master/expressWebsocket",
                 title:"express/websocket登录系统",
-                desc:"一个使用express框架配合express-ws模块，模拟了一个登录系统的项目，项目中使用了jade模版。由于项目没有上线，只能在github中查看源码",
+                desc:"一个使用express框架配合express-ws模块，模拟了一个登录系统的项目，项目中使用了jade模版。由于项目没有上线，只能在github中查看源码并在本地运行。",
                 time:"2017-05"
             },{
                 type:"point",
                 img:"http://home.duanran96.com/showImages/show3.jpg",
                 url:"https://github.com/duanran1996112/duanranPoint/tree/master/expressMongoDB",
                 title:"express/mongoDB学籍系统",
-                desc:"一个使用express框架配合mongoDB数据库，实现了在数据库中的存储的项目，项目中使用了jade模版。由于项目没有上线，只能在github中查看源码",
+                desc:"一个使用express框架配合mongoDB数据库，实现了在数据库中的存储的项目，项目中使用了jade模版。由于项目没有上线，只能在github中查看源码并在本地运行。",
                 time:"2017-05"
+            },{
+                type:"h5",
+                img:"http://mat1.gtimg.com/news/v_rranduan/dogdog/select-pdog-1.png",
+                url:"http://home.duanran96.com/dog/",
+                title:"北京狗生",
+                desc:"一个含有多个模块的h5页面，使用from表单和ajax向服务器发送数据，编写回掉函数处理数据并显示于页面上。由于项目脱离了腾讯域名只支持浏览功能。",
+                time:"2017-06"
+            },{
+                type:"point",
+                img:"http://home.duanran96.com/showImages/show4.jpg",
+                url:"https://github.com/duanran1996112/duanranPoint/tree/master/koaMysql",
+                title:"koa/mysql数据展现",
+                desc:"一个使用koa框架配合mysql数据库的项目，项目中使用pug模版对数据库中的数据进行展现。由于项目没有上线，只能在github中查看源码并在本地运行。",
+                time:"2017-07"
+            },{
+                type:"point",
+                img:"http://home.duanran96.com/showImages/show5.jpg",
+                url:"https://github.com/duanran1996112/duanranPoint/tree/master/koaSocketio",
+                title:"koa/socket.io聊天池",
+                desc:"一个使用koa框架配合socket.io搭建的聊天池的项目，项目中使用pug模版，实现了多人同时聊天。由于项目没有上线，只能在github中查看源码并在本地运行。",
+                time:"2017-07"
+            },{
+                type:"point",
+                img:"http://home.duanran96.com/showImages/show6.jpg",
+                url:"http://home.duanran96.com/angularTodolist/",
+                title:"angularjs-todolist",
+                desc:"一个使用angualrjs框架编写的小项目，其中含有todolist的功能",
+                time:"2017-07"
             }];
         var page ={
             init: function(){

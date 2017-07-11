@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./angular-1.3.0/angular.js"></script>
+    <style>
+        .finish {
+            text-decoration: line-through;
+        }
+
+        .show {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div ng-app="App" ng-controller="TodoList">
+        <input type="text" ng-model="inp" ng-keypress="add($event)">
+        <p>输入完内容后敲击回车 enter</p>
+        <ul>
+            <li ng-repeat="item in todoListArr" ng-if="item.show" ng-class="{true: 'finish'}[item.finish]" ng-click="todo(item)">{{item.thing}}</li>
+        </ul> 
+        <div>
+            <span ng-click="all()" ng-class="{true: 'show'}[showArr[0]]">show all</span>
+            <span ng-click="finish()" ng-class="{true: 'show'}[showArr[1]]">show finish</span>
+            <span ng-click="nofinish()" ng-class="{true: 'show'}[showArr[2]]">show nofinish</span>
+        </div>   
+    </div>
+
+    <script>
+        var app = angular.module('App', []);
+        app.controller('TodoList', function ($scope) {
+            $scope.todoListArr = [];
+            $scope.showArr = [true,false,false];
+            $scope.inp = "";
+
+            $scope.add = function ($event) {
+                if($event.keyCode ==13) {
+                    $scope.todoListArr.push({
+                        thing: $scope.inp,
+                        finish: false,
+                        show: true
+                    });
+                    $scope.inp = "";
+                }
+            }
+
+            $scope.todo = function (item) {
+                item.finish = !item.finish;
+                if($scope.showArr[0] == false && $scope.showArr[1] == false || $scope.showArr[0] == false && $scope.showArr[2] == false) {
+                    item.show = false;
+                }
+            }
+
+            $scope.all = function () {
+                for(var i = 0 ; i < $scope.todoListArr.length ; i++) {
+                    $scope.todoListArr[i].show = true;
+                }
+                $scope.showArr = [true,false,false];
+            }
+
+            $scope.finish = function () {
+                for(var i = 0 ; i < $scope.todoListArr.length ; i++) {
+                    if($scope.todoListArr[i].finish == false) {
+                        $scope.todoListArr[i].show = false;
+                    } else {
+                        $scope.todoListArr[i].show = true;
+                    }
+                }
+                $scope.showArr = [false,true,false];
+            }
+
+            $scope.nofinish = function () {
+                for(var i = 0 ; i < $scope.todoListArr.length ; i++) {
+                    if($scope.todoListArr[i].finish == false) {
+                        $scope.todoListArr[i].show = true;
+                    } else {
+                        $scope.todoListArr[i].show = false;
+                    }
+                }
+                $scope.showArr = [false,false,true];
+            }
+
+        });
+
+    </script>
+</div>
+</body>
+</html>
