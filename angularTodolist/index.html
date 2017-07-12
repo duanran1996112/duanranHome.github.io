@@ -33,17 +33,20 @@
     <script>
         var app = angular.module('App', []);
         app.controller('TodoList', function ($scope) {
-            function fetch () {
-                return JSON.parse(window.localStorage.getItem('newMessage') || '[]');
+            var storageTodoList = "storageTodoList";
+            var storageShow = "storageShow";
+
+            function fetch (storage,item) {
+                return JSON.parse(window.localStorage.getItem(storage) || item);
             }
 
-            function save (items) {
-                window.localStorage.setItem('newMessage',JSON.stringify(items));
+            function save (storage,items) {
+                window.localStorage.setItem(storage,JSON.stringify(items));
             }
 
 
-            $scope.todoListArr = fetch();
-            $scope.showArr = [true,false,false];
+            $scope.todoListArr = fetch(storageTodoList,'[]');
+            $scope.showArr = fetch(storageShow,'[true,false,false]');
             $scope.inp = "";
 
             $scope.add = function ($event) {
@@ -51,7 +54,7 @@
                     $scope.todoListArr.push({
                         thing: $scope.inp,
                         finish: false,
-                        show: true
+                        show: ($scope.showArr[0] == false && $scope.showArr[2] == false) ? false : true
                     });
                     $scope.inp = "";
                 }
@@ -94,8 +97,12 @@
             }
 
             $scope.$watch('todoListArr',function (newValue) {
-                save(newValue);
+                save(storageTodoList,newValue);
             },true)
+
+            $scope.$watch('showArr',function (newValue) {
+                save(storageShow,newValue);
+            })
 
         });
 
