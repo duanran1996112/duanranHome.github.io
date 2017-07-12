@@ -33,7 +33,16 @@
     <script>
         var app = angular.module('App', []);
         app.controller('TodoList', function ($scope) {
-            $scope.todoListArr = [];
+            function fetch () {
+                return JSON.parse(window.localStorage.getItem('newMessage') || '[]');
+            }
+
+            function save (items) {
+                window.localStorage.setItem('newMessage',JSON.stringify(items));
+            }
+
+
+            $scope.todoListArr = fetch();
             $scope.showArr = [true,false,false];
             $scope.inp = "";
 
@@ -83,6 +92,10 @@
                 }
                 $scope.showArr = [false,false,true];
             }
+
+            $scope.$watch('todoListArr',function (newValue) {
+                save(newValue);
+            },true)
 
         });
 
