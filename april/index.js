@@ -10,73 +10,73 @@ $(document).ready(function () {
         {
             title: "四月5大食药谣言盘点",
             desc: "在外喝粥等于喝胶？塑料加工成大米？较真四月5大食药谣言盘点",
-            img: "http://home.duanran96.com/april/images/share-logo.jpg"
+            img: "https://duanran1996112.github.io/duanranHome.github.io/april/images/share-logo.jpg"
         },
         {
             title: "四月5大食药谣言盘点",
             desc: "在外喝粥等于喝胶？塑料加工成大米？较真四月5大食药谣言盘点",
-            img: "http://home.duanran96.com/april/images/share-logo.jpg"
+            img: "https://duanran1996112.github.io/duanranHome.github.io/april/images/share-logo.jpg"
         },
         {
             title: '四月食药谣言NO.1：皮皮虾遭人为“注胶',
             desc: '我正在看较真：皮皮虾遭人为注“胶”？那是未成熟的虾黄。',
-            img: 'http://home.duanran96.com/april/images/share-01.jpg'
+            img: 'https://duanran1996112.github.io/duanranHome.github.io/april/images/share-01.jpg'
         },
         {
             title: '四月食药谣言NO.2：人造鸡蛋流入市场',
             desc: '我正在看较真：人造假鸡蛋流入市场？只是玩具，不必担心。',
-            img: 'http://home.duanran96.com/april/images/share-02.jpg'
+            img: 'https://duanran1996112.github.io/duanranHome.github.io/april/images/share-02.jpg'
         },
         {
             title: '四月食药谣言NO.3：春茶含过量农药，一喝中毒',
             desc: '我正在看较真：春茶含过量农药，一就喝中毒？春茶基本不用药。',
-            img: 'http://home.duanran96.com/april/images/share-03.jpg'
+            img: 'https://duanran1996112.github.io/duanranHome.github.io/april/images/share-03.jpg'
         },
         {
             title: '四月食药谣言NO.4：在外面喝粥等于喝胶水',
             desc: '我正在看较真：在外喝粥等于喝胶水？夸大事实。',
-            img: 'http://home.duanran96.com/april/images/share-04.jpg'
+            img: 'https://duanran1996112.github.io/duanranHome.github.io/april/images/share-04.jpg'
         },
         {
             title: '四月食药谣言NO.5：塑料加工成大米',
             desc: '我正在看较真：视频曝光塑料加工成大米？谣言，那是塑料颗粒',
-            img: 'http://home.duanran96.com/april/images/share-05.jpg'
+            img: 'https://duanran1996112.github.io/duanranHome.github.io/april/images/share-05.jpg'
         },
         {
             title: "四月5大食药谣言盘点",
             desc: "在外喝粥等于喝胶？塑料加工成大米？较真四月5大食药谣言盘点",
-            img: "http://home.duanran96.com/april/images/share-logo.jpg"
+            img: "https://duanran1996112.github.io/duanranHome.github.io/april/images/share-logo.jpg"
         },
         {
             title: "四月5大食药谣言盘点",
             desc: "在外喝粥等于喝胶？塑料加工成大米？较真四月5大食药谣言盘点",
-            img: "http://home.duanran96.com/april/images/share-logo.jpg"
+            img: "https://duanran1996112.github.io/duanranHome.github.io/april/images/share-logo.jpg"
         },
         {
             title: "四月5大食药谣言盘点",
             desc: "在外喝粥等于喝胶？塑料加工成大米？较真四月5大食药谣言盘点",
-            img: "http://home.duanran96.com/april/images/share-logo.jpg"
+            img: "https://duanran1996112.github.io/duanranHome.github.io/april/images/share-logo.jpg"
         },
         {
             title: "四月5大食药谣言盘点",
             desc: "在外喝粥等于喝胶？塑料加工成大米？较真四月5大食药谣言盘点",
-            img: "http://home.duanran96.com/april/images/share-logo.jpg"
+            img: "https://duanran1996112.github.io/duanranHome.github.io/april/images/share-logo.jpg"
         },
         {
             title: "四月5大食药谣言盘点",
             desc: "在外喝粥等于喝胶？塑料加工成大米？较真四月5大食药谣言盘点",
-            img: "http://home.duanran96.com/april/images/share-logo.jpg"
+            img: "https://duanran1996112.github.io/duanranHome.github.io/april/images/share-logo.jpg"
         },
         {
             title: "四月5大食药谣言盘点",
             desc: "在外喝粥等于喝胶？塑料加工成大米？较真四月5大食药谣言盘点",
-            img: "http://home.duanran96.com/april/images/share-logo.jpg"
+            img: "https://duanran1996112.github.io/duanranHome.github.io/april/images/share-logo.jpg"
         }
     ]; 
     var shareData = {
         title: "较真发布：四月5大食药谣言盘点",
         desc: "在外喝粥等于喝胶？塑料加工成大米？较真四月5大食药谣言盘点",
-        img: "http://home.duanran96.com/april/images/share-logo.jpg",
+        img: "https://duanran1996112.github.io/duanranHome.github.io/april/images/share-logo.jpg",
         link: window.location.href
     };
 
@@ -103,76 +103,76 @@ $(document).ready(function () {
 
     // 图片预加载
     var picArr = [
-        'http://home.duanran96.com/april/images/loading-icon.png',
-        'http://home.duanran96.com/april/images/loading-word.png',
-        'http://home.duanran96.com/april/images/page-m-1.png',
-        'http://home.duanran96.com/april/images/swipe.png',
-        'http://home.duanran96.com/april/images/share-bg.png',
-        'http://home.duanran96.com/april/images/page-m-02.png',
-        'http://home.duanran96.com/april/images/m-l.png',
-        'http://home.duanran96.com/april/images/m-t-1.png',
-        'http://home.duanran96.com/april/images/m-t-2.png',
-        'http://home.duanran96.com/april/images/m-h-1.png',
-        'http://home.duanran96.com/april/images/m-h-2.png',
-        'http://home.duanran96.com/april/images/m-p-1.png',
-        'http://home.duanran96.com/april/images/m-p-2.png',
-        'http://home.duanran96.com/april/images/m-a-1.png',
-        'http://home.duanran96.com/april/images/m-a-2.png',
-        'http://home.duanran96.com/april/images/m-d-1.png',
-        'http://home.duanran96.com/april/images/m-d-2.png',
-        'http://home.duanran96.com/april/images/m-s-1.png',
-        'http://home.duanran96.com/april/images/m-s-2.png',
-        'http://home.duanran96.com/april/images/share-01.jpg',
-        'http://home.duanran96.com/april/images/share-02.jpg',
-        'http://home.duanran96.com/april/images/share-logo.jpg'
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/loading-icon.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/loading-word.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/page-m-1.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/swipe.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/share-bg.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/page-m-02.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-l.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-t-1.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-t-2.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-h-1.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-h-2.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-p-1.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-p-2.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-a-1.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-a-2.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-d-1.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-d-2.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-s-1.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-s-2.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/share-01.jpg',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/share-02.jpg',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/share-logo.jpg'
     ];
     // 加载剩余图片
     var nextArr = [ 
-        'http://home.duanran96.com/april/images/m-t-3.png',
-        'http://home.duanran96.com/april/images/m-t-4.png',
-        'http://home.duanran96.com/april/images/m-t-5.png',
-        'http://home.duanran96.com/april/images/m-h-3.png',
-        'http://home.duanran96.com/april/images/m-h-4.png',
-        'http://home.duanran96.com/april/images/m-h-5.png',
-        'http://home.duanran96.com/april/images/m-p-3.png',
-        'http://home.duanran96.com/april/images/m-p-4.png',
-        'http://home.duanran96.com/april/images/m-p-5.png',
-        'http://home.duanran96.com/april/images/m-a-3.png',
-        'http://home.duanran96.com/april/images/m-a-4.png',
-        'http://home.duanran96.com/april/images/m-a-5.png',
-        'http://home.duanran96.com/april/images/m-d-3.png',
-        'http://home.duanran96.com/april/images/m-d-4.png',
-        'http://home.duanran96.com/april/images/m-d-5.png',
-        'http://home.duanran96.com/april/images/m-s-3.png',
-        'http://home.duanran96.com/april/images/m-s-4.png',
-        'http://home.duanran96.com/april/images/m-s-5.png',
-        'http://home.duanran96.com/april/images/share-03.jpg',
-        'http://home.duanran96.com/april/images/share-04.jpg',
-        'http://home.duanran96.com/april/images/share-05.jpg',
-        'http://home.duanran96.com/april/images/page-m-3.png',
-        'http://home.duanran96.com/april/images/joke-1-1.png',
-        'http://home.duanran96.com/april/images/joke-1-2.png',
-        'http://home.duanran96.com/april/images/joke-1-3.png',
-        'http://home.duanran96.com/april/images/joke-1-4.png',
-        'http://home.duanran96.com/april/images/joke-1-5.png',
-        'http://home.duanran96.com/april/images/joke-2-1.png',
-        'http://home.duanran96.com/april/images/joke-2-2.png',
-        'http://home.duanran96.com/april/images/joke-2-3.png',
-        'http://home.duanran96.com/april/images/joke-2-4.png',
-        'http://home.duanran96.com/april/images/joke-2-5.png',
-        'http://home.duanran96.com/april/images/joke-3-1.png',
-        'http://home.duanran96.com/april/images/joke-3-2.png',
-        'http://home.duanran96.com/april/images/joke-3-3.png',
-        'http://home.duanran96.com/april/images/joke-3-4.png',
-        'http://home.duanran96.com/april/images/joke-3-5.png',
-        'http://home.duanran96.com/april/images/joke-4-1.png',
-        'http://home.duanran96.com/april/images/joke-4-2.png',
-        'http://home.duanran96.com/april/images/joke-4-3.png',
-        'http://home.duanran96.com/april/images/joke-4-4.png',
-        'http://home.duanran96.com/april/images/joke-4-5.png',
-        'http://home.duanran96.com/april/images/page-more.png',
-        'http://home.duanran96.com/april/images/page-old.png',
-        'http://home.duanran96.com/april/images/page-m-4.png'
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-t-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-t-4.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-t-5.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-h-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-h-4.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-h-5.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-p-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-p-4.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-p-5.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-a-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-a-4.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-a-5.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-d-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-d-4.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-d-5.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-s-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-s-4.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/m-s-5.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/share-03.jpg',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/share-04.jpg',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/share-05.jpg',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/page-m-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-1-1.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-1-2.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-1-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-1-4.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-1-5.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-2-1.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-2-2.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-2-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-2-4.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-2-5.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-3-1.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-3-2.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-3-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-3-4.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-3-5.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-4-1.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-4-2.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-4-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-4-4.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/joke-4-5.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/page-more.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/page-old.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/april/images/page-m-4.png'
     ]
     function loadImg(arr,callback) {
         var len = arr.length;

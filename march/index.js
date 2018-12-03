@@ -10,154 +10,154 @@ $(document).ready(function () {
         {
             title: "较真发布：三月10大食药谣言盘点",
             desc: "面条洗出“胶”、米饭赛砒霜？较真三月10大食药谣言盘点",
-            img: "http://home.duanran96.com/march/images/share-logo.jpg"
+            img: "https://duanran1996112.github.io/duanranHome.github.io/march/images/share-logo.jpg"
         },
         {
             title: '三月食药谣言NO.1：“耐撕”紫菜是塑料袋做的',
             desc: '干紫菜这么耐撕，竟是塑料袋做的？别信！|较真发布',
-            img: 'http://home.duanran96.com/march/images/share-01.jpg'
+            img: 'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-01.jpg'
         },
         {
             title: '三月食药谣言NO.2：吃大盘鸡会感染H7N9死亡',
             desc: '吃大盘鸡得禽流感？老谣言又翻新，烧透的食物放心吃。|较真发布',
-            img: 'http://home.duanran96.com/march/images/share-02.jpg'
+            img: 'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-02.jpg'
         },
         {
             title: '三月食药谣言NO.3：疫苗有毒，应该远离疫苗',
             desc: '为了孩子请远离疫苗？害人谣言，疫苗益处远大于风险。|较真发布',
-            img: 'http://home.duanran96.com/march/images/share-03.jpg'
+            img: 'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-03.jpg'
         },
         {
             title: '三月食药谣言NO.4：易燃粉丝是塑料制成的',
             desc: '易燃粉丝是塑料做的？主要成分有淀粉，易燃没毛病。|较真发布',
-            img: 'http://home.duanran96.com/march/images/share-04.jpg'
+            img: 'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-04.jpg'
         },
         {
             title: '三月食药谣言NO.5：巧克力含矿物油吃了会致癌',
             desc: '巧克力含致癌矿物油？测评存在问题，“过量”危言耸听。|较真发布',
-            img: 'http://home.duanran96.com/march/images/share-05.jpg'
+            img: 'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-05.jpg'
         },
         {
             title: '三月食药谣言NO.6：中国的煮饭方法会吃进砒霜',
             desc: '中国的煮饭方法会吃进砒霜？过度渲染，不必担心。|较真发布',
-            img: 'http://home.duanran96.com/march/images/share-06.jpg'
+            img: 'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-06.jpg'
         },
         {
             title: '三月食药谣言NO.7：柑橘橙的甜是打了甜蜜素',
             desc: '柑橘橙的甜靠打药？以讹传讹，现实里可操作性差。|较真发布',
-            img: 'http://home.duanran96.com/march/images/share-07.jpg'
+            img: 'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-07.jpg'
         },
         {
             title: '三月食药谣言NO.8：草莓又大又甜靠“打药”',
             desc: '草莓又大又甜靠“打药”？以讹传讹，现实里操作风险大。|较真发布',
-            img: 'http://home.duanran96.com/march/images/share-08.jpg'
+            img: 'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-08.jpg'
         },
         {
             title: '三月食药谣言NO.9：面条洗出“胶”，不能吃',
             desc: '面条洗出“胶”不能吃？别担心，胶状物其实只是面筋。|较真发布',
-            img: 'http://home.duanran96.com/march/images/share-09.jpg'
+            img: 'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-09.jpg'
         },
         {
             title: '三月食药谣言NO.10：啤酒中含“多菌灵”会致癌',
             desc: '啤酒含多菌灵会致癌？老谣新炒，而且还假借权威报道的名头。|较真发布',
-            img: 'http://home.duanran96.com/march/images/share-10.jpg'
+            img: 'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-10.jpg'
         },
         {
             title: "较真发布：三月10大食药谣言盘点",
             desc: "面条洗出“胶”、米饭赛砒霜？较真三月10大食药谣言盘点",
-            img: "http://home.duanran96.com/march/images/share-logo.jpg"
+            img: "https://duanran1996112.github.io/duanranHome.github.io/march/images/share-logo.jpg"
         }
     ]; 
     var shareData = {
         title: "较真发布：三月10大食药谣言盘点",
         desc: "面条洗出“胶”、米饭赛砒霜？较真三月10大食药谣言盘点",
-        img: "http://home.duanran96.com/march/images/share-logo.jpg",
+        img: "https://duanran1996112.github.io/duanranHome.github.io/march/images/share-logo.jpg",
         link: window.location.href
     };
 
     //图片预加载
     var picArr = [
-        'http://home.duanran96.com/march/images/loading-icon.png',
-        'http://home.duanran96.com/march/images/loading-word.png',
-        'http://home.duanran96.com/march/images/page-message.png',
-        'http://home.duanran96.com/march/images/m-a-1.png',
-        'http://home.duanran96.com/march/images/m-a-2.png',
-        'http://home.duanran96.com/march/images/m-a-3.png',
-        'http://home.duanran96.com/march/images/m-a-4.png',
-        'http://home.duanran96.com/march/images/m-a-5.png',
-        'http://home.duanran96.com/march/images/m-a-6.png',
-        'http://home.duanran96.com/march/images/m-a-7.png',
-        'http://home.duanran96.com/march/images/m-a-8.png',
-        'http://home.duanran96.com/march/images/m-a-9.png',
-        'http://home.duanran96.com/march/images/m-a-10.png',
-        'http://home.duanran96.com/march/images/m-d-1.png',
-        'http://home.duanran96.com/march/images/m-d-2.png',
-        'http://home.duanran96.com/march/images/m-d-3.png',
-        'http://home.duanran96.com/march/images/m-d-4.png',
-        'http://home.duanran96.com/march/images/m-d-5.png',
-        'http://home.duanran96.com/march/images/m-d-6.png',
-        'http://home.duanran96.com/march/images/m-d-7.png',
-        'http://home.duanran96.com/march/images/m-d-8.png',
-        'http://home.duanran96.com/march/images/m-d-9.png',
-        'http://home.duanran96.com/march/images/m-d-10.png',
-        'http://home.duanran96.com/march/images/m-h-1.png',
-        'http://home.duanran96.com/march/images/m-h-2.png',
-        'http://home.duanran96.com/march/images/m-h-3.png',
-        'http://home.duanran96.com/march/images/m-h-3.png',
-        'http://home.duanran96.com/march/images/m-h-4.png',
-        'http://home.duanran96.com/march/images/m-h-5.png',
-        'http://home.duanran96.com/march/images/m-h-6.png',
-        'http://home.duanran96.com/march/images/m-h-7.png',
-        'http://home.duanran96.com/march/images/m-h-8.png',
-        'http://home.duanran96.com/march/images/m-h-9.png',
-        'http://home.duanran96.com/march/images/m-h-10.png',
-        'http://home.duanran96.com/march/images/m-l.png',
-        'http://home.duanran96.com/march/images/m-p-1.png',
-        'http://home.duanran96.com/march/images/m-p-2.png',
-        'http://home.duanran96.com/march/images/m-p-3.png',
-        'http://home.duanran96.com/march/images/m-p-4.png',
-        'http://home.duanran96.com/march/images/m-p-5.png',
-        'http://home.duanran96.com/march/images/m-p-6.png',
-        'http://home.duanran96.com/march/images/m-p-7.png',
-        'http://home.duanran96.com/march/images/m-p-8.png',
-        'http://home.duanran96.com/march/images/m-p-9.png',
-        'http://home.duanran96.com/march/images/m-p-10.png',
-        'http://home.duanran96.com/march/images/m-s-1.png',
-        'http://home.duanran96.com/march/images/m-s-2.png',
-        'http://home.duanran96.com/march/images/m-s-3.png',
-        'http://home.duanran96.com/march/images/m-s-4.png',
-        'http://home.duanran96.com/march/images/m-s-5.png',
-        'http://home.duanran96.com/march/images/m-s-6.png',
-        'http://home.duanran96.com/march/images/m-s-7.png',
-        'http://home.duanran96.com/march/images/m-s-8.png',
-        'http://home.duanran96.com/march/images/m-s-9.png',
-        'http://home.duanran96.com/march/images/m-s-10.png',
-        'http://home.duanran96.com/march/images/m-t-1.png',
-        'http://home.duanran96.com/march/images/m-t-2.png',
-        'http://home.duanran96.com/march/images/m-t-3.png',
-        'http://home.duanran96.com/march/images/m-t-4.png',
-        'http://home.duanran96.com/march/images/m-t-5.png',
-        'http://home.duanran96.com/march/images/m-t-6.png',
-        'http://home.duanran96.com/march/images/m-t-7.png',
-        'http://home.duanran96.com/march/images/m-t-8.png',
-        'http://home.duanran96.com/march/images/m-t-9.png',
-        'http://home.duanran96.com/march/images/m-t-10.png',
-        'http://home.duanran96.com/march/images/swipe.png',
-        'http://home.duanran96.com/march/images/page-teach.png',
-        'http://home.duanran96.com/march/images/page-more.png',
-        'http://home.duanran96.com/march/images/page-news.png',
-        'http://home.duanran96.com/march/images/share-01.jpg',
-        'http://home.duanran96.com/march/images/share-02.jpg',
-        'http://home.duanran96.com/march/images/share-03.jpg',
-        'http://home.duanran96.com/march/images/share-04.jpg',
-        'http://home.duanran96.com/march/images/share-05.jpg',
-        'http://home.duanran96.com/march/images/share-06.jpg',
-        'http://home.duanran96.com/march/images/share-07.jpg',
-        'http://home.duanran96.com/march/images/share-08.jpg',
-        'http://home.duanran96.com/march/images/share-09.jpg',
-        'http://home.duanran96.com/march/images/share-10.jpg',
-        'http://home.duanran96.com/march/images/share-logo.jpg',
-        'http://home.duanran96.com/march/images/share-bg.png'
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/loading-icon.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/loading-word.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/page-message.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-a-1.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-a-2.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-a-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-a-4.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-a-5.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-a-6.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-a-7.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-a-8.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-a-9.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-a-10.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-d-1.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-d-2.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-d-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-d-4.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-d-5.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-d-6.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-d-7.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-d-8.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-d-9.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-d-10.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-h-1.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-h-2.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-h-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-h-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-h-4.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-h-5.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-h-6.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-h-7.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-h-8.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-h-9.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-h-10.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-l.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-p-1.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-p-2.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-p-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-p-4.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-p-5.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-p-6.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-p-7.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-p-8.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-p-9.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-p-10.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-s-1.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-s-2.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-s-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-s-4.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-s-5.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-s-6.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-s-7.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-s-8.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-s-9.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-s-10.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-t-1.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-t-2.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-t-3.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-t-4.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-t-5.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-t-6.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-t-7.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-t-8.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-t-9.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/m-t-10.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/swipe.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/page-teach.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/page-more.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/page-news.png',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-01.jpg',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-02.jpg',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-03.jpg',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-04.jpg',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-05.jpg',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-06.jpg',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-07.jpg',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-08.jpg',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-09.jpg',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-10.jpg',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-logo.jpg',
+        'https://duanran1996112.github.io/duanranHome.github.io/march/images/share-bg.png'
     ];
     function loadImg(arr,callback) {
         var len = arr.length;
